@@ -14,22 +14,7 @@
   --callout-caution: rgba(253, 186, 116, 0.15);
 }
 
-@media (prefers-color-scheme: light) {
-  /* Provide a light fallback if explicitly requested, but default is dark-ish now */
-  :root {
-    --text: #334155;
-    --text-muted: #64748b;
-    --bg: #f8fafc;
-    --border: #e2e8f0;
-    --link: #4f46e5;
-    --code-bg: #f1f5f9;
-    --callout-note: rgba(79, 70, 229, 0.1);
-    --callout-warning: rgba(217, 119, 6, 0.1);
-    --callout-important: rgba(220, 38, 38, 0.1);
-    --callout-tip: rgba(22, 163, 74, 0.1);
-    --callout-caution: rgba(234, 88, 12, 0.1);
-  }
-}
+
 
 *,
 *::before,
