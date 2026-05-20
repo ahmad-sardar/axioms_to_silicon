@@ -1,23 +1,8 @@
----
-title: "Operations on Natural Numbers"
-subtitle: "Axiomatic Proofs of Addition and Multiplication"
-format:
-  html:
-    toc: true
-    toc-depth: 4
-    toc-location: left
-    number-sections: true
-    code-fold: show
-    theme: cosmo
-    html-math-method: katex
-  pdf:
-    toc: true
-    number-sections: true
-    colorlinks: true
-execute:
-  echo: true
-  warning: false
----
++++
+title = "Operations on Natural Numbers"
+slug = "natural_numbers_part_2"
+toc = true
++++
 
 # Main Theorems of Addition
 
@@ -49,10 +34,12 @@ Inductive Hypothesis (IH): Assume $0 + k = k$ for some $k \in \mathbb{N}$.
 
 Goal: Prove $0 + S(k) = S(k)$.
 
-\begin{align*}
+$$
+\begin{aligned}
 0 + S(k) &= S(0 + k) && \text{[definition: } n + S(m) = S(n+m)\text{]} \\
 &= S(k) && \text{[by IH: } 0 + k = k\text{]}
-\end{align*}
+\end{aligned}
+$$
 
 Therefore $0 + S(k) = S(k)$ ✓
 
@@ -97,9 +84,11 @@ Transform the left side:
 $$S(m) + S(k) = S(S(m) + k) \quad \text{[definition: } n + S(p) = S(n+p)\text{]}$$
 
 Transform the right side:
-\begin{align*}
+$$
+\begin{aligned}
 S(m + S(k)) &= S(S(m + k)) && \text{[definition: } m + S(k) = S(m+k)\text{]}
-\end{align*}
+\end{aligned}
+$$
 
 Now we need to show: $S(S(m) + k) = S(S(m + k))$
 
@@ -134,10 +123,12 @@ Let $P(n)$ be the statement "$m + n = n + m$".
 
 We need to show $m + 0 = 0 + m$.
 
-\begin{align*}
+$$
+\begin{aligned}
 m + 0 &= m && \text{[definition]} \\
 0 + m &= m && \text{[Theorem 1]}
-\end{align*}
+\end{aligned}
+$$
 
 Therefore $m + 0 = m = 0 + m$ ✓
 
@@ -202,10 +193,12 @@ Transform the left side:
 $$(a + b) + S(k) = S((a + b) + k) \quad \text{[definition]}$$
 
 Transform the right side:
-\begin{align*}
+$$
+\begin{aligned}
 a + (b + S(k)) &= a + S(b + k) && \text{[definition]} \\
 &= S(a + (b + k)) && \text{[definition again]}
-\end{align*}
+\end{aligned}
+$$
 
 Connect using IH:
 
@@ -259,7 +252,8 @@ $$n \times S(m) = (n \times m) + n$$
 
 ### Example: Computing $3 \times 2$
 
-\begin{align*}
+$$
+\begin{aligned}
 3 \times 2 &= 3 \times S(1) \\
 &= (3 \times 1) + 3 && \text{[recursive case]} \\
 &= (3 \times S(0)) + 3 \\
@@ -267,7 +261,8 @@ $$n \times S(m) = (n \times m) + n$$
 &= (0 + 3) + 3 && \text{[base case]} \\
 &= 3 + 3 && \text{[Theorem 1]} \\
 &= 6
-\end{align*}
+\end{aligned}
+$$
 
 ## What Must Be Proven
 
@@ -301,11 +296,13 @@ IH: Assume $0 \times k = 0$ for some $k \in \mathbb{N}$.
 
 Goal: Prove $0 \times S(k) = 0$.
 
-\begin{align*}
+$$
+\begin{aligned}
 0 \times S(k) &= (0 \times k) + 0 && \text{[definition]} \\
 &= 0 + 0 && \text{[by IH]} \\
 &= 0 && \text{[definition of addition]}
-\end{align*}
+\end{aligned}
+$$
 
 **Conclusion:** By induction, $0 \times n = 0$ for all $n \in \mathbb{N}$. ∎
 
@@ -345,10 +342,12 @@ We prove by induction on $n$.
 
 **Base case ($n = 0$):**
 
-\begin{align*}
+$$
+\begin{aligned}
 m \times 0 &= 0 && \text{[definition]} \\
 0 \times m &= 0 && \text{[Theorem 5]}
-\end{align*}
+\end{aligned}
+$$
 
 Therefore $m \times 0 = 0 \times m$ ✓
 
@@ -358,11 +357,13 @@ IH: Assume $m \times k = k \times m$ for some $k \in \mathbb{N}$.
 
 Goal: Prove $m \times S(k) = S(k) \times m$.
 
-\begin{align*}
+$$
+\begin{aligned}
 m \times S(k) &= (m \times k) + m && \text{[definition]} \\
 &= (k \times m) + m && \text{[by IH]} \\
 &= S(k) \times m && \text{[Theorem 6]}
-\end{align*}
+\end{aligned}
+$$
 
 **Conclusion:** By induction, $m \times n = n \times m$ for all $m, n \in \mathbb{N}$. ∎
 
@@ -380,10 +381,12 @@ We prove by induction on $c$.
 
 **Base case ($c = 0$):**
 
-\begin{align*}
+$$
+\begin{aligned}
 a \times (b + 0) &= a \times b && \text{[addition definition]} \\
 (a \times b) + (a \times 0) &= (a \times b) + 0 = a \times b && \text{[multiplication definition]}
-\end{align*}
+\end{aligned}
+$$
 
 Both sides equal $a \times b$ ✓
 
@@ -394,15 +397,19 @@ IH: Assume $a \times (b + k) = (a \times b) + (a \times k)$.
 Goal: Prove $a \times (b + S(k)) = (a \times b) + (a \times S(k))$.
 
 Left side:
-\begin{align*}
+$$
+\begin{aligned}
 a \times (b + S(k)) &= a \times S(b + k) && \text{[addition definition]} \\
 &= (a \times (b + k)) + a && \text{[multiplication definition]}
-\end{align*}
+\end{aligned}
+$$
 
 Right side:
-\begin{align*}
+$$
+\begin{aligned}
 (a \times b) + (a \times S(k)) &= (a \times b) + ((a \times k) + a) && \text{[multiplication definition]}
-\end{align*}
+\end{aligned}
+$$
 
 Using IH: $(a \times (b + k)) + a = ((a \times b) + (a \times k)) + a$
 
@@ -451,10 +458,12 @@ Examples that illuminate subtle aspects of the theory.
 
 Consider trying to define it recursively on the LEFT:
 
-\begin{align*}
+$$
+\begin{aligned}
 0 + n &= n \\
 S(m) + n &= S(m + n)
-\end{align*}
+\end{aligned}
+$$
 
 **Problem:** How would you compute $3 + 2$ using these rules?
 
@@ -464,14 +473,16 @@ You cannot apply either rule! The left side has $S(\ldots)$, not $0$.
 
 **With our definition (recursive on RIGHT):**
 
-\begin{align*}
+$$
+\begin{aligned}
 3 + 2 &= 3 + S(1) \\
 &= S(3 + 1) \\
 &= S(3 + S(0)) \\
 &= S(S(3 + 0)) \\
 &= S(S(3)) \\
 &= 5 \checkmark
-\end{align*}
+\end{aligned}
+$$
 
 The successor is on the RIGHT, so we can successfully recurse.
 
@@ -488,14 +499,16 @@ The successor is on the RIGHT, so we can successfully recurse.
 
 To see this, try computing $0 + 2$ using ONLY the definition:
 
-\begin{align*}
+$$
+\begin{aligned}
 0 + 2 &= 0 + S(1) \\
 &= S(0 + 1) && \text{[definition: } n + S(m) = S(n+m)\text{]} \\
 &= S(0 + S(0)) \\
 &= S(S(0 + 0)) && \text{[definition again]} \\
 &= S(S(0)) && \text{[base case: } n + 0 = n\text{]} \\
 &= 2
-\end{align*}
+\end{aligned}
+$$
 
 It works, but we had to COMPUTE it through multiple steps—it's not immediate from the definition!
 
@@ -837,16 +850,20 @@ Answer: A cyclic group of order 5, denoted $\mathbb{Z}/5\mathbb{Z}$ or $\mathbb{
 ## Alternative Recursion for Addition
 
 **Our definition:**
-\begin{align*}
+$$
+\begin{aligned}
 n + 0 &= n \\
 n + S(m) &= S(n + m)
-\end{align*}
+\end{aligned}
+$$
 
 **Alternative definition (recursive on left):**
-\begin{align*}
+$$
+\begin{aligned}
 0 + m &= m \\
 S(n) + m &= S(n + m)
-\end{align*}
+\end{aligned}
+$$
 
 **Exploration questions:**
 
@@ -867,11 +884,13 @@ The total work is the same, just distributed differently!
 
 **Solution:** Define $F: \mathbb{N} \to \mathbb{N}$ by more complex recursion:
 
-\begin{align*}
+$$
+\begin{aligned}
 F(0) &= 0 \\
 F(1) &= 1 \\
 F(S(S(n))) &= F(S(n)) + F(n)
-\end{align*}
+\end{aligned}
+$$
 
 This is **two-step recursion**—the value depends on TWO previous values, not just one.
 
@@ -887,10 +906,12 @@ This is **two-step recursion**—the value depends on TWO previous values, not j
 ## Fast Exponentiation Algorithm
 
 **Define exponentiation recursively:**
-\begin{align*}
+$$
+\begin{aligned}
 a^0 &= 1 \\
 a^{S(n)} &= a^n \times a
-\end{align*}
+\end{aligned}
+$$
 
 **Naive computation of $2^{1000}$:** Requires 999 multiplications
 
@@ -1062,11 +1083,13 @@ Prove the **well-ordering principle**: Every non-empty subset $S \subseteq \math
 ### Problem 12
 
 Define the Fibonacci sequence by:
-\begin{align*}
+$$
+\begin{aligned}
 F(0) &= 0 \\
 F(1) &= 1 \\
 F(n+2) &= F(n+1) + F(n)
-\end{align*}
+\end{aligned}
+$$
 
 Prove that $F(n) < 2^n$ for all $n \geq 1$.
 
@@ -1080,10 +1103,12 @@ Prove that $F(n) < 2^n$ for all $n \geq 1$.
 
 **Proof:**
 
-\begin{align*}
+$$
+\begin{aligned}
 n + S(0) &= S(n + 0) && \text{[definition: } n + S(m) = S(n+m)\text{]} \\
 &= S(n) && \text{[definition: } n + 0 = n\text{]}
-\end{align*}
+\end{aligned}
+$$
 
 Therefore $n + S(0) = S(n)$. ∎
 
@@ -1101,10 +1126,12 @@ IH: Assume $S(0) + k = S(k)$ for some $k \in \mathbb{N}$.
 
 Goal: Prove $S(0) + S(k) = S(S(k))$.
 
-\begin{align*}
+$$
+\begin{aligned}
 S(0) + S(k) &= S(S(0) + k) && \text{[Theorem 2: } S(m) + n = S(m+n)\text{]} \\
 &= S(S(k)) && \text{[by IH]}
-\end{align*}
+\end{aligned}
+$$
 
 Therefore $S(0) + S(k) = S(S(k))$ ✓
 
@@ -1124,12 +1151,14 @@ IH: Assume $k \times S(0) = k$ for some $k \in \mathbb{N}$.
 
 Goal: Prove $S(k) \times S(0) = S(k)$.
 
-\begin{align*}
+$$
+\begin{aligned}
 S(k) \times S(0) &= (k \times S(0)) + S(0) && \text{[Theorem 6: } S(m) \times n = (m \times n) + n\text{]} \\
 &= k + S(0) && \text{[by IH]} \\
 &= S(k + 0) && \text{[definition of addition]} \\
 &= S(k) && \text{[definition: } k + 0 = k\text{]}
-\end{align*}
+\end{aligned}
+$$
 
 Therefore $S(k) \times S(0) = S(k)$ ✓
 
@@ -1152,10 +1181,12 @@ Goal: Show that if $n + S(k) = n$, then $S(k) = 0$ (which will give us a contrad
 Suppose $n + S(k) = n$.
 
 Then:
-\begin{align*}
+$$
+\begin{aligned}
 n + S(k) &= n \\
 S(n + k) &= n && \text{[definition of addition]}
-\end{align*}
+\end{aligned}
+$$
 
 But this says $S(n + k) = n$, which means $n$ is a successor. But by Axiom 4, no element equals both $S(\text{something})$ and equals $n$ for all $n$ unless we derive a contradiction.
 
@@ -1435,17 +1466,21 @@ Condensed reference for working mathematicians.
 
 ### Addition (Recursive on Right Argument)
 
-\begin{align*}
+$$
+\begin{aligned}
 n + 0 &= n && \text{(base case)} \\
 n + S(m) &= S(n + m) && \text{(recursive case)}
-\end{align*}
+\end{aligned}
+$$
 
 ### Multiplication (Recursive on Right Argument)
 
-\begin{align*}
+$$
+\begin{aligned}
 n \times 0 &= 0 && \text{(base case)} \\
 n \times S(m) &= (n \times m) + n && \text{(recursive case)}
-\end{align*}
+\end{aligned}
+$$
 
 ## All Proven Theorems
 
@@ -1619,8 +1654,384 @@ Complete arithmetic on ℕ
 
 # Formal Verification in Lean
 
-Below is the complete executable code that implements the Peano axioms and proves the theorems we derived above. You do not need to install Lean to view this code, but if you wish to run it, you can install [Lean 4 and VS Code](https://leanprover.github.io/lean4/doc/quickstart.html).
+Below is the complete executable code that implements the Peano axioms and proves the theorems we derived above. You do not need to install Lean to view this code, but if you wish to run it, you can install [Lean 4 and VS Code](https://lean-lang.org/).
 
 ```lean
-{{< include peano_arithmetic.lean >}}
+```lean
+-- Peano Arithmetic in Lean 4
+-- Complete formalization of natural numbers from axioms
+
+/-!
+# Peano Axioms and Arithmetic
+
+This file formalizes:
+1. The 5 Peano Axioms
+2. Definition of addition
+3. Key theorems about addition
+4. Definition of multiplication
+5. Key theorems about multiplication
+
+All proofs are by induction, matching our hand-written proofs.
+-/
+
+-- ============================================================================
+-- PART 1: THE PEANO AXIOMS
+-- ============================================================================
+
+/-!
+## The Natural Numbers Type
+
+In Lean, we define the natural numbers as an inductive type.
+This automatically gives us:
+- A type Nat
+- A constructor zero : Nat (our 0)
+- A constructor succ : Nat → Nat (our S function)
+-/
+
+inductive Nat where
+  | zero : Nat
+  | succ : Nat → Nat
+
+-- Open the namespace so we can write "zero" instead of "Nat.zero"
+open Nat
+
+/-!
+## The 5 Peano Axioms (Verified Automatically)
+
+Axiom 1 (Existence): zero exists ✓
+  - Guaranteed by the constructor
+
+Axiom 2 (Closure): succ n is a Nat for any Nat n ✓
+  - Guaranteed by the type system: succ : Nat → Nat
+
+Axiom 3 (Injectivity): succ n = succ m → n = m ✓
+  - We prove this below
+
+Axiom 4 (Zero not successor): succ n ≠ zero ✓
+  - Guaranteed by inductive type (different constructors)
+
+Axiom 5 (Induction): Built into Lean's recursor ✓
+  - We use it via the "induction" tactic
+-/
+
+-- AXIOM 3: Injectivity of successor
+theorem succ_injective : ∀ n m : Nat, succ n = succ m → n = m := by
+  intros n m h
+  -- In Lean, constructors are injective automatically
+  injection h
+
+/-!
+EXPLANATION:
+- "theorem" declares a theorem
+- "∀" means "for all" (universal quantifier)
+- "→" means "implies"
+- "by" starts the proof
+- "intros" introduces the variables and hypothesis
+- "injection" uses the fact that constructors are injective
+-/
+
+-- ============================================================================
+-- PART 2: ADDITION
+-- ============================================================================
+
+/-!
+## Definition of Addition
+
+We define addition recursively on the right argument:
+  n + zero = n                    (base case)
+  n + (succ m) = succ (n + m)     (recursive case)
+-/
+
+def add : Nat → Nat → Nat
+  | n, zero => n
+  | n, succ m => succ (add n m)
+
+-- Notation: We can write n + m instead of add n m
+instance : Add Nat where
+  add := add
+
+/-!
+EXPLANATION:
+- "def" defines a function
+- Pattern matching on the second argument (m)
+- First case: m = zero, return n
+- Second case: m = succ m', return succ (n + m')
+- "instance" lets us use + notation
+-/
+
+-- ============================================================================
+-- PART 3: THEOREMS ABOUT ADDITION
+-- ============================================================================
+
+/-!
+## Theorem 1: Left Identity (0 + n = n)
+
+This is NOT built into the definition (which only gives n + 0 = n).
+We must prove it by induction.
+-/
+
+theorem zero_add : ∀ n : Nat, zero + n = n := by
+  intro n
+  induction n with
+  | zero =>
+    -- Base case: zero + zero = zero
+    rfl  -- "reflexivity" - both sides are definitionally equal
+  | succ k ih =>
+    -- Inductive step
+    -- IH: zero + k = k
+    -- Goal: zero + k.succ = k.succ
+    rw [add]  -- Apply definition: zero + succ k = succ (zero + k)
+    rw [ih]   -- Use IH: succ (zero + k) = succ k
+    rfl       -- Both sides equal
+
+/-!
+EXPLANATION:
+- "induction n with" starts induction on n
+- Two cases: zero and succ k
+- "rfl" means "reflexivity" - proves things that are definitionally equal
+- "rw" means "rewrite" - replaces left side with right side of equation
+- "ih" is the inductive hypothesis
+-/
+
+/-!
+## Theorem 2: Left Successor (S(m) + n = S(m + n))
+
+Again, the definition only gives n + S(m) = S(n + m).
+We prove the left version by induction.
+-/
+
+theorem succ_add : ∀ m n : Nat, succ m + n = succ (m + n) := by
+  intros m n
+  induction n with
+  | zero =>
+    -- Base case: succ m + zero = succ (m + zero)
+    rfl  -- By definition, both equal succ m
+  | succ k ih =>
+    -- IH: succ m + k = succ (m + k)
+    -- Goal: succ m + succ k = succ (m + succ k)
+    rw [add]           -- succ m + succ k = succ (succ m + k)
+    rw [ih]            -- succ (succ m + k) = succ (succ (m + k))
+    rw [add]           -- m + succ k = succ (m + k)
+    rfl
+
+/-!
+EXPLANATION:
+- Same structure as Theorem 1
+- Multiple "rw" steps correspond to our manual proof steps
+- Each "rw" applies a definition or previously proven theorem
+-/
+
+/-!
+## Theorem 3: Commutativity (m + n = n + m)
+
+This is the big one! Uses both Theorem 1 and Theorem 2.
+-/
+
+theorem add_comm : ∀ m n : Nat, m + n = n + m := by
+  intros m n
+  induction n with
+  | zero =>
+    -- Base case: m + zero = zero + m
+    rw [add]        -- m + zero = m (by definition)
+    rw [zero_add]   -- zero + m = m (by Theorem 1)
+  | succ k ih =>
+    -- IH: m + k = k + m
+    -- Goal: m + succ k = succ k + m
+    rw [add]        -- m + succ k = succ (m + k)
+    rw [ih]         -- succ (m + k) = succ (k + m)
+    rw [succ_add]   -- succ k + m = succ (k + m)
+
+/-!
+EXPLANATION:
+- Uses our two previous theorems!
+- "rw [zero_add]" applies Theorem 1
+- "rw [succ_add]" applies Theorem 2
+- Shows how theorems build on each other
+-/
+
+/-!
+## Theorem 4: Associativity ((a + b) + c = a + (b + c))
+
+Surprisingly, this doesn't need commutativity!
+-/
+
+theorem add_assoc : ∀ a b c : Nat, (a + b) + c = a + (b + c) := by
+  intros a b c
+  induction c with
+  | zero =>
+    -- Base case: (a + b) + zero = a + (b + zero)
+    rfl  -- Both sides definitionally equal to a + b
+  | succ k ih =>
+    -- IH: (a + b) + k = a + (b + k)
+    -- Goal: (a + b) + succ k = a + (b + succ k)
+    rw [add, add]   -- Left: (a + b) + succ k = succ ((a + b) + k)
+    rw [ih]         -- succ ((a + b) + k) = succ (a + (b + k))
+    rw [add]        -- Right: a + (b + succ k) = a + succ (b + k)
+    rw [add]        -- a + succ (b + k) = succ (a + (b + k))
+
+/-!
+EXPLANATION:
+- Multiple "rw [add]" applications unfold the definition
+- "rw [add, add]" is shorthand for two applications
+- Notice we didn't use commutativity at all!
+-/
+
+-- ============================================================================
+-- PART 4: MULTIPLICATION
+-- ============================================================================
+
+/-!
+## Definition of Multiplication
+
+Recursive on the right argument:
+  n * zero = zero                      (base case)
+  n * (succ m) = (n * m) + n          (recursive case)
+-/
+
+def mul : Nat → Nat → Nat
+  | n, zero => zero
+  | n, succ m => mul n m + n
+
+instance : Mul Nat where
+  mul := mul
+
+/-!
+EXPLANATION:
+- Base case: anything times zero is zero
+- Recursive: n * succ m = (n * m) + n
+- Notice we use our previously defined addition!
+-/
+
+-- ============================================================================
+-- PART 5: THEOREMS ABOUT MULTIPLICATION
+-- ============================================================================
+
+/-!
+## Theorem 5: Left Identity (0 * n = 0)
+-/
+
+theorem zero_mul : ∀ n : Nat, zero * n = zero := by
+  intro n
+  induction n with
+  | zero =>
+    rfl  -- zero * zero = zero by definition
+  | succ k ih =>
+    -- IH: zero * k = zero
+    -- Goal: zero * succ k = zero
+    rw [mul]        -- zero * succ k = (zero * k) + zero
+    rw [ih]         -- (zero * k) + zero = zero + zero
+    rw [add]        -- zero + zero = zero
+
+/-!
+## Theorem 6: Left Successor (S(m) * n = (m * n) + n)
+-/
+
+theorem succ_mul : ∀ m n : Nat, succ m * n = m * n + n := by
+  intros m n
+  induction n with
+  | zero =>
+    rfl  -- Both sides equal zero
+  | succ k ih =>
+    -- IH: succ m * k = m * k + k
+    -- Goal: succ m * succ k = m * succ k + succ k
+    rw [mul]              -- succ m * succ k = (succ m * k) + succ m
+    rw [ih]               -- (succ m * k) + succ m = (m * k + k) + succ m
+    rw [mul]              -- m * succ k = (m * k) + m
+    rw [add]              -- m * succ k + succ k = succ (m * succ k) + k
+    -- Now we need to rearrange using associativity and commutativity
+    rw [add_assoc]        -- (m * k + k) + succ m = m * k + (k + succ m)
+    rw [add_assoc]        -- Goal: m * k + (k + succ m) = m * k + (m + succ k)
+    -- Need to show: k + succ m = m + succ k
+    have h : k + succ m = succ (k + m) := by rw [add]
+    rw [h]
+    have h2 : m + succ k = succ (m + k) := by rw [add]
+    rw [h2]
+    have h3 : k + m = m + k := by rw [add_comm]
+    rw [h3]
+
+/-!
+EXPLANATION:
+- More complex proof requiring multiple rewrites
+- Uses associativity and commutativity of addition
+- "have" introduces intermediate lemmas
+- Shows how multiplication proofs depend on addition theorems
+-/
+
+/-!
+## Theorem 7: Commutativity (m * n = n * m)
+
+Uses both Theorem 5 and Theorem 6!
+-/
+
+theorem mul_comm : ∀ m n : Nat, m * n = n * m := by
+  intros m n
+  induction n with
+  | zero =>
+    rw [mul]        -- m * zero = zero
+    rw [zero_mul]   -- zero * m = zero
+  | succ k ih =>
+    rw [mul]        -- m * succ k = (m * k) + m
+    rw [ih]         -- (m * k) + m = (k * m) + m
+    rw [succ_mul]   -- succ k * m = (k * m) + m
+
+-- ============================================================================
+-- VERIFICATION
+-- ============================================================================
+
+/-!
+## Example Computations
+
+Let's verify our definitions work correctly:
+-/
+
+-- Define some numbers for testing
+def one := succ zero
+def two := succ one
+def three := succ two
+
+-- Test addition
+example : two + three = succ (succ (succ (succ (succ zero)))) := by rfl
+
+-- Test multiplication
+example : two * three = succ (succ (succ (succ (succ (succ zero))))) := by rfl
+
+-- Test commutativity
+example : two + three = three + two := by rw [add_comm]
+example : two * three = three * two := by rw [mul_comm]
+
+/-!
+EXPLANATION:
+- "example" creates an anonymous theorem (just for verification)
+- "rfl" proves things that compute to the same value
+- These verify our definitions match standard arithmetic!
+-/
+
+-- ============================================================================
+-- SUMMARY
+-- ============================================================================
+
+/-!
+## What We've Formalized
+
+AXIOMS:
+✓ All 5 Peano Axioms (built into the inductive type)
+
+DEFINITIONS:
+✓ Addition (recursive on right argument)
+✓ Multiplication (recursive on right argument)
+
+THEOREMS ABOUT ADDITION:
+✓ Theorem 1: zero + n = n (left identity)
+✓ Theorem 2: succ m + n = succ (m + n) (left successor)
+✓ Theorem 3: m + n = n + m (commutativity)
+✓ Theorem 4: (a + b) + c = a + (b + c) (associativity)
+
+THEOREMS ABOUT MULTIPLICATION:
+✓ Theorem 5: zero * n = zero (left identity)
+✓ Theorem 6: succ m * n = (m * n) + n (left successor)
+✓ Theorem 7: m * n = n * m (commutativity)
+
+All proofs are machine-verified by Lean's type checker!
+-/
+```
 ```

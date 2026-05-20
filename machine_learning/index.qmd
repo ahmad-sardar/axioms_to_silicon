@@ -1,5 +1,0 @@
----
-title: "Machine Learning Algorithms"
----
-
-## [1- Fundamental Algorithms](algorithms.qmd) {.unnumbered}

@@ -1,0 +1,20 @@
+title = "Axioms to Silicon"
+description = "Mathematics and Machine Learning from First Principles"
+base_url = "https://ahmad-sardar.github.io"
+output_dir = "docs"
+compile_sass = false
+build_search_index = false
+generate_sitemap = true
+default_language = "en"
+
+[slugify]
+paths = "off"
+
+[markdown]
+smart_punctuation = true
+
+[extra]
+github = "https://github.com/ahmad-sardar"
+linkedin = "https://linkedin.com/in/asardar"
+email = "mailto:ahmad@ahmadsardar.com"
+site_author = "Ahmad Sardar"

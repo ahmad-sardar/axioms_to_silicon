@@ -1,41 +1,21 @@
----
-title: "Euclidean Geometry"
-format:
-  html:
-    toc: true
-    toc-depth: 4
-    toc-location: left
-    number-sections: true
-    code-fold: show
-    code-tools: true
-    theme: cosmo
-    html-math-method: mathjax
-    embed-resources: false
-    fig-cap-location: bottom
-    tbl-cap-location: top
-  pdf:
-    documentclass: article
-    geometry:
-      - margin=1in
-    include-in-header:
-      text: |
-        \usepackage{amsmath}
-        \usepackage{amsthm}
-        \usepackage{tikz}
----
++++
+title = "Euclidean Geometry"
+slug = "euclidean_geometry_enhanced"
+toc = true
++++
 
-::: {.callout-note icon=false}
+{% callout_note() %}
 ## Navigation
 
 **Prerequisites:** None (foundational)  
 **Enables:** Trigonometry, Coordinate Geometry, Linear Algebra, Calculus  
-:::
+{% end %}
 
-# Introduction {.unnumbered}
+# Introduction
 
 Euclidean geometry forms the spatial reasoning foundation essential for machine learning. From understanding projections in high-dimensional spaces to grasping optimization landscapes, these concepts are fundamental prerequisites.
 
-::: {.callout-important}
+{% callout_important() %}
 ## Why This Matters for Machine Learning
 
 - **Vector Spaces**: Geometric objects with distance and angles
@@ -43,11 +23,11 @@ Euclidean geometry forms the spatial reasoning foundation essential for machine 
 - **Dimensionality Reduction**: Projections preserve geometric structure
 - **Kernel Methods**: Distance-based similarity in feature space
 - **Neural Networks**: Each layer performs geometric transformation
-:::
+{% end %}
 
 ---
 
-# Axioms and Postulates {#sec-axioms}
+# Axioms and Postulates 
 
 > *"The laws of nature are but the mathematical thoughts of God."* — Euclid
 
@@ -100,11 +80,11 @@ The axioms tell you:
 - What properties are guaranteed
 - What you can assume without proof
 
-::: {.callout-tip}
+{% callout_tip() %}
 ## Visualization Exercise
 
 Close your eyes. Imagine two dots floating in space. Now imagine the shortest path between them. That path is unique—this is Postulate 1's intuitive content.
-:::
+{% end %}
 
 ## Precise Definitions
 
@@ -341,7 +321,7 @@ Slope of $\ell = 2$, so parallel line: $y - 4 = 2(x - 3)$, i.e., $y = 2x - 2$.
 
 ## Common Pitfalls
 
-::: {.callout-warning icon=false}
+{% callout_warning() %}
 ## Mistakes to Avoid
 
 **Pitfall 1: Assuming What Needs Proof**  
@@ -363,7 +343,7 @@ Slope of $\ell = 2$, so parallel line: $y - 4 = 2(x - 3)$, i.e., $y = 2x - 2$.
 **Pitfall 5: Confusing Axioms with Theorems**  
 ❌ *Wrong:* Trying to "prove" an axiom  
 ✅ *Right:* Axioms are accepted without proof; theorems are proved from axioms
-:::
+{% end %}
 
 ## Connections
 
@@ -426,7 +406,7 @@ theorem vertical_angles_equal (α β : Angle)
 
 ---
 
-# Distance and Angle Measurement {#sec-distance}
+# Distance and Angle Measurement 
 
 ## Motivation & Context
 
@@ -780,7 +760,7 @@ $$d = \sqrt{(2-2)^2 + (5-5)^2} = 0$$
 
 ## Common Pitfalls
 
-::: {.callout-warning icon=false}
+{% callout_warning() %}
 ## Mistakes to Avoid
 
 **Pitfall 1: Forgetting Square Root**  
@@ -802,7 +782,7 @@ $$d = \sqrt{(2-2)^2 + (5-5)^2} = 0$$
 **Pitfall 5: Dimension Mismatch**  
 ❌ Applying 2D formula to 3D points  
 ✅ Ensure formula matches dimension: $d = \sqrt{\sum_{i=1}^n (x_i - y_i)^2}$
-:::
+{% end %}
 
 ## Connections
 
@@ -863,7 +843,7 @@ theorem triangle_ineq (x y z : ℝ × ℝ) :
 
 ---
 
-# The Pythagorean Theorem {#sec-pythagoras}
+# The Pythagorean Theorem 
 
 ## Motivation & Context
 
@@ -909,7 +889,7 @@ Draw a right triangle with:
 
 Build squares on each side:
 
-![Pythagorean Visual Proof](euclidean_geometry_enhanced_files/visualizations/pythagorean_visual_proof.svg){width=80%}
+<img src="/mathematics/euclidean_geometry_enhanced_files/visualizations/pythagorean_visual_proof.svg" alt="Pythagorean Visual Proof" style="max-width: 80%">
 
 **Key Insight:** The area of the square on the hypotenuse equals the sum of areas on the two legs:
 
@@ -1218,7 +1198,7 @@ Since $\cos C < 0$, we have $C > 90°$ (obtuse).
 
 ## Common Pitfalls
 
-::: {.callout-warning icon=false}
+{% callout_warning() %}
 ## Mistakes to Avoid
 
 **Pitfall 1: Forgetting Which Side is Hypotenuse**  
@@ -1244,8 +1224,7 @@ Since $\cos C < 0$, we have $C > 90°$ (obtuse).
 **Pitfall 6: Rounding Too Early**  
 ❌ $\sqrt{50} \approx 7$, so use 7  
 ✅ Keep exact: $\sqrt{50} = 5\sqrt{2} \approx 7.071$
-
-:::
+{% end %}
 
 ## Connections
 
@@ -1323,24 +1302,24 @@ theorem distance_formula (p q : ℝ × ℝ) :
 
 ## Interactive Exploration
 
-::: {.callout-tip}
+{% callout_tip() %}
 ## Try It Yourself!
 
 Use the interactive visualization below to explore the Pythagorean theorem dynamically. Adjust the leg lengths and watch how the squares' areas relate:
 
-<iframe src="euclidean_geometry_enhanced_files/visualizations/pythagorean_interactive.html" width="100%" height="750px" style="border:2px solid #bdc3c7; border-radius:5px;"></iframe>
+<iframe src="/mathematics/euclidean_geometry_enhanced_files/visualizations/pythagorean_interactive.html" width="100%" height="750px" style="border:2px solid #bdc3c7; border-radius:5px;"></iframe>
 
 **Observations to make:**
 - The equation $a^2 + b^2 = c^2$ holds for all leg combinations
 - As you increase $a$ or $b$, the hypotenuse $c$ grows predictably
 - The visual proof becomes clear: areas on the legs sum to area on hypotenuse
-:::
+{% end %}
 
 ---
 
 ## Practice Problems
 
-::: {.callout-tip collapse="true"}
+{% callout_tip() %}
 ## Expand for Problems with Solutions
 
 ### Problem 1: Distance Calculation
@@ -1463,5 +1442,5 @@ $$= \sqrt{41}$$
 
 **Note:** This is NOT a Pythagorean triple (41 is not a perfect square).
 </details>
+{% end %}
 
-:::

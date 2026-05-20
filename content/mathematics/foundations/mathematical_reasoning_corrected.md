@@ -1,26 +1,11 @@
----
-title: "Mathematical Reasoning"
-subtitle: "Logic, Proof, and Set Theory"
-format:
-  html:
-    toc: true
-    toc-depth: 4
-    toc-location: left
-    number-sections: true
-    code-fold: show
-    theme: cosmo
-    html-math-method: katex
-  pdf:
-    toc: true
-    number-sections: true
-    colorlinks: true
-    geometry: margin=1in
-execute:
-  echo: true
-  warning: false
----
++++
+title = "Mathematical Reasoning (Corrected)"
+slug = "mathematical_reasoning_corrected"
+draft = true
+toc = true
++++
 
-# Introduction {.unnumbered}
+# Introduction
 
 This document builds foundations in logic, proof techniques, and set theory. These topics form the language and reasoning tools for all advanced mathematics.
 
@@ -54,11 +39,11 @@ Natural language is often ambiguous: "I saw the man with the telescope" could me
 
 ## Formal Definitions
 
-::: {.callout-note}
+{% callout_note() %}
 ## Definition: Proposition
 
 A **proposition** is a declarative statement with exactly one truth value: TRUE (T) or FALSE (F).
-:::
+{% end %}
 
 ### Logical Connectives
 
@@ -104,11 +89,11 @@ The only false case: $P$ true but $Q$ false.
 
 When $P$ is false, the implication is **vacuously true** regardless of $Q$. Think of it like a promise: "If you score 100% on the exam, you'll get an A." If you score 85%, was the promise broken? No—the condition wasn't met.
 
-::: {.callout-warning}
+{% callout_warning() %}
 A common error: from $P \to Q$ and observing $Q$ is true, concluding $P$ must be true. This is **affirming the consequent** and is invalid.
 
 Example: "If it rains, the ground is wet." Seeing wet ground doesn't prove it rained—could be sprinklers.
-:::
+{% end %}
 
 **Biconditional** ($P \leftrightarrow Q$):
 
@@ -214,9 +199,9 @@ $$
 
 ### Order Matters
 
-::: {.callout-important}
+{% callout_important() %}
 When quantifiers have different types ($\forall$ vs $\exists$), **order is crucial**.
-:::
+{% end %}
 
 Statement A: $\forall x \, \exists y \, (x < y)$
 
@@ -348,7 +333,7 @@ Different proof techniques are different navigation strategies:
 
 ## Direct Proof
 
-::: {.callout-note}
+{% callout_note() %}
 ## Definition: Direct Proof
 
 To prove $P \to Q$:
@@ -356,7 +341,7 @@ To prove $P \to Q$:
 1. Assume $P$ (hypothesis)
 2. Through logical steps, derive $Q$ (conclusion)
 3. Each step must be justified
-:::
+{% end %}
 
 **Structure:**
 
@@ -391,11 +376,11 @@ By definition, $n^2$ is even. ∎
 
 ## Proof by Contrapositive
 
-::: {.callout-note}
+{% callout_note() %}
 ## Definition: Proof by Contrapositive
 
 To prove $P \to Q$, instead prove the equivalent statement $\neg Q \to \neg P$.
-:::
+{% end %}
 
 Use this when negations are easier to work with than the originals.
 
@@ -425,7 +410,7 @@ By definition, $n^2$ is odd. ∎
 
 ## Proof by Contradiction
 
-::: {.callout-note}
+{% callout_note() %}
 ## Definition: Proof by Contradiction
 
 To prove statement $S$:
@@ -433,7 +418,7 @@ To prove statement $S$:
 1. Assume $\neg S$ (opposite of what you want)
 2. Derive a logical contradiction ($R \land \neg R$)
 3. Conclude $S$ must be true
-:::
+{% end %}
 
 Use this for proving negatives, irrationality, infinitude, or non-existence.
 
@@ -487,7 +472,7 @@ Therefore $\sqrt{2}$ is irrational. ∎
 
 ## Proof by Cases
 
-::: {.callout-note}
+{% callout_note() %}
 ## Definition: Proof by Cases
 
 To prove statement $S$:
@@ -495,7 +480,7 @@ To prove statement $S$:
 1. Partition all possibilities into exhaustive cases
 2. Prove $S$ holds in each case separately
 3. Conclude $S$ holds universally
-:::
+{% end %}
 
 Use when a natural partition exists (even/odd, positive/negative/zero).
 
@@ -606,23 +591,23 @@ Visual: A set is like a basket. An element is like an apple in the basket. The s
 
 ## Formal Definitions
 
-::: {.callout-note}
+{% callout_note() %}
 ## Definition: Set
 
 A **set** is an unordered collection of distinct objects called **elements** or **members**.
-:::
+{% end %}
 
 **Notation:**
 - $x \in S$ means "$x$ is an element of $S$"
 - $x \notin S$ means "$x$ is not an element of $S$"
 
-::: {.callout-warning}
+{% callout_warning() %}
 **Critical distinction:** 3 is a number (element). $\{3\}$ is a set containing that number.
 
 - $3 \in \{1, 2, 3\}$ ✓ (3 is listed)
 - $\{3\} \in \{1, 2, 3\}$ ✗ ($\{3\}$ is not listed, only 3 is)
 - $\{3\} \subseteq \{1, 2, 3\}$ ✓ (subset relationship)
-:::
+{% end %}
 
 ### Specifying Sets
 
@@ -646,12 +631,12 @@ General form: $\{$expression $\mid$ condition$\}$
 
 **Empty set:** $\emptyset$ or $\{\}$
 
-::: {.callout-important}
+{% callout_important() %}
 - $|\emptyset| = 0$
 - $\emptyset \subseteq S$ for any set $S$ (vacuously true)
 - $\emptyset \in S$ only if explicitly listed as an element
 - $\emptyset \neq \{\emptyset\}$
-:::
+{% end %}
 
 Empty box versus box containing an empty box.
 
@@ -685,13 +670,13 @@ $$
 
 ## Subsets
 
-::: {.callout-note}
+{% callout_note() %}
 ## Definition: Subset
 
 $A \subseteq B$ means every element of $A$ is also in $B$.
 
 **Formally:** $A \subseteq B \Leftrightarrow (\forall x \in A, x \in B)$
-:::
+{% end %}
 
 **Proper subset:** $A \subset B$ means $A \subseteq B$ and $A \neq B$
 
@@ -702,11 +687,11 @@ $A \subseteq B$ means every element of $A$ is also in $B$.
 
 The last property gives us the standard way to prove set equality:
 
-::: {.callout-tip}
+{% callout_tip() %}
 To prove $A = B$:
 1. Show $A \subseteq B$
 2. Show $B \subseteq A$
-:::
+{% end %}
 
 ## Set Operations
 
@@ -806,7 +791,7 @@ $$
 
 ## Cartesian Products
 
-::: {.callout-note}
+{% callout_note() %}
 ## Definition: Cartesian Product
 
 $$
@@ -814,7 +799,7 @@ A \times B = \{(a, b) \mid a \in A \text{ and } b \in B\}
 $$
 
 The set of all **ordered pairs** with first element from $A$, second from $B$.
-:::
+{% end %}
 
 **Important:** $(a, b) \neq (b, a)$ unless $a = b$ (order matters)
 
@@ -836,7 +821,7 @@ The plane. Similarly $\mathbb{R}^3$ is 3D space, $\mathbb{R}^n$ is $n$-dimension
 
 ## Power Sets
 
-::: {.callout-note}
+{% callout_note() %}
 ## Definition: Power Set
 
 $$
@@ -844,13 +829,13 @@ $$
 $$
 
 The set of **all subsets** of $A$.
-:::
+{% end %}
 
 Elements of $\mathcal{P}(A)$ are sets themselves.
 
-::: {.callout-important}
+{% callout_important() %}
 If $|A| = n$, then $|\mathcal{P}(A)| = 2^n$
-:::
+{% end %}
 
 **Why $2^n$?** For each element: include it in the subset or don't (2 choices). With $n$ elements: $2 \times 2 \times \cdots \times 2 = 2^n$ total subsets.
 
@@ -1001,7 +986,7 @@ $\mathcal{P}(\{a, b\})$ includes both $\emptyset$ and $\{a, b\}$ itself.
 
 ## Relations
 
-::: {.callout-note}
+{% callout_note() %}
 ## Definition: Relation
 
 A **relation** $R$ from $A$ to $B$ is a subset of $A \times B$.
@@ -1009,7 +994,7 @@ A **relation** $R$ from $A$ to $B$ is a subset of $A \times B$.
 $$
 R \subseteq A \times B
 $$
-:::
+{% end %}
 
 If $(a, b) \in R$, we write $a \, R \, b$. Meaning that the element $a$ is related to the element $b$ by the relation $R$.
 
@@ -1043,18 +1028,18 @@ Chaining works.
 
 **Antisymmetric:** $\forall a, b \in A$, if $(a, b) \in R$ and $(b, a) \in R$, then $a = b$
 
-In antisymmetrical relation sets, bidirection only exists when the elements are equal. In other words, if $a$ is related to $b$, then $b$ is not related to $a$ unless $a = b$.
+In antisymmetric relation sets, bidirection only exists when the elements are equal. In other words, if $a$ is related to $b$, then $b$ is not related to $a$ unless $a = b$ in antisymmetri relation.
 
 ### Equivalence Relations
 
-::: {.callout-note}
+{% callout_note() %}
 ## Definition: Equivalence Relation
 
 A relation is an **equivalence relation** if it is:
 1. Reflexive
 2. Symmetric
 3. Transitive
-:::
+{% end %}
 
 **Examples:**
 - Equality ($=$)
@@ -1063,7 +1048,7 @@ A relation is an **equivalence relation** if it is:
 
 ## Functions
 
-::: {.callout-note}
+{% callout_note() %}
 ## Definition: Function
 
 A **function** $f: A \to B$ assigns to each element of $A$ exactly one element of $B$.
@@ -1072,7 +1057,7 @@ A **function** $f: A \to B$ assigns to each element of $A$ exactly one element o
 - **Domain:** $A$
 - **Codomain:** $B$
 - **Range:** $\{f(a) \mid a \in A\} \subseteq B$
-:::
+{% end %}
 
 Each input maps to **exactly one** output.
 
@@ -1102,9 +1087,9 @@ Equivalently: Range = Codomain
 
 Both injective and surjective. Perfect one-to-one pairing.
 
-::: {.callout-important}
+{% callout_important() %}
 Only bijective functions have inverses.
-:::
+{% end %}
 
 ## Examples
 
@@ -1235,23 +1220,23 @@ His shocking answer: yes, some infinities are strictly larger than others.
 
 For finite sets, size means counting. For infinite sets, we can't "count to infinity," but we can establish pairings.
 
-::: {.callout-note}
+{% callout_note() %}
 ## Definition: Same Cardinality
 
 Sets $A$ and $B$ have the **same cardinality** (written $|A| = |B|$) if there exists a bijection $f: A \to B$.
-:::
+{% end %}
 
 Think of it as a perfect pairing—each element of $A$ pairs with exactly one element of $B$, and vice versa.
 
 ## Countably Infinite Sets
 
-::: {.callout-note}
+{% callout_note() %}
 ## Definition: Countably Infinite
 
 A set is **countably infinite** if $|A| = |\mathbb{N}|$.
 
 Equivalently: elements can be listed as $a_0, a_1, a_2, a_3, \ldots$
-:::
+{% end %}
 
 ### Example 1: Even Natural Numbers
 
@@ -1319,13 +1304,13 @@ Rationals are countable despite being "everywhere" (dense in the reals).
 
 ## Uncountably Infinite Sets
 
-::: {.callout-note}
+{% callout_note() %}
 ## Definition: Uncountable
 
 A set is **uncountable** if it is infinite but NOT countably infinite.
 
 Cannot be put in bijection with $\mathbb{N}$.
-:::
+{% end %}
 
 ### Cantor's Diagonal Argument
 
@@ -1455,784 +1440,9 @@ Multiple distinct infinite cardinalities exist.
 
 **Related:** Cardinal arithmetic, ordinal numbers, continuum hypothesis
 
----
+# Mathematical Induction 
 
-# Mathematical Induction
-
-## Historical Background
-
-The principle of mathematical induction has roots in ancient mathematics, but its modern formalization emerged in the 16th-17th centuries. Blaise Pascal (1653) used a form of induction in his work on binomial coefficients. Francesco Maurolico (1575) proved results about sums using inductive reasoning.
-
-The term "mathematical induction" was coined by Augustus De Morgan in the 1830s. Giuseppe Peano (1889) incorporated induction as an axiom in his axiomatization of natural numbers—the fifth Peano axiom explicitly states the principle of mathematical induction.
-
-Why was formalization necessary? Early mathematicians observed patterns (like $1 + 2 + \cdots + n = \frac{n(n+1)}{2}$) and verified them for many cases. But mathematical truth requires proof for ALL cases, infinitely many of them. Induction provides a rigorous method to prove statements about all natural numbers without checking each one individually.
-
-This wasn't about applications—it was about establishing a logically sound foundation for reasoning about infinite sequences of statements.
-
-## Understanding Mathematical Induction
-
-Imagine an infinite line of dominoes. You want to prove they all fall down. How?
-
-**Two steps:**
-1. **Knock down the first domino** (base case)
-2. **Ensure each domino knocks down the next** (inductive step)
-
-If both conditions hold, all dominoes must fall.
-
-Mathematical induction works the same way for statements about natural numbers:
-- Prove the statement for $n = 1$ (base case)
-- Prove: "if true for $n = k$, then true for $n = k+1$" (inductive step)
-
-Together, these guarantee the statement holds for all $n \geq 1$.
-
-**Physical analogy:** Think of climbing an infinite ladder. You can reach any rung if:
-1. You can reach the first rung (base case)
-2. From any rung you can reach, you can reach the next one (inductive step)
-
-**Why it works:** Suppose the statement fails for some number. Let $m$ be the smallest number where it fails. But we proved it for $n = 1$, so $m > 1$. Since $m$ is smallest, it works for $m - 1$. But the inductive step says if it works for $m - 1$, it works for $m$. Contradiction! Therefore, no such $m$ exists.
-
-## Formal Definition
-
-::: {.callout-note}
-## Principle of Mathematical Induction
-
-Let $P(n)$ be a statement about natural number $n$. If:
-
-1. **Base case:** $P(1)$ is true
-2. **Inductive step:** For all $k \geq 1$, if $P(k)$ is true, then $P(k+1)$ is true
-
-Then $P(n)$ is true for all natural numbers $n \geq 1$.
-:::
-
-**Components unpacked:**
-
-- $P(n)$: A predicate (statement depending on $n$)
-- **Base case**: Verify $P(1)$ directly
-- **Inductive hypothesis**: Assume $P(k)$ is true for arbitrary $k$
-- **Inductive step**: Using the hypothesis, prove $P(k+1)$
-- **Conclusion**: By induction, $P(n)$ holds for all $n \geq 1$
-
-**Variants:**
-- Can start at any $n_0$ (not just 1): prove $P(n_0)$ and $P(k) \Rightarrow P(k+1)$
-- **Strong induction**: Assume $P(1), P(2), \ldots, P(k)$ all true, prove $P(k+1)$
-- **Backward induction**: Sometimes prove $P(k+1) \Rightarrow P(k)$ with a different base
-
-## Why This Definition
-
-**Why two separate steps?**
-
-The base case alone isn't enough—verifying $P(1), P(2), P(3), \ldots$ for finitely many values proves nothing about ALL values.
-
-The inductive step alone isn't enough either. Consider the statement $P(n)$: "$n = n + 1$". The inductive step is vacuously true (if $k = k + 1$, then $k + 1 = k + 2$), but the statement is false for all $n$.
-
-**Why assume what we're trying to prove?**
-
-This confuses many students. We're NOT proving $P(k)$—we're proving the implication: $P(k) \Rightarrow P(k+1)$. 
-
-Think of it as proving: "IF the statement works for some number, THEN it works for the next number." We're allowed to assume the hypothesis of an implication to prove the conclusion.
-
-**Why start at 1 (or any specific base)?**
-
-Because the chain must start somewhere. The inductive step links $k$ to $k+1$, but without an anchor (base case), we can't conclude anything. It's like having dominoes arranged but never knocking the first one over.
-
-**What makes this different from assuming what we want to prove?**
-
-We prove:
-1. $P(1)$ (established independently)
-2. $P(1) \Rightarrow P(2)$ (from inductive step with $k=1$)
-3. Therefore $P(2)$ (modus ponens)
-4. $P(2) \Rightarrow P(3)$ (from inductive step with $k=2$)
-5. Therefore $P(3)$ (modus ponens)
-6. ...continues infinitely
-
-Each specific case is proven, though we can't write them all. The induction principle formalizes this infinite process.
-
-## Key Properties
-
-### Property 1: Well-Ordering Principle (Equivalent)
-
-Mathematical induction is equivalent to the well-ordering principle: every nonempty subset of natural numbers has a smallest element.
-
-**Why equivalent?**
-
-Induction $\Rightarrow$ Well-ordering: Suppose $S \subseteq \mathbb{N}$ is nonempty with no minimum. Let $P(n)$ = "$n \notin S$". Then $P(1)$ holds (otherwise 1 would be minimum). If $P(k)$ holds, then $P(k+1)$ must hold (otherwise $k+1$ would be minimum). By induction, $P(n)$ holds for all $n$, so $S$ is empty. Contradiction.
-
-Well-ordering $\Rightarrow$ Induction: Suppose $P(1)$ and $P(k) \Rightarrow P(k+1)$, but $P(n)$ fails for some $n$. Let $S$ = {$n : P(n)$ is false}. By well-ordering, $S$ has minimum element $m$. We know $m \neq 1$ (base case). So $m > 1$ and $m - 1 \notin S$, meaning $P(m-1)$ is true. By inductive step, $P(m)$ is true, contradicting $m \in S$.
-
-This equivalence means you can use either principle depending on which is more convenient for a given problem.
-
-### Property 2: Strong Induction
-
-::: {.callout-note}
-## Strong Induction Principle
-
-If:
-1. $P(1)$ is true (base case)
-2. For all $k \geq 1$: if $P(1), P(2), \ldots, P(k)$ are all true, then $P(k+1)$ is true
-
-Then $P(n)$ is true for all $n \geq 1$.
-:::
-
-**Why is this equivalent to regular induction?**
-
-Strong induction appears stronger (assume more), but they're equivalent in power. 
-
-Proof of equivalence: Let $Q(n)$ = "$P(1) \land P(2) \land \cdots \land P(n)$". Then strong induction on $P$ is equivalent to regular induction on $Q$.
-
-**When to use strong induction:**
-
-When proving $P(k+1)$ requires knowing $P$ holds for multiple previous values, not just $P(k)$. Example: Fibonacci recurrence, fundamental theorem of arithmetic.
-
-### Property 3: Structural Induction
-
-Beyond numbers, induction applies to any well-founded structure:
-- Trees (induction on tree depth or node count)
-- Strings (induction on length)
-- Formulas (induction on complexity)
-- Recursively defined objects
-
-The principle: prove for base structures, then prove the property is preserved under construction operations.
-
-## Main Theorems
-
-::: {.callout-important}
-## Theorem: Equivalence of Induction and Well-Ordering
-
-The following are equivalent over the natural numbers:
-1. Principle of Mathematical Induction
-2. Well-Ordering Principle
-3. Strong Induction Principle
-:::
-
-**Proof sketch:** Already shown in Key Properties above. The key insight is that all three capture the fundamental structure of $\mathbb{N}$ as built from 1 by repeatedly adding 1.
-
-::: {.callout-important}
-## Theorem: Induction as Proof Technique
-
-For any predicate $P(n)$ on natural numbers, if the base case and inductive step are proven, then $\forall n \geq n_0, P(n)$ is established with certainty.
-:::
-
-This formalizes that induction is a valid proof method, not just heuristic reasoning.
-
-## Computational Methods
-
-### Algorithm: Writing an Induction Proof
-
-**Template:**
-
-```
-Theorem: [State what you're proving: P(n) for all n ≥ n₀]
-
-Proof by induction:
-
-Base case (n = n₀):
-  [Verify P(n₀) directly by computation/argument]
-  [Show result: "Therefore P(n₀) holds."]
-
-Inductive step:
-  Inductive hypothesis: Assume P(k) is true for arbitrary k ≥ n₀.
-  [State explicitly what P(k) says with k substituted]
-  
-  Goal: Prove P(k+1)
-  [State explicitly what P(k+1) says]
-  
-  [Proof of P(k+1) using P(k)]
-  [Chain of implications/equalities]
-  [Point out where you used inductive hypothesis]
-  
-  Therefore P(k+1) holds.
-
-Conclusion:
-  By the principle of mathematical induction, P(n) holds for all n ≥ n₀. ∎
-```
-
-### Example: Sum Formula
-
-**Prove:** For all $n \geq 1$, $\sum_{i=1}^n i = \frac{n(n+1)}{2}$
-
-**Proof:**
-
-**Base case ($n = 1$):**
-$$
-\sum_{i=1}^1 i = 1 \quad \text{and} \quad \frac{1(1+1)}{2} = \frac{2}{2} = 1
-$$
-Therefore $P(1)$ holds.
-
-**Inductive step:**
-
-*Inductive hypothesis:* Assume for some $k \geq 1$:
-$$
-\sum_{i=1}^k i = \frac{k(k+1)}{2}
-$$
-
-*Goal:* Prove:
-$$
-\sum_{i=1}^{k+1} i = \frac{(k+1)(k+2)}{2}
-$$
-
-*Proof:*
-
-\begin{align}
-\sum_{i=1}^{k+1} i &= \left(\sum_{i=1}^k i\right) + (k+1) \\
-&= \frac{k(k+1)}{2} + (k+1) \quad \text{[by inductive hypothesis]} \\
-&= \frac{k(k+1)}{2} + \frac{2(k+1)}{2} \\
-&= \frac{k(k+1) + 2(k+1)}{2} \\
-&= \frac{(k+1)(k+2)}{2}
-\end{align}
-
-Therefore $P(k+1)$ holds.
-
-**Conclusion:** By mathematical induction, the formula holds for all $n \geq 1$. ∎
-
-## Examples and Worked Problems
-
-### Worked Example 1: Proving a Summation Formula
-**[Heavily Scaffolded]**
-
-**Problem:** Prove that for all $n \geq 1$: $\sum_{i=1}^n (2i - 1) = n^2$
-
-**Complete Solution:**
-
-This is the sum of the first $n$ odd numbers. We'll prove it equals $n^2$.
-
-**Proof by induction:**
-
-**Base case ($n = 1$):**
-
-Left side: $\sum_{i=1}^1 (2i - 1) = 2(1) - 1 = 1$
-
-Right side: $1^2 = 1$
-
-Since $1 = 1$, the base case holds. ✓
-
-**Inductive step:**
-
-*Inductive hypothesis:* Assume that for some $k \geq 1$:
-$$
-\sum_{i=1}^k (2i - 1) = k^2
-$$
-
-This is our assumption—we're assuming the formula works for $n = k$.
-
-*Goal:* We need to prove it works for $n = k + 1$:
-$$
-\sum_{i=1}^{k+1} (2i - 1) = (k+1)^2
-$$
-
-*Proof:* Starting with the left side of what we want to prove:
-\begin{align}
-\sum_{i=1}^{k+1} (2i - 1) &= \left[\sum_{i=1}^k (2i - 1)\right] + (2(k+1) - 1) \\
-\end{align}
-
-We separated out the last term $(i = k+1)$ from the sum. Now we can apply our inductive hypothesis to the first part:
-
-\begin{align}
-&= k^2 + (2k + 2 - 1) \quad \text{[using inductive hypothesis]} \\
-&= k^2 + 2k + 1 \\
-&= (k + 1)^2 \quad \text{[factor as perfect square]}
-\end{align}
-
-This is exactly what we needed to prove! Therefore $P(k+1)$ holds.
-
-**Conclusion:** By the principle of mathematical induction, the formula $\sum_{i=1}^n (2i - 1) = n^2$ holds for all natural numbers $n \geq 1$. ∎
-
-**Key insight:** The sum of the first $n$ odd numbers is always a perfect square. This is a beautiful geometric fact—you can visualize this as an $n \times n$ square built from L-shaped odd numbers.
-
-### Worked Example 2: Divisibility
-**[Heavily Scaffolded]**
-
-**Problem:** Prove that for all $n \geq 1$, $7^n - 1$ is divisible by 6.
-
-**Complete Solution:**
-
-Let $P(n)$ be the statement: "$7^n - 1$ is divisible by 6", or equivalently, "$6 | (7^n - 1)$".
-
-**Base case ($n = 1$):**
-$$
-7^1 - 1 = 7 - 1 = 6 = 6 \cdot 1
-$$
-
-Since $6$ divides $6$, the base case holds. ✓
-
-**Inductive step:**
-
-*Inductive hypothesis:* Assume for some $k \geq 1$ that $6 | (7^k - 1)$.
-
-This means: $7^k - 1 = 6m$ for some integer $m$, or equivalently, $7^k = 6m + 1$.
-
-*Goal:* Prove $6 | (7^{k+1} - 1)$.
-
-*Proof:* We need to show $7^{k+1} - 1$ is divisible by 6.
-
-\begin{align}
-7^{k+1} - 1 &= 7 \cdot 7^k - 1 \\
-&= 7(6m + 1) - 1 \quad \text{[substitute from inductive hypothesis]} \\
-&= 42m + 7 - 1 \\
-&= 42m + 6 \\
-&= 6(7m + 1)
-\end{align}
-
-Since $7m + 1$ is an integer, we've expressed $7^{k+1} - 1$ as 6 times an integer. Therefore $6 | (7^{k+1} - 1)$.
-
-**Conclusion:** By mathematical induction, $7^n - 1$ is divisible by 6 for all $n \geq 1$. ∎
-
-**Why this works:** Each power of 7 exceeds the previous by a factor of 7. Since $7 \equiv 1 \pmod{6}$, we have $7^n \equiv 1^n \equiv 1 \pmod{6}$, so $7^n - 1 \equiv 0 \pmod{6}$.
-
-### Guided Problem 3: Inequality
-**[Moderately Scaffolded]**
-
-**Problem:** Prove that for all $n \geq 5$, $2^n > n^2$.
-
-**Setup Provided:**
-
-This is a common inequality. Notice it's false for $n = 1, 2, 3, 4$ (check: $2^4 = 16 \not> 16$), so our base case must start at $n = 5$.
-
-**Base case ($n = 5$):**
-$$
-2^5 = 32 \quad \text{and} \quad 5^2 = 25
-$$
-
-Since $32 > 25$, the base case holds for $n = 5$. ✓
-
-**Your Task:**
-
-Complete the inductive step. Assume $2^k > k^2$ for some $k \geq 5$. Prove $2^{k+1} > (k+1)^2$.
-
-**Hint:** Start with $2^{k+1} = 2 \cdot 2^k$ and use the inductive hypothesis. You'll need to show that $2k^2 > (k+1)^2$ for $k \geq 5$.
-
-**Guidance for the algebraic step:**
-
-Expand $(k+1)^2 = k^2 + 2k + 1$. You want to show $2k^2 > k^2 + 2k + 1$, which simplifies to $k^2 > 2k + 1$, or $k^2 - 2k - 1 > 0$. For $k \geq 5$, verify this is true.
-
-[Try completing this yourself before checking the solution in the Solutions section]
-
-### Practice Problem 4: Geometric Sum
-**[Lightly Scaffolded]**
-
-**Problem:** Prove that for all $n \geq 0$ and $r \neq 1$:
-$$
-\sum_{i=0}^n r^i = \frac{r^{n+1} - 1}{r - 1}
-$$
-
-[This is a standard formula you should prove from scratch using induction. Remember to handle the base case, state your inductive hypothesis clearly, and manipulate the algebra carefully.]
-
-### Challenge Problem 5: Fibonacci Inequality
-**[Independent]**
-
-**Problem:** Let $F_n$ be the $n$-th Fibonacci number defined by:
-- $F_1 = 1, F_2 = 1$
-- $F_n = F_{n-1} + F_{n-2}$ for $n \geq 3$
-
-Prove that for all $n \geq 1$:
-$$
-F_n < 2^n
-$$
-
-**Hint:** This will require strong induction since the Fibonacci recurrence depends on two previous terms.
-
-[This is a novel application requiring you to choose the right induction variant and handle the recursive definition carefully.]
-
-## Frequent Mistakes and Debugging
-
-### Error Pattern 1: Not Stating the Inductive Hypothesis
-
-**What goes wrong:**
-Students jump into the inductive step without explicitly writing what they're assuming.
-
-**Why it happens:**
-Rushing through the proof structure, not understanding that the assumption is the key tool.
-
-**How to catch it:**
-Before proving $P(k+1)$, ask yourself: "What exactly am I allowed to assume?"
-
-**How to fix it:**
-Always write: "Inductive hypothesis: Assume $P(k)$ is true, i.e., [write out $P(k)$ with $k$ substituted]."
-
-**Example:**
-
-❌ **Wrong:**
-```
-Inductive step: We need to prove the formula for n = k+1.
-[proceeds to manipulate]
-```
-
-✅ **Correct:**
-```
-Inductive step:
-Inductive hypothesis: Assume Σᵢ₌₁ᵏ i = k(k+1)/2
-
-Goal: Prove Σᵢ₌₁ᵏ⁺¹ i = (k+1)(k+2)/2
-```
-
-### Error Pattern 2: Proving the Base Case for n = 0 When Statement is n ≥ 1
-
-**What goes wrong:**
-Verifying $P(0)$ when the theorem statement says "for all $n \geq 1$".
-
-**Why it happens:**
-Confusion about where to start; 0 feels like the "first" natural number.
-
-**How to catch it:**
-Read the problem statement carefully. What is the domain of $n$?
-
-**How to fix it:**
-Match your base case to the problem's starting value. If it says $n \geq 1$, verify $P(1)$. If $n \geq 5$, verify $P(5)$.
-
-**Example:**
-
-Problem: "For all $n \geq 1$, prove $n! \geq 2^{n-1}$"
-
-**Wrong:** Base case $n = 0$: $0! = 1$ and $2^{-1} = 0.5$...
-
-**Correct:** Base case $n = 1$: $1! = 1$ and $2^0 = 1$, so $1 \geq 1$. ✓
-
-### Error Pattern 3: Circular Reasoning (Using P(k+1) to Prove P(k+1))
-
-**What goes wrong:**
-In the inductive step, accidentally assuming what you're trying to prove.
-
-**Why it happens:**
-Losing track of what's assumed vs. what's to be proven.
-
-**How to catch it:**
-After completing the proof, check: did I use the statement $P(k+1)$ anywhere? If yes, it's circular.
-
-**How to fix it:**
-Clearly separate:
-- What you HAVE: $P(k)$ (inductive hypothesis)
-- What you WANT: $P(k+1)$ (goal)
-
-Only use $P(k)$ in your proof.
-
-**Example:**
-
-**Wrong:**
-```
-Want to prove: Σᵢ₌₁ᵏ⁺¹ i = (k+1)(k+2)/2
-
-Since this is true [assuming it], we have proven it.
-```
-
-**Correct:**
-```
-Σᵢ₌₁ᵏ⁺¹ i = [Σᵢ₌₁ᵏ i] + (k+1)
-         = k(k+1)/2 + (k+1)  [using P(k)]
-         = (k+1)(k+2)/2
-```
-
-### Error Pattern 4: Incomplete Base Case (Multiple Base Cases Needed)
-
-**What goes wrong:**
-For strong induction or two-term recurrences, verifying only one base case when two are needed.
-
-**Why it happens:**
-Not recognizing that strong induction may require multiple starting values.
-
-**How to catch it:**
-If your recurrence is $P(k+1)$ depends on both $P(k)$ and $P(k-1)$, you need base cases for two consecutive values.
-
-**How to fix it:**
-Verify all necessary base cases. For Fibonacci-style recurrences, verify $n = 1$ and $n = 2$.
-
-**Example (Fibonacci):**
-
-**Wrong:**
-```
-Base case (n = 1): F₁ = 1 < 2¹ = 2 ✓
-Inductive step: Assume Fₖ < 2ᵏ...
-```
-
-**Correct:**
-```
-Base case (n = 1): F₁ = 1 < 2¹ = 2 ✓
-Base case (n = 2): F₂ = 1 < 2² = 4 ✓
-Inductive step: Assume Fₖ₋₁ < 2ᵏ⁻¹ and Fₖ < 2ᵏ for k ≥ 2...
-```
-
-### Error Pattern 5: Algebra Errors in Inductive Step
-
-**What goes wrong:**
-Correct proof structure but computational mistakes in manipulating expressions.
-
-**Why it happens:**
-Working too quickly, not checking intermediate steps.
-
-**How to catch it:**
-Verify each algebraic manipulation. Substitute specific values (like $k = 5$) to check.
-
-**How to fix it:**
-- Show all intermediate steps
-- Factor carefully
-- Check: does LHS = RHS after substitution?
-- For inequalities, preserve inequality direction
-
-### Debugging Checklist for Induction Proofs
-
-Before finalizing:
-
-- [ ] Base case verified for correct starting value ($n_0$ from problem statement)
-- [ ] Inductive hypothesis explicitly stated with $k$ substituted into $P(n)$
-- [ ] Goal ($P(k+1)$) clearly stated before proving it
-- [ ] Inductive hypothesis actually USED in the proof (point out where)
-- [ ] No circular reasoning (didn't assume $P(k+1)$ to prove $P(k+1)$)
-- [ ] All algebra steps are correct (verified by checking)
-- [ ] Conclusion statement: "By mathematical induction, $P(n)$ holds for all $n \geq n_0$"
-- [ ] For strong induction: all necessary base cases verified
-- [ ] For inequalities: inequality directions preserved throughout
-
-## Mathematical Connections
-
-### Prerequisites
-
-To understand mathematical induction, you need:
-
-**Essential:**
-- **Natural numbers** (concept of $\mathbb{N} = \{1, 2, 3, \ldots\}$)
-  - Why: Induction works over $\mathbb{N}$
-  - Specific use: Understanding successor function ($n \to n+1$)
-
-- **Logical implications** ($P \Rightarrow Q$)
-  - Why: Inductive step is proving an implication
-  - Specific use: Understanding "if $P(k)$ then $P(k+1)$"
-
-- **Predicates and quantifiers**
-  - Why: $P(n)$ is a predicate, we prove $\forall n, P(n)$
-  - Specific use: Substituting values into $P$
-
-**Helpful:**
-- Basic algebra (for manipulating expressions in proofs)
-- Summation notation ($\sum$)
-- Understanding of what constitutes a proof
-
-### What This Enables
-
-Mathematical induction unlocks:
-
-**Immediate consequences:**
-- Proving formulas for sums: $\sum_{i=1}^n f(i)$
-- Proving divisibility results for all $n$
-- Proving inequalities for all $n$ (e.g., $2^n > n^2$ for $n \geq 5$)
-
-**Subsequent topics:**
-- **Recursive algorithms**: Proving correctness (algorithm works for input size $n$)
-- **Recurrence relations**: Solving and proving solutions (Fibonacci, divide-and-conquer)
-- **Graph theory**: Proving properties about trees (nodes $n$ $\Rightarrow$ edges $n-1$)
-- **Combinatorics**: Proving identities (binomial theorem, Pascal's triangle)
-- **Number theory**: Proving divisibility and congruence results
-- **Analysis**: Proving convergence of sequences defined recursively
-
-**Mathematical structures enabled:**
-- Well-founded recursion and induction on arbitrary well-founded sets
-- Structural induction (trees, formulas, programs)
-- Transfinite induction (ordinals beyond $\mathbb{N}$)
-
-### Related Concepts
-
-**Well-Ordering Principle:**
-- Relationship: Equivalent to mathematical induction over $\mathbb{N}$
-- Difference: WOP says every nonempty subset has a minimum; induction is proof technique
-- When to use which: WOP useful for proof by contradiction; induction for direct proofs
-
-**Strong Induction:**
-- Relationship: Equivalent in power to regular induction
-- Difference: Can assume $P(1), \ldots, P(k)$ all true instead of just $P(k)$
-- When to use: When $P(k+1)$ depends on multiple previous cases
-
-**Complete Induction:**
-- Another name for strong induction
-
-**Structural Induction:**
-- Generalization: Induction on recursively defined structures (not just numbers)
-- Examples: Trees, lists, formulas, programs
-- Same principle: prove base cases, prove inductive step preserves property
-
-**Recursion:**
-- Connection: Induction proves properties of recursive definitions
-- Recursion defines objects; induction proves things about them
-- Example: Fibonacci sequence (recursive def) + induction (proves properties)
-
-### Synthesis: The Bigger Mathematical Picture
-
-**Induction's foundational role:**
-
-Mathematical induction is the bridge between finite and infinite. It allows us to make statements about infinitely many objects (all natural numbers) using finite reasoning (base case + one implication).
-
-**Across mathematical domains:**
-
-*Discrete mathematics:*
-- Proves combinatorial identities
-- Central to algorithm analysis
-- Foundation for discrete structures
-
-*Analysis:*
-- Sequence convergence proofs
-- Series convergence (ratio test involves inductive reasoning)
-- Defining real numbers from rationals
-
-*Algebra:*
-- Proving properties of algebraic structures
-- Polynomial division algorithm
-- Fundamental theorem of arithmetic (uses strong induction)
-
-*Computer Science:*
-- Loop invariants (induction on iteration count)
-- Proving program correctness
-- Complexity analysis (Master theorem, recurrences)
-
-**Generalization hierarchy:**
-
-1. $\mathbb{N}$: Mathematical induction (finite ordinals)
-2. Structural induction: Recursively defined objects
-3. Well-founded induction: Any well-founded partial order
-4. Transfinite induction: Infinite ordinals $\omega, \omega + 1, \ldots$
-
-**Unifying principle:**
-
-"Building from base cases through construction rules"
-
-In numbers: Start with 1, build using $+1$
-In logic: Start with axioms, build using inference rules  
-In sets: Start with $\emptyset$, build using operations
-In programs: Start with base cases, build using recursive calls
-
-The pattern repeats throughout mathematics: define a minimal base, define construction operations, prove properties by induction on the construction.
-
-**Why induction is indispensable:**
-
-Without induction, we cannot rigorously prove statements about all natural numbers. We'd be limited to checking finitely many cases, leaving infinitely many unverified. Induction completes the logical foundation for reasoning about discrete infinite objects.
-
-## Exploring Further
-
-### Generate Your Own Examples
-
-**1. Create induction proofs for new summation formulas:**
-
-Try proving:
-- $\sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}$
-- $\sum_{i=1}^n i^3 = \left(\frac{n(n+1)}{2}\right)^2$
-- $\sum_{i=1}^n \frac{1}{i(i+1)} = \frac{n}{n+1}$
-
-**Verification:** After creating your proof, check that the base case and algebra are correct by substituting $n = 1, 2, 3$ into both sides.
-
-**2. Design divisibility problems:**
-
-Create statements like:
-- For all $n \geq 1$, $5^n - 1$ is divisible by ___? (find what works)
-- For all $n \geq 1$, $n^3 - n$ is divisible by ___?
-
-**Guidance:** Pick a base (like $a^n$) and compute $a^1 - 1, a^2 - 1, a^3 - 1$. Find the GCD—that's what divides $a^n - 1$ for all $n$.
-
-**3. Construct inequality chains:**
-
-Create problems like:
-- Find the smallest $n_0$ such that $n! > 3^n$ for all $n \geq n_0$
-- Prove $n^2 < 2^n$ for $n \geq 5$ (test variations)
-
-### Create Your Own Problems
-
-**Problem creation framework:**
-
-**Modify existing:**
-- Original: Prove $\sum_{i=1}^n i = \frac{n(n+1)}{2}$
-- Your variation: Change to $\sum_{i=1}^n (3i - 2) = \frac{n(3n-1)}{2}$ [verify first!]
-
-**Combine concepts:**
-- Induction + modular arithmetic: Prove $7^n \equiv 1 \pmod{6}$ for all $n \geq 1$
-- Induction + inequalities: Prove $\frac{1}{2} \cdot \frac{3}{4} \cdot \frac{5}{6} \cdots \frac{2n-1}{2n} < \frac{1}{\sqrt{2n+1}}$
-
-**Reverse engineer:**
-- Pick a formula you know is true (from textbook, etc.)
-- Write a clean induction proof
-- Now modify one part and see what needs to change
-
-### Extend the Concept
-
-**1. Relax to backward induction:**
-
-Instead of $P(k) \Rightarrow P(k+1)$, what if we prove $P(k+1) \Rightarrow P(k)$ with a different starting point?
-
-- When does this work?
-- What's a problem suited to backward induction?
-- Try: Prove $n! > 2^n$ for $n \geq 4$ by showing $P(k+1) \Rightarrow P(k)$ and verifying a large base case.
-
-**2. Generalize to two-dimensional induction:**
-
-Prove statements about pairs $(m, n)$ by induction on $m + n$ or by nested induction.
-
-Example: Prove $\binom{m+n}{m} = \binom{m+n}{n}$ by induction on $m + n$.
-
-**3. Apply to non-numeric structures:**
-
-- **Trees:** Prove that a binary tree with $n$ nodes has $n+1$ null pointers (use structural induction on tree height)
-- **Strings:** Prove properties about strings of length $n$
-- **Graphs:** Prove a graph with $n$ vertices and $n-1$ edges that is connected must be a tree
-
-**4. Strong induction variants:**
-
-Define: **Complete induction** assumes $P(1), P(2), \ldots, P(k)$ (all previous) to prove $P(k+1)$.
-
-When is this necessary vs. regular induction?
-
-Create problems that require complete induction (like Fundamental Theorem of Arithmetic).
-
-### Prove Related Results
-
-**1. Prove variations:**
-
-We proved: For all $n \geq 1$, $\sum_{i=1}^n i = \frac{n(n+1)}{2}$
-
-Your challenges:
-- Prove: $\sum_{i=1}^n (2i-1) = n^2$ [sum of odd numbers]
-- Prove: $\sum_{i=1}^n i(i+1) = \frac{n(n+1)(n+2)}{3}$
-- Generalize: Can you find a pattern for $\sum_{i=1}^n i^k$?
-
-**2. Prove consequences:**
-
-Using mathematical induction, prove:
-
-- **Bernoulli's Inequality:** For $x \geq -1$ and $n \geq 1$: $(1 + x)^n \geq 1 + nx$
-- **AM-GM for 2^n terms:** $\frac{a_1 + \cdots + a_{2^n}}{2^n} \geq \sqrt[2^n]{a_1 \cdots a_{2^n}}$ (use induction on $n$)
-- **Binomial Theorem:** $(x+y)^n = \sum_{k=0}^n \binom{n}{k} x^k y^{n-k}$
-
-**3. Prove the equivalences:**
-
-Show rigorously:
-- Induction $\Leftrightarrow$ Well-Ordering Principle
-- Regular Induction $\Leftrightarrow$ Strong Induction
-
-(Detailed proof of both directions)
-
-### Hints and Ideas for Exploration
-
-**For further investigation:**
-
-**1. Double induction:**
-
-Read: How to prove statements about two variables using nested induction
-
-Try: Prove the general binomial theorem: $\sum_{k=0}^n \binom{n}{k} = 2^n$ using induction on $n$
-
-Extend: Prove Pascal's identity $\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}$ by double induction
-
-**2. Combinatorial proofs vs. induction:**
-
-Explore: The formula $\sum_{i=1}^n i = \frac{n(n+1)}{2}$ has a beautiful visual proof (arranging dots in triangular array). Can you find combinatorial proofs for other induction results?
-
-Question: When is induction necessary vs. when can you give a direct combinatorial argument?
-
-**3. Limits of induction:**
-
-Investigate: Can you prove $\sum_{i=1}^{\infty} i = \frac{\infty(\infty+1)}{2}$? Why not?
-
-Question: What properties of $\mathbb{N}$ make induction work that fail for infinite sums?
-
-**4. Strengthening the inductive hypothesis:**
-
-Sometimes to prove $P(n)$, you must prove a stronger $Q(n)$ by induction because $Q(k) \Rightarrow Q(k+1)$ works but $P(k) \Rightarrow P(k+1)$ doesn't.
-
-Example: Try proving $F_n < 2^n$ directly vs. proving $F_n \leq 2^{n-1}$ (the latter works better with strong induction).
-
----
+## coming soon
 
 # Applications to Machine Learning
 
@@ -2308,6 +1518,26 @@ $$
 
 $|X| = c$ (continuum). Requires measure-theoretic probability—we can't assign probability to every individual point.
 
+## Decision Trees and Logic
+
+Internal nodes in decision trees are logical predicates:
+
+"If (feature1 > 5) AND (feature2 < 10) then predict class A"
+
+This is $P \land Q \to R$ structure from propositional logic.
+
+## Convergence and Quantifiers
+
+Proving convergence of gradient descent uses quantifiers:
+
+"For all $\varepsilon > 0$, there exists iteration $N$ such that for all $n > N$, $|f(x_n) - f^*| < \varepsilon$"
+
+$$
+\forall \varepsilon > 0, \exists N, \forall n > N, (|f(x_n) - f^*| < \varepsilon)
+$$
+
+Order of quantifiers matters! The $N$ depends on $\varepsilon$.
+
 ## PAC Learning and Quantifiers
 
 Probably Approximately Correct (PAC) learning definition:
@@ -2331,6 +1561,18 @@ $$
 This space has cardinality $|C([0,1]^d)| = 2^c$ (uncountably infinite).
 
 Universal approximation theorems show neural networks can approximate any function in $C([0,1]^d)$ arbitrarily well (with enough neurons). But we can never achieve actual surjectivity—the set of representable functions is a dense subset, not the whole space.
+
+## Proofs in Learning Theory
+
+Many key results require proof:
+
+**Generalization bounds:** Prove that training error is close to test error
+
+**Convergence rates:** Prove gradient descent converges, and how fast
+
+**Approximation theorems:** Prove certain function classes can approximate others
+
+All use techniques from this document: direct proof, contrapositive, contradiction, cases.
 
 ---
 
@@ -2401,144 +1643,3 @@ Universal approximation theorems show neural networks can approximate any functi
 **Problem 19:** Explain why $|\mathcal{P}(\mathbb{N})| = |\mathbb{R}|$
 
 **Problem 20:** Which is larger: $|\mathbb{Q} \times \mathbb{Q}|$ or $|\mathbb{Q}|$? Justify.
-
----
-
-## Problem Set 6: Mathematical Induction
-
-### Solution to Guided Problem 3
-
-**Problem:** Prove that for all $n \geq 5$, $2^n > n^2$.
-
-**Complete Solution:**
-
-**Base case ($n = 5$):**
-$$
-2^5 = 32 \quad \text{and} \quad 5^2 = 25
-$$
-Since $32 > 25$, the base case holds. ✓
-
-**Inductive step:**
-
-*Inductive hypothesis:* Assume for some $k \geq 5$ that $2^k > k^2$.
-
-*Goal:* Prove $2^{k+1} > (k+1)^2$.
-
-*Proof:*
-
-\begin{align}
-2^{k+1} &= 2 \cdot 2^k \\
-&> 2k^2 \quad \text{[by inductive hypothesis]}
-\end{align}
-
-Now we need to show $2k^2 > (k+1)^2$ for $k \geq 5$.
-
-Expanding:
-
-\begin{align}
-(k+1)^2 &= k^2 + 2k + 1
-\end{align}
-
-We want to show:
-$$
-2k^2 > k^2 + 2k + 1
-$$
-
-Simplifying:
-$$
-k^2 > 2k + 1
-$$
-$$
-k^2 - 2k - 1 > 0
-$$
-
-For $k = 5$: $25 - 10 - 1 = 14 > 0$ ✓
-
-For $k > 5$, since $k^2$ grows much faster than $2k$, the inequality continues to hold. 
-
-More rigorously: For $k \geq 5$, we have $k^2 - 2k - 1 = k(k-2) - 1 \geq 5(3) - 1 = 14 > 0$.
-
-Therefore $2^{k+1} > 2k^2 > (k+1)^2$.
-
-**Conclusion:** By mathematical induction, $2^n > n^2$ for all $n \geq 5$. ∎
-
-### Solution to Practice Problem 4
-
-**Problem:** Prove that for all $n \geq 0$ and $r \neq 1$:
-$$
-\sum_{i=0}^n r^i = \frac{r^{n+1} - 1}{r - 1}
-$$
-
-**Solution:**
-
-**Base case ($n = 0$):**
-
-Left side: $\sum_{i=0}^0 r^i = r^0 = 1$
-
-Right side: $\frac{r^1 - 1}{r - 1} = \frac{r - 1}{r - 1} = 1$
-
-Since $1 = 1$, the base case holds. ✓
-
-**Inductive step:**
-
-*Inductive hypothesis:* Assume for some $k \geq 0$:
-$$
-\sum_{i=0}^k r^i = \frac{r^{k+1} - 1}{r - 1}
-$$
-
-*Goal:* Prove:
-$$
-\sum_{i=0}^{k+1} r^i = \frac{r^{k+2} - 1}{r - 1}
-$$
-
-*Proof:*
-
-\begin{align}
-\sum_{i=0}^{k+1} r^i &= \left(\sum_{i=0}^k r^i\right) + r^{k+1} \\
-&= \frac{r^{k+1} - 1}{r - 1} + r^{k+1} \quad \text{[inductive hypothesis]} \\
-&= \frac{r^{k+1} - 1}{r - 1} + \frac{r^{k+1}(r - 1)}{r - 1} \\
-&= \frac{r^{k+1} - 1 + r^{k+2} - r^{k+1}}{r - 1} \\
-&= \frac{r^{k+2} - 1}{r - 1}
-\end{align}
-
-This is exactly what we needed to prove.
-
-**Conclusion:** By mathematical induction, the geometric sum formula holds for all $n \geq 0$ when $r \neq 1$. ∎
-
-### Solution to Challenge Problem 5
-
-**Problem:** Prove that for all $n \geq 1$, $F_n < 2^n$.
-
-**Solution using Strong Induction:**
-
-**Base cases:**
-- $n = 1$: $F_1 = 1 < 2^1 = 2$ ✓
-- $n = 2$: $F_2 = 1 < 2^2 = 4$ ✓
-
-**Inductive step:**
-
-*Inductive hypothesis:* Assume for all $1 \leq j \leq k$ (where $k \geq 2$) that $F_j < 2^j$.
-
-In particular, we have $F_{k-1} < 2^{k-1}$ and $F_k < 2^k$.
-
-*Goal:* Prove $F_{k+1} < 2^{k+1}$.
-
-*Proof:*
-
-\begin{align}
-F_{k+1} &= F_k + F_{k-1} \quad \text{[Fibonacci recurrence]} \\
-&< 2^k + 2^{k-1} \quad \text{[by inductive hypothesis]} \\
-&= 2^{k-1}(2 + 1) \\
-&= 3 \cdot 2^{k-1} \\
-&< 4 \cdot 2^{k-1} \quad \text{[since } 3 < 4] \\
-&= 2^2 \cdot 2^{k-1} \\
-&= 2^{k+1}
-\end{align}
-
-Therefore $F_{k+1} < 2^{k+1}$.
-
-**Conclusion:** By strong induction, $F_n < 2^n$ for all $n \geq 1$. ∎
-
-**Note:** We needed strong induction because the Fibonacci recurrence requires knowledge of both $F_k$ and $F_{k-1}$, not just the immediately preceding term.
-
-

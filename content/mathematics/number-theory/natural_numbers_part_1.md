@@ -1,25 +1,11 @@
----
-title: "Natural Numbers via Peano Axioms"
-subtitle: "Foundational Construction of Arithmetic from First Principles"
-format:
-  html:
-    toc: true
-    toc-depth: 4
-    toc-location: left
-    number-sections: true
-    code-fold: show
-    theme: cosmo
-    html-math-method: katex
-  pdf:
-    toc: true
-    number-sections: true
-    colorlinks: true
-execute:
-  echo: true
-  warning: false
----
++++
+title = "Natural Numbers via Peano Axioms"
+slug = "natural_numbers_part_1"
+description = "Foundational Construction of Arithmetic from First Principles"
+toc = true
++++
 
-# Introduction {.unnumbered}
+# Introduction
 
 This document presents a rigorous construction of the natural numbers from axiomatic foundations. We develop the complete theory of $\mathbb{N}$ starting only from the Peano Axioms, proving even seemingly "obvious" properties through careful logical reasoning.
 
@@ -802,7 +788,8 @@ $$n + S(m) = S(n + m)$$
 
 **Computation:**
 
-\begin{align*}
+$$
+\begin{aligned}
 3 + 2 &= 3 + S(1) && \text{[because } 2 = S(1)\text{]} \\
 &= S(3 + 1) && \text{[recursive rule: } n + S(m) = S(n+m)\text{]} \\
 &= S(3 + S(0)) && \text{[because } 1 = S(0)\text{]} \\
@@ -810,7 +797,8 @@ $$n + S(m) = S(n + m)$$
 &= S(S(3)) && \text{[base case: } n + 0 = n\text{]} \\
 &= S(S(S(S(S(0))))) && \text{[because } 3 = S(S(S(0)))\text{]} \\
 &= 5 && \text{[by definition of 5]}
-\end{align*}
+\end{aligned}
+$$
 
 **What happened:**
 
@@ -824,7 +812,8 @@ $$n + S(m) = S(n + m)$$
 
 Is this the same as $3 + 0$?
 
-\begin{align*}
+$$
+\begin{aligned}
 0 + 3 &= 0 + S(2) && \text{[because } 3 = S(2)\text{]} \\
 &= S(0 + 2) && \text{[recursive rule]} \\
 &= S(0 + S(1)) && \text{[because } 2 = S(1)\text{]} \\
@@ -833,7 +822,8 @@ Is this the same as $3 + 0$?
 &= S(S(S(0 + 0))) && \text{[recursive rule]} \\
 &= S(S(S(0))) && \text{[base case]} \\
 &= 3 && \text{[by definition]}
-\end{align*}
+\end{aligned}
+$$
 
 So $0 + 3 = 3$ ✓
 

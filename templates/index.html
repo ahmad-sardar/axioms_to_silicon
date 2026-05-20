@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}{% if section.path == "/" %}{{ config.title }}{% else %}{{ section.title }} — {{ config.title }}{% endif %}{% endblock title %}
+{% block description %}{% if section.description %}{{ section.description }}{% else %}{{ config.description }}{% endif %}{% endblock description %}
+{% block canonical %}{{ section.permalink | safe }}{% endblock canonical %}
+{% block og_title %}{% if section.path == "/" %}{{ config.title }}{% else %}{{ section.title }} — {{ config.title }}{% endif %}{% endblock og_title %}
+{% block og_description %}{% if section.description %}{{ section.description }}{% else %}{{ config.description }}{% endif %}{% endblock og_description %}
+{% block og_url %}{{ section.permalink | safe }}{% endblock og_url %}
+
+{% block content %}
+<article class="page-content">
+  <header class="page-header">
+
+  </header>
+  <div class="page-body {% if section.path == '/' %}home-body{% endif %}">
+    {{ section.content | safe }}
+  </div>
+</article>
+{% endblock content %}

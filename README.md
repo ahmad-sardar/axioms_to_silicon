@@ -1,28 +1,37 @@
-## Welcome
+# Axioms to Algorithms
 
-Here I publicly share my notes on mathematics and machine learning, built from first principles. The emphasis is deliberately **math-first**: mathematics is studied as a discipline worthy of appreciation in its own right, independent of application. The objective is to engage with theory respectfully and rigorously, while maintaining conceptual clarity and depth.
+Mathematics and machine learning notes from first principles.
 
-Machine learning is examined through two complementary theoretical frameworks:
+Built with [Zola](https://www.getzola.org/).
 
-1. **Statistical Learning Theory**, grounded in the principles developed by Vapnik.
-2. **Probabilistic Modeling**, informed by Murphy’s treatment.
+## Local development
 
-Mathematics and machine learning are developed in parallel: the mathematical sections focus on pure concepts, whereas the machine learning sections integrate those concepts into formal learning frameworks.
+```bash
+zola serve
+```
 
-## Mathematics
+Open http://127.0.0.1:1111
 
-Mathematical foundations are organized by domain. Each concept is introduced systematically, beginning with motivation and context, followed by intuitive visualizations, precise definitions, key properties, and principal theorems. Computational methods accompany the theory, with worked examples spanning basic cases through edge scenarios and explicit discussions of common pitfalls.
+## Build
 
-Topics reference their prerequisites and the ideas they enable, forming a coherent learning trajectory. Lean is used for formal verification, while geometric visualizations support intuition and complement the underlying rigor.
+```bash
+zola build --base-url "https://ahmad-sardar.github.io"
+```
 
-Not all topics may relate to ML. As mentioned earlier we treat maths as its own discipline, independent of application.
+Output is written to `docs/` for GitHub Pages.
 
-## Machine Learning Algorithms
+## Content
 
-These notes present machine learning algorithms from first principles. Each algorithm is developed in five layers: historical context and motivation, an intuitive explanation without notation, concrete algebraic computation using actual numbers, a formal mathematical treatment with proofs, and cross-perspective connections. The primary focus is understanding why algorithms work, rather than only how to use them.
+- `content/` — Markdown pages
+- `static/` — CSS, images, and interactive visualizations
+- `templates/` — HTML layouts and shortcodes
 
-Lean proofs ensure correctness; visualizations provide geometric intuition. The notes also address model validation, uncertainty estimation, calibration, and interpretation of metrics.
+To regenerate markdown from legacy Quarto sources (if retained), run:
 
-## About Me
+```bash
+python3 scripts/convert_qmd.py
+```
 
-Hi, I am Ahmad Sardar. I am deeply interested in the science underlying Machine Learning, with particular focus on mathematical and theoretical foundations. I currently work as an MLE, contributing end-to-end across experimentation, modeling, and analysis.
+## Deploy
+
+Pushes to `main` trigger `.github/workflows/publish.yml`, which builds with Zola and deploys to GitHub Pages.

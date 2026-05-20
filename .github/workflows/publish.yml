@@ -3,7 +3,7 @@ on:
   push:
     branches: main
 
-name: Quarto Publish
+name: Zola Publish
 
 jobs:
   build:
@@ -14,19 +14,20 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
+      - name: Install Zola
+        uses: taiki-e/install-action@v2
+        with:
+          tool: zola@0.19.2
 
-      - name: Install system dependencies
+      - name: Build site
+        run: zola build --base-url "https://ahmad-sardar.github.io"
+
+      - name: Reject base64 embedded images
         run: |
-          sudo apt-get update
-          sudo apt-get install -y librsvg2-bin
-
-      - name: Install TinyTeX via Quarto
-        run: quarto install tinytex
-
-      - name: Render Quarto project
-        run: quarto render
+          if grep -rq 'data:image' docs/; then
+            echo "::error::Base64 images found in build output"
+            exit 1
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
