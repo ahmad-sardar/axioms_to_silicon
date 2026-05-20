@@ -20,7 +20,7 @@ jobs:
           tool: zola@0.19.2
 
       - name: Build site
-        run: zola build --base-url "https://ahmad-sardar.github.io"
+        run: zola build --base-url "https://www.ahmadsardar.com"
 
       - name: Reject base64 embedded images
         run: |

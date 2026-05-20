@@ -1,6 +1,6 @@
 title = "Axioms to Silicon"
 description = "Mathematics and Machine Learning from First Principles"
-base_url = "https://ahmad-sardar.github.io"
+base_url = "https://www.ahmadsardar.com"
 output_dir = "docs"
 compile_sass = false
 build_search_index = false
