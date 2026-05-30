@@ -57,6 +57,63 @@
           throwOnError: false
         });
       }
+
+      // Active TOC highlighting scroll spy
+      var tocLinks = document.querySelectorAll(".page-toc a");
+      if (tocLinks.length > 0) {
+        var headings = [];
+        var linkMap = new Map();
+
+        tocLinks.forEach(function (link) {
+          try {
+            var hash = link.hash;
+            if (hash) {
+              var id = decodeURIComponent(hash.slice(1));
+              var heading = document.getElementById(id);
+              if (heading) {
+                headings.push(heading);
+                linkMap.set(heading, link);
+              }
+            }
+          } catch (e) {}
+        });
+
+        if (headings.length > 0) {
+          var threshold = 120; // px offset from top of viewport
+
+          function updateActiveToc() {
+            var currentActive = null;
+            for (var i = 0; i < headings.length; i++) {
+              var heading = headings[i];
+              var rect = heading.getBoundingClientRect();
+              if (rect.top <= threshold) {
+                currentActive = heading;
+              } else {
+                break;
+              }
+            }
+
+            if (!currentActive && window.scrollY < 100) {
+              currentActive = headings[0];
+            }
+
+            if (currentActive) {
+              var activeLink = linkMap.get(currentActive);
+              tocLinks.forEach(function (link) {
+                if (link === activeLink) {
+                  link.classList.add("active");
+                } else {
+                  link.classList.remove("active");
+                }
+              });
+            }
+          }
+
+          window.addEventListener("scroll", updateActiveToc, { passive: true });
+          window.addEventListener("resize", updateActiveToc);
+          updateActiveToc();
+        }
+      }
     });
   </script>
   <script data-goatcounter="https://ahmadsardar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
