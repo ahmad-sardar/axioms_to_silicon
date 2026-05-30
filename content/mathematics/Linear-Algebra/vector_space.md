@@ -1,23 +1,10 @@
 +++
-title = "Vector Space"
+title = "Linear Algebra Part 1"
 slug = "vector_space"
 toc = true
 +++
 
-{% callout_note() %}
-## Navigation
-
-**Prerequisites:** [Foundations](foundations/), [Geometry](geometry/)  
-**Enables:** Linear Combinations, Span, Basis, PCA, SVD  
-{% end %}
-
-The chain we build: vector space, then linear combination, then span, then independence, then basis, then dimension. Coordinates and subspace come later.
-
-Rule for these notes: first the exact definition, then how to compute it, then an example, then where it breaks.
-
----
-
-## Vector space
+# Vector Space
 
 A vector space over a field $F$ is a set $V$ with two operations: vector addition and scalar multiplication. The set and the operations must follow eight rules. We call these rules axioms.
 
@@ -30,7 +17,7 @@ There are two kinds of object here. They are different. Do not mix them.
 
 You can add a vector to a vector. You can multiply a scalar by a vector. You cannot add a vector to a scalar. That has no meaning.
 
-### The eight axioms
+## The eight axioms
 
 For any vectors $u, v, w \in V$ and any scalars $a, b \in F$.
 
@@ -53,7 +40,7 @@ Four rules for scaling:
 A4 is the rule the Gaussian distribution needs most. Subtraction is defined from it: $u - v$ means $u + (-v)$. Without A4 there is no subtraction. Then there is no "$x - \mu$". Then there is no Gaussian.
 {% end %}
 
-### How addition is done
+## How addition is done
 
 The axioms say what addition must obey. They do not say how to compute it. How you compute it depends on the space.
 
@@ -62,13 +49,13 @@ The axioms say what addition must obey. They do not say how to compute it. How y
 
 $\mathbb{R}^n$ follows the axioms because each component is a real number, and real numbers already follow these rules.
 
-### How a vector looks
+## How a vector looks
 
 - **Small:** a vector in $\mathbb{R}^n$ is a list of $n$ numbers. Example: $(3,4)$.
 - **Large:** in $\mathbb{R}^{784}$ a vector is a list of $784$ numbers. A $28 \times 28$ gray image is one such vector. Each pixel brightness is one number in the list.
 - **Other:** a function is a vector. You can think of a function as a vector with one number for every input point. So it has infinitely many numbers. The Gaussian lives in this function space.
 
-### Axiom and theorem are different
+## Axiom and theorem are different
 
 This point is important.
 
@@ -77,20 +64,20 @@ This point is important.
 
 So you check the eight axioms one time for a candidate. After that, every theorem comes for free.
 
-### Two proofs we did
+## Two proofs we did
 
 - **The zero vector is unique.**  
   *Method:* assume two zeros, $\mathbf{0}$ and $\mathbf{0}'$. Compute $\mathbf{0}' + \mathbf{0}$ in two ways. One way gives $\mathbf{0}'$. The other way gives $\mathbf{0}$. So $\mathbf{0}' = \mathbf{0}$. There is only one.
 - **Zero scalar times any vector gives the zero vector:** $0 \cdot v = \mathbf{0}$.  
   *Method:* start from $0 + 0 = 0$ for numbers. Use A6 to get $0 \cdot v = (0+0) \cdot v = 0 \cdot v + 0 \cdot v$. Then add the inverse $-(0 \cdot v)$ (from A4) to both sides and cancel. You are left with $0 \cdot v = \mathbf{0}$.
 
-### Where it came from
+## Where it came from
 
 First came the geometric ideas. Hamilton and Grassmann worked on directed quantities in the 1840s. Then came matrix and determinant work later in the 1800s. The clean eight-axiom definition came last. Peano wrote it in 1888. So the examples came first and the abstract rules came last. We teach it the other way, rules first, because that is more exact. But that is the reverse of history.
 
 ---
 
-## Linear combination
+# Linear Combination
 
 Take some vectors $v_1, \dots, v_n$. Take some scalars $a_1, \dots, a_n$. A linear combination is:
 
@@ -117,7 +104,7 @@ The same form $a \cdot e$ is used two ways. When you build a target, the coeffic
 
 ---
 
-## Span
+# Span
 
 The span of $v_1, \dots, v_n$ is the set of all their linear combinations. It is everything you can reach by any choice of coefficients.
 
@@ -133,7 +120,7 @@ Note: a line or plane that does not pass through the origin is not a span. The s
 
 ---
 
-## Linear independence
+# Linear Independence
 
 The vectors $v_1, \dots, v_n$ are linearly independent if the only way to get the zero vector is to use all-zero coefficients:
 
@@ -162,7 +149,7 @@ Word trap: dependent means you reach zero using nonzero coefficients. Independen
 
 ---
 
-## Basis
+# Basis
 
 A set is a basis of $V$ if it does two things at once: it spans $V$, and it is linearly independent. Both must hold.
 
@@ -186,7 +173,7 @@ The standard basis: in $\mathbb{R}^n$ it is the vectors $e_i$, each with a singl
 
 ---
 
-## Dimension
+# Dimension
 
 The dimension of $V$ is the number of vectors in a basis of $V$.
 
@@ -213,11 +200,9 @@ High dimension view: in $2$ or $3$ dimensions you can see the axes, so the numbe
 These two are equal only for the trivial space $\{\mathbf{0}\}$. The idea "polynomials are functions, so the dimension is infinite" is wrong. Polynomials of degree at most $3$ have only $4$ free choices, so dimension $4$. Being a function does not make the dimension infinite. Having infinitely many free choices makes it infinite.
 {% end %}
 
----
+# Pixels — A Worked Example
 
-## Pixels — a worked example
-
-An image is a vector. A $2$-pixel image is (left brightness, right brightness), a vector in $\mathbb{R}^2$. A $4096$-pixel image is a vector in $\mathbb{R}^{4096}$. The $x,y$ location of a pixel is only its address. What lives in the vector is the brightness of each pixel.
+An image is a vector. A $2$-pixel image is (left brightness, right brightness), a vector in $\mathbb{R}^2$. A $4096$-pixel image is a vector in $\mathbb{R}^{4096}$. The $x,y$ location of a pixel is only its address. What is left in the vector is the brightness of each pixel.
 
 Building blocks (the standard basis): $e_1 = (1,0)$ means "left pixel lit, right pixel dark." $e_2 = (0,1)$ means "left dark, right lit." The single $1$ picks which pixel is lit. The $0$ means the other pixel is dark.
 
@@ -246,7 +231,7 @@ The $0$ to $255$ range is a real-photo limit. It does not matter for the vector 
 
 ---
 
-## Coordinates (short intro, full version later)
+# Coordinates
 
 Once you fix a basis, every vector has one unique list of coefficients that builds it. That list is its coordinates in that basis.
 
@@ -265,7 +250,7 @@ The point did not move. The numbers changed because the directions changed.
 
 ---
 
-## The basis-change idea (the "wow" moment)
+# The Basis-Change Idea
 
 Why bases and coordinates matter: a good basis shows hidden structure and lets you drop the coordinates that do not matter.
 
@@ -294,7 +279,7 @@ Forward link: finding that tilted basis on its own, in any dimension, is what PC
 
 ---
 
-## Concept map for this stop
+# Concept Map
 
 $$\text{vector space (8 axioms; set + field + 2 operations)} \to \text{linear combination (scale and add)} \to \text{span (all linear combinations)} \to \text{linear independence (no waste)}$$
 $$\downarrow$$
@@ -304,7 +289,7 @@ $$\text{subspace} \to \text{inner product} \to \text{norm} \to \text{metric} \to
 
 ---
 
-## Anchors (one short hook each)
+# Anchors
 
 - **Vector space:** "anything that follows the eight axioms."
 - **Linear combination:** "scale and add."
@@ -314,5 +299,3 @@ $$\text{subspace} \to \text{inner product} \to \text{norm} \to \text{metric} \to
 - **Dimension:** "count of independent directions, not points."
 - **Coordinates:** "the one recipe for a vector in a chosen basis."
 - **Basis change:** "rotate to where the information is, then drop the rest."
-
----
