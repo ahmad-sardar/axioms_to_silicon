@@ -1,6 +1,6 @@
 +++
 title = "Linear Algebra Part 1"
-slug = "vector_space"
+slug = "Linear_Algebra_Part_1"
 toc = true
 +++
 

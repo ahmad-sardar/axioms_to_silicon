@@ -2,4 +2,4 @@
 title = "Linear Algebra"
 +++
 
-- [Vector Space](vector_space/)
+- [Linear Algebra (Part 1)](Linear_Algebra_Part_1/)
