@@ -2,4 +2,4 @@
 title = "Linear Algebra"
 +++
 
-- [Linear Algebra (Part 1)](Linear_Algebra_Part_1/)
+- [Vector Spaces, Length, and Distance](Vector%20Spaces,%20Length,%20and%20Distance/)
