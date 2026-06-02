@@ -198,7 +198,7 @@ $$
 
 ### Order Matters
 
-{% callout_important() %}
+{% callout_warning() %}
 When quantifiers have different types ($\forall$ vs $\exists$), **order is crucial**.
 {% end %}
 
@@ -630,7 +630,7 @@ General form: $\{$expression $\mid$ condition$\}$
 
 **Empty set:** $\emptyset$ or $\{\}$
 
-{% callout_important() %}
+{% callout_warning() %}
 - $|\emptyset| = 0$
 - $\emptyset \subseteq S$ for any set $S$ (vacuously true)
 - $\emptyset \in S$ only if explicitly listed as an element
@@ -832,7 +832,7 @@ The set of **all subsets** of $A$.
 
 Elements of $\mathcal{P}(A)$ are sets themselves.
 
-{% callout_important() %}
+{% callout_tip() %}
 If $|A| = n$, then $|\mathcal{P}(A)| = 2^n$
 {% end %}
 
@@ -1086,7 +1086,7 @@ Equivalently: Range = Codomain
 
 Both injective and surjective. Perfect one-to-one pairing.
 
-{% callout_important() %}
+{% callout_tip() %}
 Only bijective functions have inverses.
 {% end %}
 
@@ -1315,7 +1315,9 @@ Cannot be put in bijection with $\mathbb{N}$.
 
 ### Cantor's Diagonal Argument
 
+{% callout_tip() %}
 **Theorem:** $\mathbb{R}$ is uncountable ($|\mathbb{R}| > |\mathbb{N}|$)
+{% end %}
 
 **Proof:**
 
@@ -1361,7 +1363,9 @@ Therefore $\mathbb{R}$ cannot be listed—it's uncountable. ∎
 
 ## Hierarchy of Infinities
 
+{% callout_tip() %}
 **Cantor's Theorem:** For any set $A$, $|A| < |\mathcal{P}(A)|$
+{% end %}
 
 Power set is always strictly larger.
 
@@ -1585,7 +1589,7 @@ The principle: prove for base structures, then prove the property is preserved u
 
 ## Main Theorems
 
-{% callout_important() %}
+{% callout_tip() %}
 ## Theorem: Equivalence of Induction and Well-Ordering
 
 The following are equivalent over the natural numbers:
@@ -1596,7 +1600,7 @@ The following are equivalent over the natural numbers:
 
 **Proof sketch:** Already shown in Key Properties above. The key insight is that all three capture the fundamental structure of $\mathbb{N}$ as built from 1 by repeatedly adding 1.
 
-{% callout_important() %}
+{% callout_tip() %}
 ## Theorem: Induction as Proof Technique
 
 For any predicate $P(n)$ on natural numbers, if the base case and inductive step are proven, then $\forall n \geq n_0, P(n)$ is established with certainty.

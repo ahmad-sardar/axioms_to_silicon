@@ -15,7 +15,7 @@ toc = true
 
 Euclidean geometry forms the spatial reasoning foundation essential for machine learning. From understanding projections in high-dimensional spaces to grasping optimization landscapes, these concepts are fundamental prerequisites.
 
-{% callout_important() %}
+{% callout_warning() %}
 ## Why This Matters for Machine Learning
 
 - **Vector Spaces**: Geometric objects with distance and angles
@@ -92,14 +92,17 @@ Close your eyes. Imagine two dots floating in space. Now imagine the shortest pa
 
 Three concepts are **primitive** (undefined, but understood intuitively):
 
+{% callout_note() %}
 **Point:** An object with no dimensions (position only)  
 **Line:** A one-dimensional object extending infinitely in both directions  
 **Plane:** A two-dimensional flat surface extending infinitely
+{% end %}
 
 **Why undefined?** To avoid circular definitions. These are our starting vocabulary.
 
 ### Euclid's Five Postulates
 
+{% callout_note() %}
 **Postulate 1** (Uniqueness of Line).  
 *Given any two distinct points $P$ and $Q$, there exists exactly one line $\ell$ passing through both.*
 
@@ -114,9 +117,11 @@ Three concepts are **primitive** (undefined, but understood intuitively):
 
 **Postulate 5** (Parallel Postulate).  
 *Given a line $\ell$ and a point $P$ not on $\ell$, there exists exactly one line through $P$ parallel to $\ell$.*
+{% end %}
 
 ### Common Notions (Axioms of Equality)
 
+{% callout_note() %}
 **CN1** (Transitivity). If $a = b$ and $b = c$, then $a = c$.
 
 **CN2** (Addition). If $a = b$ and $c = d$, then $a + c = b + d$.
@@ -126,6 +131,7 @@ Three concepts are **primitive** (undefined, but understood intuitively):
 **CN4** (Coincidence). Things that coincide are equal.
 
 **CN5** (Whole vs Part). The whole is greater than any proper part.
+{% end %}
 
 ## Why These Definitions
 
@@ -185,6 +191,7 @@ From these axioms, immediate consequences follow:
 
 These axioms enable us to prove *everything else*:
 
+{% callout_tip() %}
 **Theorem 1.1** (Vertical Angles).  
 *When two lines intersect, vertical angles are congruent.*
 
@@ -199,6 +206,7 @@ These axioms enable us to prove *everything else*:
 
 **Theorem 1.5** (Parallel Line Properties).  
 *When a transversal crosses parallel lines, corresponding angles are congruent.*
+{% end %}
 
 *All of these follow logically from the five postulates!*
 
@@ -565,6 +573,7 @@ where $s$ = arc length, $r$ = radius.
 
 ### Properties of Distance
 
+{% callout_tip() %}
 **Theorem 2.1** (Distance Invariance).  
 Distance is **invariant** under:
 - **Translation**: Shifting all points by same vector
@@ -572,6 +581,7 @@ Distance is **invariant** under:
 - **Reflection**: Mirroring across a line
 
 *This is what makes distance a fundamental geometric quantity—it doesn't depend on coordinate system choice.*
+{% end %}
 
 **Proof sketch (Translation):**  
 If we shift $A \to A'$ and $B \to B'$ by vector $\mathbf{v}$:
@@ -579,12 +589,16 @@ $$d(A', B') = \|(B + \mathbf{v}) - (A + \mathbf{v})\| = \|B - A\| = d(A, B)$$
 
 ### Properties of Angles
 
+{% callout_tip() %}
 **Theorem 2.2** (Angle Addition).  
 If ray $\overrightarrow{OB}$ lies between $\overrightarrow{OA}$ and $\overrightarrow{OC}$:
 $$\angle AOC = \angle AOB + \angle BOC$$
+{% end %}
 
+{% callout_tip() %}
 **Theorem 2.3** (Vertical Angles).  
 When two lines intersect, **vertical angles** are congruent.
+{% end %}
 
 ```
     \ α /
@@ -599,14 +613,20 @@ Therefore $\alpha = \gamma$ (both equal $180° - \beta$). $\square$
 
 ## Main Theorems
 
+{% callout_tip() %}
 **Theorem 2.4** (Angle Sum in Triangle).  
 The sum of interior angles in any triangle is **180°**.
+{% end %}
 
+{% callout_tip() %}
 **Theorem 2.5** (Exterior Angle Theorem).  
 An exterior angle of a triangle equals the sum of the two non-adjacent interior angles.
+{% end %}
 
+{% callout_tip() %}
 **Theorem 2.6** (Perpendicular Distance).  
 The shortest distance from point $P$ to line $\ell$ is the **perpendicular distance**.
+{% end %}
 
 *Proof:* Any other path from $P$ to $\ell$ forms the hypotenuse of a right triangle, which is longer than the leg. $\square$
 
@@ -899,13 +919,17 @@ This isn't just symbolic—you can literally cut and rearrange the smaller squar
 
 ## Precise Definition
 
+{% callout_tip() %}
 **Theorem 3.1** (Pythagorean Theorem).  
 In a right triangle with legs of lengths $a$ and $b$, and hypotenuse of length $c$:
 
 $$a^2 + b^2 = c^2$$
+{% end %}
 
+{% callout_tip() %}
 **Converse (Theorem 3.2).**  
 If three sides of a triangle satisfy $a^2 + b^2 = c^2$, then the triangle is a right triangle with hypotenuse $c$.
+{% end %}
 
 ## Why These Definitions
 
@@ -935,7 +959,9 @@ $$c^2 = a^2 + b^2 - 2ab\cos C$$
 
 ### Pythagorean Triples
 
+{% callout_note() %}
 **Definition:** Integer solutions to $a^2 + b^2 = c^2$.
+{% end %}
 
 **Common Examples:**
 | $a$ | $b$ | $c$ | Verification |

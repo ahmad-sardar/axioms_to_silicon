@@ -225,6 +225,7 @@ These must satisfy five axioms.
 
 ## Axiom 1: Existence
 
+{% callout_note() %}
 $$0 \in \mathbb{N}$$
 
 **In words:** Zero is a natural number.
@@ -236,9 +237,11 @@ This ensures $\mathbb{N}$ is non-empty and provides a starting point for buildin
 - $0$ is an element (not a set, not a function)
 - $\mathbb{N}$ is a set
 - $\in$ is the membership relation
+{% end %}
 
 ## Axiom 2: Closure
 
+{% callout_note() %}
 $$\forall n \in \mathbb{N}, \quad S(n) \in \mathbb{N}$$
 
 **In words:** The successor of any natural number is also a natural number.
@@ -252,9 +255,11 @@ This ensures we can keep building—there's no edge where $S$ fails. The set $\m
 - $S: \mathbb{N} \to \mathbb{N}$ is a total function
 
 This axiom also implicitly asserts $S$ is **single-valued** (function property): each $n$ has exactly one $S(n)$, not multiple.
+{% end %}
 
 ## Axiom 3: Injectivity
 
+{% callout_note() %}
 $$\forall n, m \in \mathbb{N}, \quad S(n) = S(m) \implies n = m$$
 
 **Contrapositive form (equivalent):**
@@ -283,9 +288,11 @@ Injective:
 3 → 5
 4 → 6    (different outputs)
 ```
+{% end %}
 
 ## Axiom 4: Zero is Not a Successor
 
+{% callout_note() %}
 $$\forall n \in \mathbb{N}, \quad S(n) \neq 0$$
 
 **Equivalently:** $\neg \exists n \in \mathbb{N}$ such that $S(n) = 0$
@@ -295,9 +302,11 @@ $$\forall n \in \mathbb{N}, \quad S(n) \neq 0$$
 This prevents cycles and makes 0 the unique minimal element. Without this axiom, we cannot distinguish infinite chains (like $\mathbb{N}$) from finite cycles (like clock arithmetic).
 
 **Combined with Axiom 3:** These two axioms together ensure no cycles anywhere in the structure, not just at 0.
+{% end %}
 
 ## Axiom 5: Induction Principle
 
+{% callout_note() %}
 **Set-theoretic form:**
 
 Let $P \subseteq \mathbb{N}$. If:
@@ -334,6 +343,7 @@ and nothing more.
 - Condition (i): First domino falls
 - Condition (ii): If domino $n$ falls, then domino $S(n)$ falls
 - Conclusion: All dominoes fall
+{% end %}
 
 # Understanding the Axioms
 
@@ -479,7 +489,9 @@ We now derive fundamental properties from the axioms alone. Even "obvious" facts
 
 ## Property 1: Zero is Unique
 
+{% callout_tip() %}
 **Theorem:** There is exactly one element that is not a successor.
+{% end %}
 
 **Proof:**
 
@@ -504,7 +516,9 @@ Therefore, no such $x$ exists. **Zero is the unique minimal element.** ∎
 
 ## Property 2: Every Non-Zero Element is a Successor
 
+{% callout_tip() %}
 **Theorem:** For all $n \in \mathbb{N}$, if $n \neq 0$, then $n = S(m)$ for some $m \in \mathbb{N}$.
+{% end %}
 
 **Proof by Induction:**
 
@@ -524,7 +538,9 @@ Therefore, every element is either 0 or a successor. ∎
 
 ## Property 3: Successor is Bijection onto $\mathbb{N} \setminus \{0\}$
 
+{% callout_tip() %}
 **Theorem:** $S: \mathbb{N} \to \mathbb{N} \setminus \{0\}$ is a bijection.
+{% end %}
 
 **Proof:**
 
@@ -540,11 +556,15 @@ $$P(n) = \text{the unique } m \text{ such that } S(m) = n$$
 
 This exists and is unique by the bijection property.
 
+{% callout_warning() %}
 **Note:** $P$ is only defined on $\mathbb{N} \setminus \{0\}$, not on 0 itself (since 0 has no predecessor).
+{% end %}
 
 ## Property 4: $\mathbb{N}$ is Infinite
 
+{% callout_tip() %}
 **Theorem:** $\mathbb{N}$ has no largest element.
+{% end %}
 
 **Proof by Contradiction:**
 
@@ -581,7 +601,9 @@ But then $S(S^k(0)) = S^{k+1}(0)$ must equal one of these elements. It cannot eq
 
 ## Property 5: Successor Has No Fixed Points
 
+{% callout_tip() %}
 **Theorem:** For all $n \in \mathbb{N}$, $S(n) \neq n$.
+{% end %}
 
 **Proof by Induction:**
 
@@ -746,6 +768,7 @@ This is analogous to:
 
 ## Definition of Addition
 
+{% callout_note() %}
 **For any $n, m \in \mathbb{N}$, we define $n + m$ by recursion on $m$:**
 
 ### Base Case
@@ -775,6 +798,7 @@ $$n + S(m) = S(n + m)$$
 - Breaks down $n + S(m)$ into a simpler problem: $n + m$
 - We "peel off" the $S$ from the right, wrap it around the result
 - Matches intuition: $3 + 5 = 3 + (4+1) = (3+4) + 1$
+{% end %}
 
 ## How the Definition Works
 

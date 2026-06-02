@@ -10,11 +10,13 @@ Having defined addition, we now prove its fundamental properties. Each theorem r
 
 ## Theorem 1: Left Identity
 
+{% callout_tip() %}
 **Statement:** For all $n \in \mathbb{N}$, we have $0 + n = n$.
 
 **In words:** Zero on the left is the additive identity.
 
 **Why this needs proof:** The definition only gives us $n + 0 = n$ (zero on the RIGHT). The left version must be proven.
+{% end %}
 
 ### Proof
 
@@ -54,11 +56,13 @@ Therefore $0 + S(k) = S(k)$ ✓
 
 ## Theorem 2: Left Successor Property
 
+{% callout_tip() %}
 **Statement:** For all $m, n \in \mathbb{N}$, we have $S(m) + n = S(m + n)$.
 
 **In words:** Successor on the left behaves like successor on the right.
 
 **Why this matters:** The definition gives us $n + S(m) = S(n + m)$ (successor on RIGHT). This theorem establishes the symmetric property for successor on LEFT.
+{% end %}
 
 ### Proof
 
@@ -107,11 +111,13 @@ Applying the successor function to both sides: $S(S(m) + k) = S(S(m + k))$ ✓
 
 ## Theorem 3: Commutativity of Addition
 
+{% callout_tip() %}
 **Statement:** For all $m, n \in \mathbb{N}$, we have $m + n = n + m$.
 
 **In words:** Order doesn't matter in addition.
 
 **Dependency:** This proof requires BOTH Theorem 1 and Theorem 2.
+{% end %}
 
 ### Proof
 
@@ -163,11 +169,13 @@ Thus: $m + S(k) = S(m + k) = S(k + m) = S(k) + m$ ✓
 
 ## Theorem 4: Associativity of Addition
 
+{% callout_tip() %}
 **Statement:** For all $a, b, c \in \mathbb{N}$, we have $(a + b) + c = a + (b + c)$.
 
 **In words:** Grouping doesn't matter in addition.
 
 **Interesting fact:** This theorem does NOT require commutativity—they are independent properties.
+{% end %}
 
 ### Proof
 
@@ -234,6 +242,7 @@ With addition fully characterized, we define multiplication recursively using ad
 
 ## Definition of Multiplication
 
+{% callout_note() %}
 **For any $n, m \in \mathbb{N}$, we define $n \times m$ by recursion on $m$:**
 
 **Base case:**
@@ -249,6 +258,7 @@ $$n \times S(m) = (n \times m) + n$$
 **Meaning:** To multiply $n$ by one-more-than-$m$, take the result of multiplying by $m$ and add $n$.
 
 **Intuition:** "n groups of (m+1) things = (n groups of m things) + (n more things)"
+{% end %}
 
 ### Example: Computing $3 \times 2$
 
@@ -280,9 +290,11 @@ From the definition alone:
 
 ## Theorem 5: Left Identity for Multiplication
 
+{% callout_tip() %}
 **Statement:** For all $n \in \mathbb{N}$, we have $0 \times n = 0$.
 
 **In words:** Zero times anything is zero.
+{% end %}
 
 ### Proof
 
@@ -308,11 +320,13 @@ $$
 
 ## Theorem 6: Left Successor for Multiplication
 
+{% callout_tip() %}
 **Statement:** For all $m, n \in \mathbb{N}$, we have $S(m) \times n = (m \times n) + n$.
 
 **In words:** Multiplying the successor of $m$ by $n$ equals $(m \times n) + n$.
 
 **Dependency:** This proof requires associativity and commutativity of addition.
+{% end %}
 
 ### Proof (Sketch)
 
@@ -330,11 +344,13 @@ This requires rearranging the sum using commutativity and associativity of addit
 
 ## Theorem 7: Commutativity of Multiplication
 
+{% callout_tip() %}
 **Statement:** For all $m, n \in \mathbb{N}$, we have $m \times n = n \times m$.
 
 **In words:** Order doesn't matter in multiplication.
 
 **Dependency:** Requires Theorems 5 and 6.
+{% end %}
 
 ### Proof
 
@@ -369,11 +385,13 @@ $$
 
 ## Theorem 8: Distributivity
 
+{% callout_tip() %}
 **Statement:** For all $a, b, c \in \mathbb{N}$, we have $a \times (b + c) = (a \times b) + (a \times c)$.
 
 **In words:** Multiplication distributes over addition.
 
 **Dependency:** Requires associativity of addition (Theorem 4).
+{% end %}
 
 ### Proof
 
@@ -419,11 +437,13 @@ By associativity of addition: $((a \times b) + (a \times k)) + a = (a \times b) 
 
 ## Theorem 9: Associativity of Multiplication
 
+{% callout_tip() %}
 **Statement:** For all $a, b, c \in \mathbb{N}$, we have $(a \times b) \times c = a \times (b \times c)$.
 
 **In words:** Grouping doesn't matter in multiplication.
 
 **Dependency:** Requires distributivity (Theorem 8).
+{% end %}
 
 ### Proof (Sketch)
 
