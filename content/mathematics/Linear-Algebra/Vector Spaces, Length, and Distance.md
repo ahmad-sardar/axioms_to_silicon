@@ -21,6 +21,10 @@ A field $F$ is a set with addition, subtraction, multiplication, and division by
 
 Vectors are the elements of $V$. Scalars are the elements of $F$. You may add a vector to a vector, and multiply a scalar by a vector. Adding a vector to a scalar is not defined.
 
+##### (Note on "SPACE": In non-geometric mathematics, a **space** is simply a set of elements paired with a specific set of axioms that govern how those elements interact. The term "space" is only misleading if you are thinking about it in physical or geometric terms.For this article we are going to build vectors space purely from axioms.)
+
+##### (Note2: We will be skipping Affine Space. Close cousin of Vector Space. It also lives in Euclidean Space(more on this later).)
+
 The eight axioms, for all $u, v, w \in V$ and all $a, b \in F$:
 
 - A1. $u + v = v + u$.
@@ -503,7 +507,7 @@ ML rung (dimensionality reduction): given data points $(2,2), (4,4), (6,6) on th
 
 # Euclidean Space
 
-A Euclidean space is a finite-dimensional real vector space with the standard inner product (the dot product). $\mathbb{R}^n$ with the dot product is the Euclidean space of dimension $n$.
+A Euclidean space is a finite-dimensional real vector space with the standard inner product (the dot product). $\mathbb{R}^n$ with the dot product is the Euclidean space of dimension $n$. Secretly we have been talking about Euclidean Space all along!
 
 Three properties, all consequences of flatness:
 
