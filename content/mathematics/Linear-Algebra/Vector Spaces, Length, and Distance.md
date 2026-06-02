@@ -15,28 +15,38 @@ Many different things behave the same way under two operations: you can add two 
 
 ## Definition
 
+{% callout_note() %}
 A vector space over a field $F$ is a set $V$ with two operations, vector addition $+ : V \times V \to V$ and scalar multiplication $\cdot : F \times V \to V$, satisfying the eight axioms below. A vector is any element of $V$.
 
 A field $F$ is a set with addition, subtraction, multiplication, and division by any nonzero element, all behaving in the usual way; the real numbers $\mathbb{R}$ and the complex numbers $\mathbb{C}$ are fields. For these notes $F = \mathbb{R}$.
 
-Vectors are the elements of $V$. Scalars are the elements of $F$. You may add a vector to a vector, and multiply a scalar by a vector. Adding a vector to a scalar is not defined.
+Vectors are the elements of $V$. Scalars are the elements of $F$. You may add a vector to a vector, and multiply a scalar by a vector. 
 
-##### (Note on "SPACE": In non-geometric mathematics, a **space** is simply a set of elements paired with a specific set of axioms that govern how those elements interact. The term "space" is only misleading if you are thinking about it in physical or geometric terms.For this article we are going to build vectors space purely from axioms.)
+**Adding a vector to a scalar is NOT defined.**
+{% end %}
 
-##### (Note2: We will be skipping Affine Space. Close cousin of Vector Space. It also lives in Euclidean Space(more on this later).)
+{% callout_warning() %}
+### Note on "Space"
+In abstract math, a **space** is just a set of elements with rules (axioms) governing their interactions, not a physical or geometric area.
 
+### Note on Affine Space
+We skip Affine Space, a close cousin of Vector Space that also lives in Euclidean Space (discussed later).
+{% end %}
+
+{% callout_note() %}
 The eight axioms, for all $u, v, w \in V$ and all $a, b \in F$:
 
-- A1. $u + v = v + u$.
-- A2. $(u + v) + w = u + (v + w)$.
-- A3. There exists $\mathbf{0} \in V$ with $v + \mathbf{0} = v$ for all $v$.
-- A4. For each $v$ there exists $-v \in V$ with $v + (-v) = \mathbf{0}$.
-- A5. $a(u + v) = au + av$.
-- A6. $(a + b)v = av + bv$.
-- A7. $a(bv) = (ab)v$.
-- A8. $1 \cdot v = v$.
+- A1. **Commutativity of Addition**: $u + v = v + u$.
+- A2. **Associativity of Addition**: $(u + v) + w = u + (v + w)$.
+- A3. **Additive Identity**: There exists $\mathbf{0} \in V$ with $v + \mathbf{0} = v$ for all $v$.
+- A4. **Additive Inverse**: For each $v$ there exists $-v \in V$ with $v + (-v) = \mathbf{0}$.
+- A5. **Distributivity over Vector Addition**: $a(u + v) = au + av$.
+- A6. **Distributivity over Scalar Addition**: $(a + b)v = av + bv$.
+- A7. **Compatibility of Scalar Multiplication**: $a(bv) = (ab)v$.
+- A8. **Identity Element of Scalar Multiplication**: $1 \cdot v = v$.
 
 Subtraction is defined from A4: $u - v := u + (-v)$.
+{% end %}
 
 ## How addition is computed
 
@@ -56,9 +66,13 @@ A function $f : \mathbb{R} \to \mathbb{R}$ is also a vector, in the space of all
 
 ## Two theorems from the axioms
 
+{% callout_tip() %}
 **Theorem (the zero vector is unique).** Suppose $\mathbf{0}$ and $\mathbf{0}'$ both satisfy A3. Then $$ \mathbf{0}' = \mathbf{0}' + \mathbf{0} = \mathbf{0} + \mathbf{0}' = \mathbf{0}, $$ using A3 with $\mathbf{0}$, then A1, then A3 with $\mathbf{0}'$. So $\mathbf{0}' = \mathbf{0}$.
+{% end %}
 
+{% callout_tip() %}
 **Theorem ($0 \cdot v = \mathbf{0}$ for every $v$).** From $0 + 0 = 0$ in $\mathbb{R}$ and A6, $0 \cdot v = (0 + 0)v = 0 \cdot v + 0 \cdot v$. Add $-(0 \cdot v)$ to both sides (A4) and regroup (A2): $\mathbf{0} = 0 \cdot v$.
+{% end %}
 
 ## Where it came from
 
@@ -90,6 +104,7 @@ The point is a fixed place. Its coordinates are its address in the grid you chos
 
 ## Definition
 
+{% callout_note() %}
 Given vectors $v_1, \dots, v_n \in V$ and scalars $a_1, \dots, a_n \in F$, a linear combination is
 
 $$ a_1 v_1 + a_2 v_2 + \dots + a_n v_n. $$
@@ -97,6 +112,7 @@ $$ a_1 v_1 + a_2 v_2 + \dots + a_n v_n. $$
 The scalars are the coefficients. It uses only the two operations of the space, and the result is again a vector in $V$. A linear combination is a finite sum.
 
 The vectors are fixed building blocks. The coefficients are the numbers in front, which you choose or solve for.
+{% end %}
 
 ## Examples
 
@@ -112,6 +128,7 @@ Functions: $a_1 f_1 + a_2 f_2$ is itself a function. For $f_1(x) = x^2$, $f_2(x)
 
 ## Definition
 
+{% callout_note() %}
 The span of $v_1, \dots, v_n$ is the set of all their linear combinations:
 
 $$ \operatorname{span}(v_1, \dots, v_n) = \{ a_1 v_1 + \dots + a_n v_n : a_1, \dots, a_n \in F \}. $$
@@ -119,6 +136,7 @@ $$ \operatorname{span}(v_1, \dots, v_n) = \{ a_1 v_1 + \dots + a_n v_n : a_1, \d
 To test whether $w$ is in the span, ask whether there exist coefficients with $a_1 v_1 + \dots + a_n v_n = w$. This is a linear system; if it has a solution, $w$ is in the span.
 
 A span always contains $\mathbf{0}$ and is closed under addition and scaling, so it is itself a vector space inside $V$ (a subspace). It always passes through the origin.
+{% end %}
 
 ## Examples
 
@@ -130,10 +148,19 @@ Worked, functions: $\operatorname{span}(1, x, x^2)$ is all polynomials of degree
 
 Counterexample: $(1,0)$ alone does not span $\mathbb{R}^2$; $(0,1)$ is not in $\operatorname{span}((1,0))$, because no $a$ gives $(a,0) = (0,1)$.
 
+## Practical Applications of Span
+
+### Solvability of Linear Systems ($Ax = b$)
+
+At the lowest level of optimization and computational math, solving $Ax = b$ is about vector span. The matrix $A$ can be viewed as a collection of column vectors. The vector $x$ represents the weights (the scalars $c_i$) applied to each column.
+
+The system only has a solution if the target vector $b$ lies within the column space (the span of the columns) of $A$. If $b$ is outside that span, no perfect algebraic solution exists. In machine learning, because data is noisy, the target variable almost never falls perfectly into the span of our feature vectors. This mathematical impossibility forces the use of approximation methods like Ordinary Least Squares (OLS) to project $b$ orthogonally onto the span of $A$, minimizing the error.
+
 # Linear Independence
 
 ## Definition
 
+{% callout_note() %}
 Vectors $v_1, \dots, v_n$ are linearly independent if
 
 $$ a_1 v_1 + \dots + a_n v_n = \mathbf{0} \implies a_1 = \dots = a_n = 0. $$
@@ -141,6 +168,7 @@ $$ a_1 v_1 + \dots + a_n v_n = \mathbf{0} \implies a_1 = \dots = a_n = 0. $$
 If some choice of coefficients, not all zero, gives $\mathbf{0}$, the vectors are linearly dependent.
 
 To test: set the combination equal to $\mathbf{0}$, write it component by component, and solve. Only the all-zero solution means independent; any nonzero solution means dependent, and that solution exhibits the dependence.
+{% end %}
 
 ## Examples
 
@@ -156,12 +184,15 @@ Counterexample/edge: any set containing $\mathbf{0}$ is dependent, because $1 \c
 
 ## Basis
 
+{% callout_note() %}
 A set $\{v_1, \dots, v_n\}$ is a basis of $V$ if it spans $V$ and is linearly independent. Both conditions hold at once.
 
 A space has many bases. For $\mathbb{R}^2$: the standard basis $(1,0), (0,1)$; the diagonal basis $(1,1), (1,-1)$; the stretched basis $(2,0), (0,3)$. All are bases. A basis is about the number of vectors, not their length.
+{% end %}
 
 ## Orthonormal basis
 
+{% callout_note() %}
 The cleanest kind of basis is orthonormal. Its definition uses two ideas from measuring, perpendicular and length, which are defined in full in the inner product and norm sections below. Stated with the inner product $\langle \cdot, \cdot \rangle$:
 
 A basis $\{e_1, \dots, e_n\}$ is orthonormal if
@@ -173,6 +204,7 @@ That is, the basis vectors are pairwise orthogonal ($\langle e_i, e_j \rangle = 
 Orthogonal means pairwise perpendicular. Orthonormal means orthogonal and unit length. The diagonal basis $(1,1), (1,-1)$ is orthogonal but not orthonormal, since each has length $\sqrt{2}$; dividing each by $\sqrt 2$ makes it orthonormal.
 
 The key property of an orthonormal basis (proved in the inner product section): the coordinates of a vector are its inner products with the basis vectors, $c_i = \langle v, e_i \rangle$, with no system to solve. The standard basis is orthonormal, which is why it was always the easy one.
+{% end %}
 
 ## Examples
 
@@ -188,9 +220,13 @@ Orthonormal check: $\{(1,0),(0,1)\}$ is orthonormal; $\{(2,0),(0,1)\}$ is orthog
 
 ## Definition
 
+{% callout_note() %}
 The dimension of $V$, written $\dim V$, is the number of vectors in a basis of $V$. This is well defined because of the theorem below.
+{% end %}
 
+{% callout_tip() %}
 **Theorem (invariance of dimension).** If $V$ has a basis of $n$ vectors, every basis of $V$ has exactly $n$ vectors.
+{% end %}
 
 This rests on a lemma: if one set spans $V$ and another set is linearly independent, the independent set has at most as many vectors as the spanning set (independent $\le$ spanning).
 
@@ -212,6 +248,7 @@ Counterexample to a common error: a nontrivial space has infinitely many vectors
 
 ## Definition
 
+{% callout_note() %}
 A subset $W \subseteq V$ is a subspace of $V$ if $W$ is itself a vector space under the same two operations. Equivalently, $W$ is a subspace if it satisfies these axioms:
 
 - $\mathbf{0} \in W$,
@@ -219,6 +256,7 @@ A subset $W \subseteq V$ is a subspace of $V$ if $W$ is itself a vector space un
 - $u \in W$, $a \in F \implies au \in W$ (closed under scaling).
 
 The other vector space axioms are inherited from $V$.
+{% end %}
 
 Every subspace contains $\mathbf{0}$: a subspace is closed under scaling, and scaling any $u \in W$ by $0$ gives $0 \cdot u = \mathbf{0}$, which is therefore in $W$. So a flat that misses the origin is never a subspace.
 
@@ -238,13 +276,17 @@ Earlier we drew the picture of axes and a grid. Here is the exact definition.
 
 ## Definition
 
+{% callout_note() %}
 A coordinate system on a vector space $V$ is an origin (a chosen point assigned coordinates $(0, \dots, 0)$) together with a basis $\{b_1, \dots, b_n\}$ of $V$. The coordinates of a point $p$ are the unique coefficients $(c_1, \dots, c_n)$ with
 
 $$ p - (\text{origin}) = c_1 b_1 + \dots + c_n b_n. $$
 
 The coordinates are unique: the basis spans, so at least one such tuple exists; the basis is independent, so at most one does.
+{% end %}
 
+{% callout_tip() %}
 **Theorem (uniqueness of coordinates).** Fix a basis. If $v = \sum_i a_i b_i = \sum_i c_i b_i$, then subtracting gives $\sum_i (a_i - c_i) b_i = \mathbf{0}$, and independence forces $a_i - c_i = 0$ for all $i$, so $a_i = c_i$. The tuple is unique.
+{% end %}
 
 ## Cartesian coordinate system
 
@@ -268,6 +310,7 @@ Cartesian coordinates name the grid; flatness is the property of the space that 
 
 ## Definition
 
+{% callout_note() %}
 A space is flat if it admits one global, undistorted Cartesian coordinate system in which the distance between any two points $P, Q$ is
 
 $$ d(P, Q)^2 = (x_1 - y_1)^2 + \dots + (x_n - y_n)^2, $$
@@ -275,6 +318,11 @@ $$ d(P, Q)^2 = (x_1 - y_1)^2 + \dots + (x_n - y_n)^2, $$
 where $(x_i)$ and $(y_i)$ are the coordinates of $P$ and $Q$, and the grid is uniform everywhere (one coordinate-unit equals one distance-unit at every point and in every direction).
 
 From this definition the Pythagorean distance formula holds everywhere, as a consequence.
+{% end %}
+
+{% callout_warning() %}
+**Note:** Cartesian is the litmus test of flat space, but other coordinate systems can exist in flat space. To name a few: polar coordinates, spherical coordinates, cylindrical coordinates, etc. And Pythogras exists in all these coordinates because it depends on flatness rather than coordinates.
+{% end %}
 
 ## Examples
 
@@ -297,7 +345,14 @@ A few named spaces, for curiosity:
 
 The tool that records curvature at each point is the metric tensor, and these notes do not build it. The point for now: flat space, where we work, is the simplest case, the one where a single Cartesian grid covers everything and the Pythagorean formula never fails. Curved spaces are the general case, and they need heavier machinery.
 
-The deeper equivalent definition of flat, stated for completeness: a Riemannian manifold is flat if its Riemann curvature tensor is zero everywhere, where the curvature tensor is built from the derivatives of the metric tensor. The existence of a global Cartesian coordinate system is equivalent to vanishing curvature.
+The deeper equivalent definition of flat, stated for completeness:
+
+**Definition (Flat Riemannian Manifold).** 
+{% callout_note() %}
+A Riemannian manifold $(M, g)$ is flat if its Riemann curvature tensor $R$ vanishes identically on $M$:
+$$ R^\rho_{\sigma\mu\nu} = 0 $$
+where the components of the tensor are computed from the metric tensor $g$ and its first and second derivatives (via the Christoffel symbols). Under this condition, the manifold is locally isometric to Euclidean space, meaning that around every point there exists a local coordinate system in which the metric tensor is the constant Kronecker delta, $g_{ij} = \delta_{ij}$ (representing flat Cartesian coordinates).
+{% end %}
 
 # Inner Product
 
@@ -307,6 +362,7 @@ A vector space has addition and scaling but no length, angle, or distance. The i
 
 ## Definition
 
+{% callout_note() %}
 An inner product on a real vector space $V$ is a map $\langle \cdot, \cdot \rangle : V \times V \to \mathbb{R}$ satisfying, for all $u, v, w \in V$ and $a, b \in \mathbb{R}$:
 
 - P1 (symmetry): $\langle u, v \rangle = \langle v, u \rangle$.
@@ -314,6 +370,7 @@ An inner product on a real vector space $V$ is a map $\langle \cdot, \cdot \rang
 - P3 (positive-definiteness): $\langle v, v \rangle \ge 0$, with equality if and only if $v = \mathbf{0}$.
 
 By symmetry, linearity holds in the second argument too. P3 makes $\langle v, v \rangle \ge 0$, which permits the square root used to define length.
+{% end %}
 
 ## The dot product
 
@@ -333,7 +390,9 @@ $\langle v, v \rangle = 0$ holds only for $v = \mathbf{0}$ (a vector with itself
 
 ## The orthonormal-coordinate theorem
 
+{% callout_tip() %}
 **Theorem.** If $\{e_1, \dots, e_n\}$ is orthonormal and $v = c_1 e_1 + \dots + c_n e_n$, then $c_i = \langle v, e_i \rangle$.
+{% end %}
 
 Proof: $\langle v, e_i \rangle = \sum_j c_j \langle e_j, e_i \rangle$. By orthonormality every term vanishes except $j = i$, which is $c_i \cdot 1$. So $\langle v, e_i \rangle = c_i$.
 
@@ -353,6 +412,7 @@ Edge case: $\langle \mathbf{0}, \mathbf{0}\rangle = 0$, the only vector with zer
 
 ## Definition
 
+{% callout_note() %}
 The norm (length) of a vector is
 
 $$ \Vert v \Vert = \sqrt{\langle v, v \rangle}, $$
@@ -361,11 +421,12 @@ defined because P3 gives $\langle v, v \rangle \ge 0$. In $\mathbb{R}^n$, $\Vert
 
 A norm satisfies:
 
-- N1: $\Vert v \Vert \ge 0$, with equality if and only if $v = \mathbf{0}$.
-- N2: $\Vert av \Vert = |a| \cdot \Vert v \Vert$.
-- N3 (triangle inequality): $\Vert u + v \Vert \le \Vert u \Vert + \Vert v \Vert$ (proved below).
+- N1 **(Positivity)**: $\Vert v \Vert \ge 0$, with equality if and only if $v = \mathbf{0}$.
+- N2 **(Homogeneity)**: $\Vert av \Vert = |a| \cdot \Vert v \Vert$.
+- N3 **(Triangle Inequality)**: $\Vert u + v \Vert \le \Vert u \Vert + \Vert v \Vert$ (proved below).
 
 Proof of N2: $\Vert av \Vert = \sqrt{\langle av, av \rangle} = \sqrt{a^2 \langle v, v \rangle} = |a| \sqrt{\langle v, v \rangle} = |a| \cdot \Vert v \Vert$; the square root of $a^2$ is $|a|$.
+{% end %}
 
 ## Examples
 
@@ -381,9 +442,11 @@ Edge case: $\Vert (0,0) \Vert = 0$, the only vector of length zero.
 
 ## Statement
 
+{% callout_tip() %}
 $$ |\langle u, v \rangle| \le \Vert u \Vert \cdot \Vert v \Vert, $$
 
 with equality if and only if one vector is a scalar multiple of the other.
+{% end %}
 
 ## Proof
 
@@ -405,9 +468,11 @@ Worked, slack: $u=(1,1)$, $v=(1,-1)$: $|0| \le \sqrt 2 \cdot \sqrt 2 = 2$. The v
 
 ## Statement
 
+{% callout_tip() %}
 $$ \Vert u + v \Vert \le \Vert u \Vert + \Vert v \Vert, $$
 
 for all vectors, any angle.
+{% end %}
 
 ## Proof
 
@@ -429,11 +494,15 @@ Worked: $u=(1,0)$, $v=(1,1)$: $\sqrt 5 \approx 2.24 \le 1 + \sqrt 2 \approx 2.41
 
 ## Orthogonality
 
+{% callout_note() %}
 Vectors $u$ and $v$ are orthogonal when $\langle u, v \rangle = 0$. Example: $(1,1)$ and $(1,-1)$, since $\langle (1,1),(1,-1)\rangle = 0$.
+{% end %}
 
 ## Pythagorean theorem
 
+{% callout_tip() %}
 **Theorem.** If $\langle u, v \rangle = 0$, then $\Vert u + v \Vert^2 = \Vert u \Vert^2 + \Vert v \Vert^2$.
+{% end %}
 
 Proof: $\Vert u + v \Vert^2 = \Vert u \Vert^2 + 2\langle u, v \rangle + \Vert v \Vert^2$; orthogonality kills the middle term.
 
@@ -455,6 +524,7 @@ High-dimensional case: for pairwise orthogonal $v_1, \dots, v_k$, $\Vert v_1 + \
 
 ## Definition
 
+{% callout_note() %}
 This is some handwaving here, but not incorrect:
 
 Two vectors "agree in direction" a lot, a little, or not at all, and that degree of agreement is the angle between them. Small angle means strong agreement, right angle means none, straight-opposite means negative.
@@ -467,6 +537,7 @@ $$ \cos\theta = \frac{\langle u, v \rangle}{\Vert u \Vert \cdot \Vert v \Vert}, 
 Cauchy-Schwarz gives $-1 \le \langle u, v \rangle / (\Vert u \Vert\Vert v \Vert) \le 1$, so this is a valid cosine and $\theta$ always exists.
 
 (for now accept this. we will open this pandora box once we do geometry and lie )
+{% end %}
 ## Examples
 
 Worked: $(1,0)$ and $(1,1)$: $\cos\theta = 1/\sqrt 2$, $\theta = 45^\circ$.
@@ -487,6 +558,7 @@ The dot product measures directional agreement. Projection makes this exact: it 
 
 ## Definition
 
+{% callout_note() %}
 For a vector $u$ and a nonzero direction $v$, the orthogonal projection of $u$ onto $v$ is
 
 $$ \operatorname{proj}_v(u) = \frac{\langle u, v \rangle}{\langle v, v \rangle} \cdot v, $$
@@ -494,6 +566,7 @@ $$ \operatorname{proj}_v(u) = \frac{\langle u, v \rangle}{\langle v, v \rangle} 
 a scalar multiple of $v$.
 
 **Defining property.** The leftover $w = u - \operatorname{proj}_v(u)$ is orthogonal to $v$: $$ \langle w, v \rangle = \langle u, v \rangle - \frac{\langle u, v \rangle}{\langle v, v \rangle}\langle v, v \rangle = \langle u, v \rangle - \langle u, v \rangle = 0. $$ So $u$ splits into a part along $v$ and a part orthogonal to $v$. If $v$ has unit length, $\operatorname{proj}_v(u) = \langle u, v \rangle \cdot v$, and $\langle u, v \rangle$ is the length of the shadow.
+{% end %}
 
 ## Examples
 
@@ -507,7 +580,9 @@ ML rung (dimensionality reduction): given data points $(2,2), (4,4), (6,6) on th
 
 # Euclidean Space
 
+{% callout_note() %}
 A Euclidean space is a finite-dimensional real vector space with the standard inner product (the dot product). $\mathbb{R}^n$ with the dot product is the Euclidean space of dimension $n$. Secretly we have been talking about Euclidean Space all along!
+{% end %}
 
 Three properties, all consequences of flatness:
 
@@ -519,17 +594,19 @@ Three properties, all consequences of flatness:
 
 ## Definition
 
+{% callout_note() %}
 The distance between $x, y \in V$ is
 
 $$ d(x, y) = \Vert x - y \Vert. $$
 
 A function $d$ is a metric if, for all $x, y, z$:
 
-- M1: $d(x, y) \ge 0$, with equality if and only if $x = y$.
-- M2: $d(x, y) = d(y, x)$.
-- M3 (triangle inequality): $d(x, z) \le d(x, y) + d(y, z)$.
+- M1 **(Positivity)**: $d(x, y) \ge 0$, with equality if and only if $x = y$.
+- M2 **(Symmetry)**: $d(x, y) = d(y, x)$.
+- M3 **(Triangle Inequality)**: $d(x, z) \le d(x, y) + d(y, z)$.
 
 A set with a metric is a metric space.
+{% end %}
 
 ## Proof that $\Vert x - y \Vert$ is a metric
 
