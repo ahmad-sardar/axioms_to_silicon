@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +8,8 @@
   <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
   <link rel="canonical" href="{% block canonical %}{{ current_url | safe }}{% endblock canonical %}">
   <meta property="og:title" content="{% block og_title %}{{ config.title }}{% endblock og_title %}">
-  <meta property="og:description" content="{% block og_description %}{{ config.description }}{% endblock og_description %}">
+  <meta property="og:description"
+    content="{% block og_description %}{{ config.description }}{% endblock og_description %}">
   <meta property="og:url" content="{% block og_url %}{{ current_url | safe }}{% endblock og_url %}">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.bunny.net">
@@ -15,14 +17,17 @@
   <link rel="stylesheet" href="{{ get_url(path='css/site.css') | safe }}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    crossorigin="anonymous"></script>
 </head>
+
 <body class="theme-retro">
   <a href="#main" class="skip-link">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
       <nav class="site-nav" aria-label="Main">
-        <a href="{{ get_url(path='/') | safe }}" class="site-title"{% if current_path == "/" %} aria-current="page"{% endif %}>{{ config.title }}</a>
+        <a href="{{ get_url(path='/') | safe }}" class="site-title" {% if current_path=="/" %} aria-current="page" {%
+          endif %}>{{ config.title }}<span style="font-weight:normal">™</span></a>
       </nav>
     </div>
   </header>
@@ -75,7 +80,7 @@
                 linkMap.set(heading, link);
               }
             }
-          } catch (e) {}
+          } catch (e) { }
         });
 
         if (headings.length > 0) {
@@ -118,4 +123,5 @@
   </script>
   <script data-goatcounter="https://ahmadsardar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
+
 </html>

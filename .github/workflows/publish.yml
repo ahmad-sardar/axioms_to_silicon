@@ -1,7 +1,9 @@
 on:
   workflow_dispatch:
   push:
-    branches: main
+    branches:
+      - main
+      - dev
 
 name: Zola Publish
 
@@ -36,6 +38,7 @@ jobs:
 
   deploy:
     needs: build
+    if: github.ref_name == vars.LIVE_BRANCH || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     permissions:
       pages: write
