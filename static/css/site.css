@@ -87,7 +87,7 @@ a:focus-visible {
 
 .site-title {
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   letter-spacing: -0.02em;
   color: var(--text);
   text-decoration: none;
@@ -141,7 +141,9 @@ a:focus-visible {
 }
 
 .page-header h1 {
-  font-size: 1.25rem;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   margin: 0 0 1rem;
   line-height: 1.25;
 }
@@ -233,7 +235,7 @@ a:focus-visible {
 .page-body h1 {
   counter-increment: h1-counter;
   counter-reset: h2-counter;
-  font-size: 1.75rem;
+  font-size: 1.60rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   margin-top: 3.5rem;
