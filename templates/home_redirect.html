@@ -1,0 +1,18 @@
+{%- set target = get_url(path='@/axiomstosilicon/_index.md') -%}
+<!DOCTYPE html>
+<html lang="en" style="background:#0b0f19">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ config.title }}</title>
+  <link rel="canonical" href="{{ target | safe }}">
+  <script>window.location.replace("{{ target | safe }}" + (window.location.hash || ""));</script>
+  <meta http-equiv="refresh" content="0; url={{ target | safe }}">
+  <!-- Inline critical bg matches --bg so the first paint never flashes white;
+       site.css then applies the full theme (colors, fonts, link color). -->
+  <link rel="stylesheet" href="{{ get_url(path='css/site.css') | safe }}">
+</head>
+<body>
+  <noscript><p style="padding:1rem"><a href="{{ target | safe }}">Continue to {{ config.title }} &rarr;</a></p></noscript>
+</body>
+</html>

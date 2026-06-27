@@ -1,4 +1,4 @@
 +++
 title = "Home"
-redirect_to = "/axiomstosilicon/"
+template = "home_redirect.html"
 +++

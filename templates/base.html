@@ -27,7 +27,7 @@
   <header class="site-header">
     <div class="header-inner">
       <nav class="site-nav" aria-label="Main">
-        <a href="{{ get_url(path='/') | safe }}" class="site-title" {% if current_path=="/" %} aria-current="page" {%
+        <a href="{{ get_url(path='@/axiomstosilicon/_index.md') | safe }}" class="site-title" {% if current_path is starting_with("/axiomstosilicon") %} aria-current="page" {%
           endif %}>{{ config.title }}<span style="font-weight:normal">™</span></a>
       </nav>
     </div>
