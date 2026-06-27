@@ -48,7 +48,7 @@ The integrand is $1/t$, and not some other expression, because the demand $L(xy)
 ### Assumption
 
 The lower limit is fixed at $1$, and the input must be positive. The reason for that comes down to a single point, $t = 0$. The integrand $1/t$ is undefined at $t = 0$, and worse, it grows without bound as $t$ approaches $0$ from either side, so the area near $t = 0$ is not finite. Any path of integration that touched or crossed $t = 0$ would pass through this singularity, which is a point where the integrand is not defined and the area is not finite. A path from $1$ to a positive $x$ never reaches $0$, so it stays in the region where $1/t$ is well behaved. A path from $1$ to a negative number would have to cross $0$, so it is not allowed. This is why the domain is the open interval $(0, \infty )$, and not merely the set of nonzero reals. The single bad point at $0$ removes the entire negative side, because there is no way to reach it from $1$ without crossing the singularity.
-## Algebra
+### Algebra
 Two facts follow directly from the definition, and each is derived rather than asserted.
 
 The first is the value at $1$.
@@ -78,7 +78,7 @@ Equation $(2)$ is the first part of the Fundamental Theorem of Calculus applied 
 
 The definition also produces signed values, and the sign is part of the object, not an afterthought. When $x > 1$, the upper limit lies to the right of the lower limit, the area is swept in the positive direction, and $\ln x$ is positive. When $0 < x < 1$, the upper limit lies to the left of the lower limit, so the sweep runs in the negative direction. A definite integral whose upper limit is below its lower limit is the negative of the integral taken the other way, written $\int_1^{x} = -\int_{x}^{1}$. The area under $1/t$ from $x$ to $1$ is a genuine positive area, so $\ln x$ is its negative, a negative number. At the boundary $x = 1$ the two limits coincide and the value is $0$, from equation $(1)$. So $\ln$ is negative on $(0, 1)$, zero at $1$, and positive on $(1, \infty)$.
 
-## Properties (Consequences of the Definition)
+### Properties (Consequences of the Definition)
 
 {% callout_tip() %}
 
