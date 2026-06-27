@@ -19,6 +19,7 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
     crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="theme-retro">
@@ -47,7 +48,26 @@
     <p class="copyright">&copy; {{ now() | date(format="%Y") }} {{ config.extra.site_author }}</p>
   </footer>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", async function () {
+      document.querySelectorAll("pre code[data-lang=\"mermaid\"]").forEach(function (code) {
+        var pre = code.parentElement;
+        if (!pre) return;
+        var diagram = document.createElement("div");
+        diagram.className = "mermaid";
+        diagram.textContent = code.textContent;
+        pre.replaceWith(diagram);
+      });
+
+      if (typeof mermaid !== "undefined") {
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: "dark",
+          securityLevel: "loose",
+          flowchart: { htmlLabels: true }
+        });
+        await mermaid.run({ querySelector: ".mermaid" });
+      }
+
       if (typeof renderMathInElement === "function") {
         renderMathInElement(document.body, {
           delimiters: [

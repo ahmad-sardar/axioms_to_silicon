@@ -6,3 +6,4 @@ title = "Mathematics"
 - [Number Theory](number-theory/)
 - [Geometry](geometry/)
 - [Linear Algebra](Linear-Algebra/)
+- [Calculus](calculus/)

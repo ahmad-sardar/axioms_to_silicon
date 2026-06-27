@@ -9,4 +9,5 @@ transparent = true
   <a href="mathematics/number-theory/natural_numbers_part_2/">Natural Numbers Pt. 2</a>
   <a href="mathematics/geometry/euclidean_geometry_enhanced/">Euclidean Geometry</a>
   <a href="mathematics/Linear-Algebra/Vector%20Spaces,%20Length,%20and%20Distance/">Vector Spaces, Length, and Distance</a>
+  <a href="mathematics/calculus/logarithm/">The Logarithm and Exponential Function</a>
 </div>

@@ -13,6 +13,9 @@ paths = "off"
 [markdown]
 smart_punctuation = true
 
+[markdown.highlighting]
+theme = "github-dark"
+
 [extra]
 github = "https://github.com/ahmad-sardar"
 linkedin = "https://linkedin.com/in/asardar"
