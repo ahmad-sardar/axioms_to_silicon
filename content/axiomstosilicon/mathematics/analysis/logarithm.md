@@ -3,8 +3,26 @@ title = "The Logarithm and Exponential Function"
 slug = "logarithm"
 toc = true
 +++
+# The Story 
 
-This unit builds the natural logarithm, the exponential, the number $e$, and general powers in a single non-circular order, starting from the integral definition and never assuming a later object.
+We demanded a function which add for multiplication. Natural log($ln$) was the answer: We want a function $L$ that satisfies $L(xy) = L(x) + L(y)$ for all positive inputs. A function with this property replaces a hard multiplication by an easy addition. This is exactly why logarithm tables were built in 1614, three hundred years before the construction in this note, and it is the property that organizes everything the logarithm does.
+
+Several ways to define such a function failed, and each failure points to the construction we will use.
+
+- The first attempt defines $L$ as the inverse of an exponential function. This is circular for the purpose of building things in order. The usual development defines the exponential function using the number $e$, defines $e$ using a limit, and defines the logarithm as the inverse of the exponential. The three objects then lean on one another, and none of them can be built first. We want a definition that depends on nothing later in the chain.
+
+- The second attempt treats the equation $L(xy) = L(x) + L(y)$ as the definition itself. This is a property, not a construction. The equation describes a behavior, but it does not produce a concrete function, it does not tell us a single value, and several different functions or no function at all could satisfy it. A property cannot stand in for an object.
+
+- The third attempt extracts the function from the property by differentiation, and this one succeeds. Assume for a moment that a differentiable function $L$ satisfies $L(xy) = L(x) + L(y)$. Differentiate both sides with respect to $x$, holding $y$ fixed. On the left, the chain rule applies because $L$ is evaluated at the product $xy$, and the derivative of $xy$ with respect to $x$ is $y$:
+$$ yL'(xy) = L'(x). \tag{1} $$
+Equation $(1)$ holds for every positive $x$ and $y$. Now choose the single value $x = 1$:
+$$ yL'(y) = L'(1), \quad\text{which rearranges to}\quad L'(y) = \frac{L'(1)}{y}. \tag{2} $$
+Equation $(2)$ says that any function with the multiplication-to-addition property must have a derivative of the form constant divided by the input. The integrand $1/t$ is therefore forced by the demand, not chosen by taste. The only freedom left is the constant $L'(1)$, and setting it to $1$ selects the slope(differential) $1$ at the input $1$. Now we sum our changes(Fundamental Theorem of Calculus) to get the net value of the function at any final destination $x$. 
+
+{% aside(title="Aside") %}
+Because no algebraic combination of powers, roots, or basic fractions can define this area, this integral actually creates a brand-new, non-algebraic expression. We call this a **transcendental function**, and we give it a special name because it cannot be written as a standard polynomial: we call it ln($x$). Note that our function ln($x$) is an object now, which essentially takes an input and spits out an **area** under the curve. More later. BTW *logos* means ratios, proportions and *arithmos* means numbers and it does exactly what you would expect.
+{% end %}
+
 
 # Dependency Map
 
@@ -91,19 +109,7 @@ The definition also produces signed values, and the sign is part of the object, 
 
 $\ln x$ is the signed area under the curve $1/t$ between $1$ and $x$. For $x > 1$ the region lies to the right of $1$ and the area is positive. For $0 < x < 1$ the upper limit sits to the left of $1$, the sweep direction reverses, and the area counts as negative. At $x = 1$ there is no region and the value is $0$. The curve $1/t$ falls steeply toward the vertical axis on the left, which is the singularity at $0$ that the domain restriction avoids.
 
-<svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" fill="currentColor">
-  <text x="260" y="22" text-anchor="middle" font-size="14.5" font-weight="600">ln x is the signed area under 1/t from 1 to x</text>
-  <line x1="60" y1="250" x2="490" y2="250" stroke="currentColor" stroke-width="1.1" opacity="0.6"/>
-  <line x1="60" y1="60" x2="60" y2="258" stroke="currentColor" stroke-width="1.1" opacity="0.6"/>
-  <path d="M70 95 Q140 175 220 205 Q320 232 470 243" fill="none" stroke="#2c7be5" stroke-width="2.4"/>
-  <path d="M150 250 L150 222 Q200 210 220 205 Q300 233 360 240 L360 250 Z" fill="#2c7be5" opacity="0.16"/>
-  <line x1="150" y1="250" x2="150" y2="222" stroke="currentColor" stroke-width="1" opacity="0.4"/>
-  <line x1="360" y1="250" x2="360" y2="240" stroke="currentColor" stroke-width="1" opacity="0.4"/>
-  <text x="150" y="266" text-anchor="middle" font-size="12" opacity="0.8">1</text>
-  <text x="360" y="266" text-anchor="middle" font-size="12" opacity="0.8">x</text>
-  <text x="255" y="240" text-anchor="middle" font-size="11" opacity="0.75">area = ln x</text>
-  <text x="80" y="90" font-size="11" fill="#2c7be5">y = 1/t</text>
-</svg>
+![ln x is the signed area under 1/t from 1 to x](/mathematics/calculus/logarithm_files/ln_area.svg)
 
 ### Alternative Viewpoints & Core Concepts
 
@@ -204,7 +210,7 @@ $$ \ln(ab) = \ln a + \ln b. $$
 {% callout_important() %}
 ### Quotient Law
 For $a, b > 0$,
-$$ \ln\!\left(\frac{a}{b}\right) = \ln a - \ln b. $$
+$$ \ln\left(\frac{a}{b}\right) = \ln a - \ln b. $$
 {% end %}
 
 {% callout_important() %}
@@ -237,22 +243,7 @@ For $a > 0$, $\ln(1/a) = -\ln a$. This is the quotient law with $a = 1$ in the n
 
 The product law is area additivity in disguise. The area under $1/t$ from $1$ to $ab$ can be cut at the point $a$ into two pieces: the area from $1$ to $a$, which is $\ln a$, and the area from $a$ to $ab$, which turns out to equal $\ln b$. The second piece equals $\ln b$ because stretching the interval $[1, b]$ by the factor $a$ carries it to $[a, ab]$, and the curve $1/t$ shrinks by exactly the same factor under that stretch, so the area is unchanged.
 
-<svg viewBox="0 0 520 290" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" fill="currentColor">
-  <text x="260" y="22" text-anchor="middle" font-size="14" font-weight="600">area(1 to ab) = area(1 to a) + area(a to ab)</text>
-  <line x1="50" y1="240" x2="500" y2="240" stroke="currentColor" stroke-width="1.1" opacity="0.6"/>
-  <line x1="50" y1="60" x2="50" y2="248" stroke="currentColor" stroke-width="1.1" opacity="0.6"/>
-  <path d="M60 95 Q150 180 250 210 Q360 233 490 240" fill="none" stroke="#2c7be5" stroke-width="2.3"/>
-  <path d="M110 240 L110 205 Q160 192 210 188 L210 240 Z" fill="#2c7be5" opacity="0.18"/>
-  <path d="M210 240 L210 188 Q300 210 400 232 L400 240 Z" fill="#1a9e6e" opacity="0.16"/>
-  <line x1="110" y1="240" x2="110" y2="205" stroke="currentColor" stroke-width="1" opacity="0.4"/>
-  <line x1="210" y1="240" x2="210" y2="188" stroke="currentColor" stroke-width="1" opacity="0.4"/>
-  <line x1="400" y1="240" x2="400" y2="232" stroke="currentColor" stroke-width="1" opacity="0.4"/>
-  <text x="110" y="256" text-anchor="middle" font-size="12" opacity="0.8">1</text>
-  <text x="210" y="256" text-anchor="middle" font-size="12" opacity="0.8">a</text>
-  <text x="400" y="256" text-anchor="middle" font-size="12" opacity="0.8">ab</text>
-  <text x="160" y="228" text-anchor="middle" font-size="10" opacity="0.8">ln a</text>
-  <text x="305" y="232" text-anchor="middle" font-size="10" opacity="0.8">ln b</text>
-</svg>
+![area(1 to ab) = area(1 to a) + area(a to ab)](/mathematics/calculus/logarithm_files/product_law.svg)
 
 ### Alternative Viewpoints & Core Concepts
 
@@ -386,18 +377,7 @@ The two properties are exactly the two halves of invertibility. Strict increase 
 
 The graph of $\ln$ rises without ever levelling off or turning back. It crosses the height $0$ at the input $1$. As the input moves right toward infinity the graph rises past every horizontal line, and as the input moves left toward $0$ the graph falls past every horizontal line. Because the graph is continuous and rises through every height exactly once, each horizontal line meets it at exactly one point, which is the geometric form of the bijection.
 
-<svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" fill="currentColor">
-  <text x="260" y="22" text-anchor="middle" font-size="14" font-weight="600">ln rises through every height exactly once</text>
-  <line x1="60" y1="160" x2="500" y2="160" stroke="currentColor" stroke-width="1" opacity="0.45"/>
-  <line x1="120" y1="50" x2="120" y2="270" stroke="currentColor" stroke-width="1" opacity="0.45"/>
-  <path d="M124 268 Q140 200 200 168 Q300 128 490 95" fill="none" stroke="#2c7be5" stroke-width="2.5"/>
-  <circle cx="200" cy="160" r="4" fill="#2c7be5"/>
-  <text x="200" y="178" text-anchor="middle" font-size="11" opacity="0.8">(1, 0)</text>
-  <line x1="60" y1="120" x2="430" y2="120" stroke="#1a9e6e" stroke-width="1" stroke-dasharray="5 4" opacity="0.8"/>
-  <text x="64" y="114" font-size="10" fill="#1a9e6e">any height y</text>
-  <circle cx="345" cy="120" r="3.5" fill="#1a9e6e"/>
-  <text x="345" y="138" text-anchor="middle" font-size="10" opacity="0.8">one input</text>
-</svg>
+![ln rises through every height exactly once](/mathematics/calculus/logarithm_files/monotonicity.svg)
 
 ### Alternative Viewpoints & Core Concepts
 
@@ -513,20 +493,7 @@ Reading the exponential as "the inverse of $\ln$" rather than as "a base raised 
 
 The graph of $\exp$ is the graph of $\ln$ reflected across the line $y = x$. Reflecting across $y = x$ is the geometric form of swapping input and output, which is what taking an inverse does. The logarithm passes through $(1, 0)$, so the exponential passes through $(0, 1)$. The logarithm rose slowly and was defined only for positive inputs; the exponential rises quickly and stays positive for every input.
 
-<svg viewBox="0 0 320 300" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" fill="currentColor">
-  <text x="160" y="20" text-anchor="middle" font-size="13.5" font-weight="600">exp is ln reflected across y = x</text>
-  <line x1="40" y1="260" x2="300" y2="260" stroke="currentColor" stroke-width="1" opacity="0.45"/>
-  <line x1="40" y1="40" x2="40" y2="270" stroke="currentColor" stroke-width="1" opacity="0.45"/>
-  <line x1="40" y1="260" x2="280" y2="40" stroke="currentColor" stroke-width="1" opacity="0.3" stroke-dasharray="4 4"/>
-  <text x="270" y="52" font-size="10" opacity="0.6">y = x</text>
-  <path d="M70 250 Q130 200 280 80" fill="none" stroke="#2c7be5" stroke-width="2.3"/>
-  <text x="250" y="80" font-size="10" fill="#2c7be5">exp</text>
-  <path d="M70 250 Q120 130 230 60" fill="none" stroke="#1a9e6e" stroke-width="2.3" opacity="0.55" transform="rotate(90 160 150)"/>
-  <path d="M58 230 Q150 170 250 150" fill="none" stroke="#1a9e6e" stroke-width="2.1"/>
-  <text x="232" y="143" font-size="10" fill="#1a9e6e">ln</text>
-  <circle cx="40" cy="200" r="3.5" fill="#2c7be5"/>
-  <text x="30" y="196" text-anchor="end" font-size="10" opacity="0.8">1</text>
-</svg>
+![exp is ln reflected across y = x](/mathematics/calculus/logarithm_files/exp_reflection.svg)
 
 ### Alternative Viewpoints & Core Concepts
 
@@ -673,19 +640,7 @@ The definition leans on the logarithm being a bijection, so that "the unique num
 
 The number $e$ is the right endpoint that makes the shaded area under $1/t$ equal to exactly one unit. Starting at $1$ and sliding the right endpoint rightward, the area grows from $0$. The endpoint where the area first reaches $1$ is $e$.
 
-<svg viewBox="0 0 520 290" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" fill="currentColor">
-  <text x="260" y="22" text-anchor="middle" font-size="14" font-weight="600">e is where the area under 1/t from 1 reaches exactly 1</text>
-  <line x1="60" y1="245" x2="500" y2="245" stroke="currentColor" stroke-width="1.1" opacity="0.6"/>
-  <line x1="60" y1="60" x2="60" y2="253" stroke="currentColor" stroke-width="1.1" opacity="0.6"/>
-  <path d="M70 95 Q150 180 250 208 Q360 232 490 240" fill="none" stroke="#2c7be5" stroke-width="2.3"/>
-  <path d="M120 245 L120 200 Q200 178 320 222 L320 245 Z" fill="#2c7be5" opacity="0.18"/>
-  <line x1="120" y1="245" x2="120" y2="200" stroke="currentColor" stroke-width="1" opacity="0.4"/>
-  <line x1="320" y1="245" x2="320" y2="222" stroke="currentColor" stroke-width="1" opacity="0.4"/>
-  <text x="120" y="261" text-anchor="middle" font-size="12" opacity="0.8">1</text>
-  <text x="320" y="261" text-anchor="middle" font-size="12" opacity="0.8">e</text>
-  <text x="225" y="232" text-anchor="middle" font-size="11" opacity="0.85">area = 1</text>
-  <text x="80" y="90" font-size="11" fill="#2c7be5">y = 1/t</text>
-</svg>
+![e is where the area under 1/t from 1 reaches exactly 1](/mathematics/calculus/logarithm_files/constant_e.svg)
 
 ### Alternative Viewpoints & Core Concepts
 
@@ -778,19 +733,7 @@ The base has to be positive, because $\ln b$ shows up in the definition and the 
 
 Each positive base $b$ gives a curve $b^{x}$, and the whole family shares the point $(0, 1)$, because $b^{0} = \exp(0) = 1$ for every base. Bases above $1$ rise to the right, and the larger the base the steeper the rise. Bases below $1$ fall to the right. The base $e$ sits among the rising curves as the one whose slope at $(0,1)$ is exactly $1$.
 
-<svg viewBox="0 0 480 290" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" fill="currentColor">
-  <text x="240" y="20" text-anchor="middle" font-size="13.5" font-weight="600">the family b^x all passes through (0, 1)</text>
-  <line x1="40" y1="250" x2="450" y2="250" stroke="currentColor" stroke-width="1" opacity="0.45"/>
-  <line x1="160" y1="40" x2="160" y2="262" stroke="currentColor" stroke-width="1" opacity="0.45"/>
-  <circle cx="160" cy="200" r="4" fill="currentColor"/>
-  <text x="150" y="196" text-anchor="end" font-size="10" opacity="0.8">1</text>
-  <path d="M60 232 Q150 215 160 200 Q190 150 250 60" fill="none" stroke="#2c7be5" stroke-width="2.1"/>
-  <text x="252" y="58" font-size="10" fill="#2c7be5">b = 3</text>
-  <path d="M60 244 Q150 220 160 200 Q210 150 320 60" fill="none" stroke="#1a9e6e" stroke-width="2.1"/>
-  <text x="322" y="58" font-size="10" fill="#1a9e6e">b = e</text>
-  <path d="M60 60 Q150 150 160 200 Q175 220 260 244" fill="none" stroke="#2c7be5" stroke-width="1.8" opacity="0.6"/>
-  <text x="58" y="56" font-size="10" fill="#2c7be5" opacity="0.7">b = 1/2</text>
-</svg>
+![the family b^x all passes through (0, 1)](/mathematics/calculus/logarithm_files/general_powers.svg)
 
 ### Alternative Viewpoints & Core Concepts
 

@@ -11,41 +11,47 @@ Having defined addition, we now prove its fundamental properties. Each theorem r
 ## Theorem 1: Left Identity
 
 {% callout_tip() %}
-**Statement:** For all $n \in \mathbb{N}$, we have $0 + n = n$.
+**Statement:**
 
-**In words:** Zero on the left is the additive identity.
+For all $n \in \mathbb{N}$, we have $0 + n = n$.
 
-**Why this needs proof:** The definition only gives us $n + 0 = n$ (zero on the RIGHT). The left version must be proven.
+**In words:**
+
+Zero on the left is the additive identity.
+
+**Why this needs proof:**
+
+The definition only gives us $n + 0 = n$ (zero on the RIGHT). The left version must be proven.
 {% end %}
 
 ### Proof
 
-We prove this by induction on $n$.
-
-**Base case ($n = 0$):**
-
-We need to show $0 + 0 = 0$.
-
-By the base case of the addition definition: $n + 0 = n$
-
-Setting $n = 0$: $0 + 0 = 0$ ✓
-
-**Inductive step:**
-
-Inductive Hypothesis (IH): Assume $0 + k = k$ for some $k \in \mathbb{N}$.
-
-Goal: Prove $0 + S(k) = S(k)$.
-
-$$
-\begin{aligned}
-0 + S(k) &= S(0 + k) && \text{[definition: } n + S(m) = S(n+m)\text{]} \\
-&= S(k) && \text{[by IH: } 0 + k = k\text{]}
-\end{aligned}
-$$
-
-Therefore $0 + S(k) = S(k)$ ✓
-
-**Conclusion:** By the principle of mathematical induction (Axiom 5), we conclude that $0 + n = n$ for all $n \in \mathbb{N}$. ∎
+> We prove this by induction on $n$.
+>
+> **Base case ($n = 0$):**
+>
+> We need to show $0 + 0 = 0$.
+>
+> By the base case of the addition definition: $n + 0 = n$
+>
+> Setting $n = 0$: $0 + 0 = 0$ ✓
+>
+> **Inductive step:**
+>
+> Inductive Hypothesis (IH): Assume $0 + k = k$ for some $k \in \mathbb{N}$.
+>
+> Goal: Prove $0 + S(k) = S(k)$.
+>
+> $$
+> \begin{aligned}
+> 0 + S(k) &= S(0 + k) && \text{[definition: } n + S(m) = S(n+m)\text{]} \\
+> &= S(k) && \text{[by IH: } 0 + k = k\text{]}
+> \end{aligned}
+> $$
+>
+> Therefore $0 + S(k) = S(k)$ ✓
+>
+> **Conclusion:** By the principle of mathematical induction (Axiom 5), we conclude that $0 + n = n$ for all $n \in \mathbb{N}$. ∎
 
 ### Key Insights
 
@@ -57,50 +63,56 @@ Therefore $0 + S(k) = S(k)$ ✓
 ## Theorem 2: Left Successor Property
 
 {% callout_tip() %}
-**Statement:** For all $m, n \in \mathbb{N}$, we have $S(m) + n = S(m + n)$.
+**Statement:**
 
-**In words:** Successor on the left behaves like successor on the right.
+For all $m, n \in \mathbb{N}$, we have $S(m) + n = S(m + n)$.
 
-**Why this matters:** The definition gives us $n + S(m) = S(n + m)$ (successor on RIGHT). This theorem establishes the symmetric property for successor on LEFT.
+**In words:**
+
+Successor on the left behaves like successor on the right.
+
+**Why this matters:**
+
+The definition gives us $n + S(m) = S(n + m)$ (successor on RIGHT). This theorem establishes the symmetric property for successor on LEFT.
 {% end %}
 
 ### Proof
 
-We prove this by induction on $n$, keeping $m$ fixed but arbitrary.
-
-**Base case ($n = 0$):**
-
-We need to show $S(m) + 0 = S(m + 0)$.
-
-Left side: $S(m) + 0 = S(m)$ [by definition: $n + 0 = n$]
-
-Right side: $S(m + 0) = S(m)$ [by definition: $m + 0 = m$]
-
-Therefore $S(m) + 0 = S(m) = S(m + 0)$ ✓
-
-**Inductive step:**
-
-IH: Assume $S(m) + k = S(m + k)$ for some $k \in \mathbb{N}$.
-
-Goal: Prove $S(m) + S(k) = S(m + S(k))$.
-
-Transform the left side:
-$$S(m) + S(k) = S(S(m) + k) \quad \text{[definition: } n + S(p) = S(n+p)\text{]}$$
-
-Transform the right side:
-$$
-\begin{aligned}
-S(m + S(k)) &= S(S(m + k)) && \text{[definition: } m + S(k) = S(m+k)\text{]}
-\end{aligned}
-$$
-
-Now we need to show: $S(S(m) + k) = S(S(m + k))$
-
-By IH, we know: $S(m) + k = S(m + k)$
-
-Applying the successor function to both sides: $S(S(m) + k) = S(S(m + k))$ ✓
-
-**Conclusion:** By mathematical induction, $S(m) + n = S(m + n)$ for all $m, n \in \mathbb{N}$. ∎
+> We prove this by induction on $n$, keeping $m$ fixed but arbitrary.
+>
+> **Base case ($n = 0$):**
+>
+> We need to show $S(m) + 0 = S(m + 0)$.
+>
+> Left side: $S(m) + 0 = S(m)$ [by definition: $n + 0 = n$]
+>
+> Right side: $S(m + 0) = S(m)$ [by definition: $m + 0 = m$]
+>
+> Therefore $S(m) + 0 = S(m) = S(m + 0)$ ✓
+>
+> **Inductive step:**
+>
+> IH: Assume $S(m) + k = S(m + k)$ for some $k \in \mathbb{N}$.
+>
+> Goal: Prove $S(m) + S(k) = S(m + S(k))$.
+>
+> Transform the left side:
+> $$S(m) + S(k) = S(S(m) + k) \quad \text{[definition: } n + S(p) = S(n+p)\text{]}$$
+>
+> Transform the right side:
+> $$
+> \begin{aligned}
+> S(m + S(k)) &= S(S(m + k)) && \text{[definition: } m + S(k) = S(m+k)\text{]}
+> \end{aligned}
+> $$
+>
+> Now we need to show: $S(S(m) + k) = S(S(m + k))$
+>
+> By IH, we know: $S(m) + k = S(m + k)$
+>
+> Applying the successor function to both sides: $S(S(m) + k) = S(S(m + k))$ ✓
+>
+> **Conclusion:** By mathematical induction, $S(m) + n = S(m + n)$ for all $m, n \in \mathbb{N}$. ∎
 
 ### Key Insights
 
@@ -112,53 +124,59 @@ Applying the successor function to both sides: $S(S(m) + k) = S(S(m + k))$ ✓
 ## Theorem 3: Commutativity of Addition
 
 {% callout_tip() %}
-**Statement:** For all $m, n \in \mathbb{N}$, we have $m + n = n + m$.
+**Statement:**
 
-**In words:** Order doesn't matter in addition.
+For all $m, n \in \mathbb{N}$, we have $m + n = n + m$.
 
-**Dependency:** This proof requires BOTH Theorem 1 and Theorem 2.
+**In words:**
+
+Order doesn't matter in addition.
+
+**Dependency:**
+
+This proof requires BOTH Theorem 1 and Theorem 2.
 {% end %}
 
 ### Proof
 
-We prove this by induction on $n$, keeping $m$ fixed but arbitrary.
-
-Let $P(n)$ be the statement "$m + n = n + m$".
-
-**Base case ($n = 0$):**
-
-We need to show $m + 0 = 0 + m$.
-
-$$
-\begin{aligned}
-m + 0 &= m && \text{[definition]} \\
-0 + m &= m && \text{[Theorem 1]}
-\end{aligned}
-$$
-
-Therefore $m + 0 = m = 0 + m$ ✓
-
-**Inductive step:**
-
-IH: Assume $m + k = k + m$ for some $k \in \mathbb{N}$.
-
-Goal: Prove $m + S(k) = S(k) + m$.
-
-Transform the left side:
-$$m + S(k) = S(m + k) \quad \text{[definition]}$$
-
-Transform the right side:
-$$S(k) + m = S(k + m) \quad \text{[Theorem 2]}$$
-
-Connect using IH:
-
-By IH, we have: $m + k = k + m$
-
-Therefore: $S(m + k) = S(k + m)$
-
-Thus: $m + S(k) = S(m + k) = S(k + m) = S(k) + m$ ✓
-
-**Conclusion:** By mathematical induction, $m + n = n + m$ for all $m, n \in \mathbb{N}$. ∎
+> We prove this by induction on $n$, keeping $m$ fixed but arbitrary.
+>
+> Let $P(n)$ be the statement "$m + n = n + m$".
+>
+> **Base case ($n = 0$):**
+>
+> We need to show $m + 0 = 0 + m$.
+>
+> $$
+> \begin{aligned}
+> m + 0 &= m && \text{[definition]} \\
+> 0 + m &= m && \text{[Theorem 1]}
+> \end{aligned}
+> $$
+>
+> Therefore $m + 0 = m = 0 + m$ ✓
+>
+> **Inductive step:**
+>
+> IH: Assume $m + k = k + m$ for some $k \in \mathbb{N}$.
+>
+> Goal: Prove $m + S(k) = S(k) + m$.
+>
+> Transform the left side:
+> $$m + S(k) = S(m + k) \quad \text{[definition]}$$
+>
+> Transform the right side:
+> $$S(k) + m = S(k + m) \quad \text{[Theorem 2]}$$
+>
+> Connect using IH:
+>
+> By IH, we have: $m + k = k + m$
+>
+> Therefore: $S(m + k) = S(k + m)$
+>
+> Thus: $m + S(k) = S(m + k) = S(k + m) = S(k) + m$ ✓
+>
+> **Conclusion:** By mathematical induction, $m + n = n + m$ for all $m, n \in \mathbb{N}$. ∎
 
 ### Key Insights
 
@@ -170,53 +188,59 @@ Thus: $m + S(k) = S(m + k) = S(k + m) = S(k) + m$ ✓
 ## Theorem 4: Associativity of Addition
 
 {% callout_tip() %}
-**Statement:** For all $a, b, c \in \mathbb{N}$, we have $(a + b) + c = a + (b + c)$.
+**Statement:**
 
-**In words:** Grouping doesn't matter in addition.
+For all $a, b, c \in \mathbb{N}$, we have $(a + b) + c = a + (b + c)$.
 
-**Interesting fact:** This theorem does NOT require commutativity—they are independent properties.
+**In words:**
+
+Grouping doesn't matter in addition.
+
+**Interesting fact:**
+
+This theorem does NOT require commutativity—they are independent properties.
 {% end %}
 
 ### Proof
 
-We prove this by induction on $c$, keeping $a$ and $b$ fixed but arbitrary.
-
-**Base case ($c = 0$):**
-
-We need to show $(a + b) + 0 = a + (b + 0)$.
-
-Left side: $(a + b) + 0 = a + b$ [by definition]
-
-Right side: $a + (b + 0) = a + b$ [by definition]
-
-Therefore $(a + b) + 0 = a + b = a + (b + 0)$ ✓
-
-**Inductive step:**
-
-IH: Assume $(a + b) + k = a + (b + k)$ for some $k \in \mathbb{N}$.
-
-Goal: Prove $(a + b) + S(k) = a + (b + S(k))$.
-
-Transform the left side:
-$$(a + b) + S(k) = S((a + b) + k) \quad \text{[definition]}$$
-
-Transform the right side:
-$$
-\begin{aligned}
-a + (b + S(k)) &= a + S(b + k) && \text{[definition]} \\
-&= S(a + (b + k)) && \text{[definition again]}
-\end{aligned}
-$$
-
-Connect using IH:
-
-We have from IH: $(a + b) + k = a + (b + k)$
-
-Applying $S$ to both sides: $S((a + b) + k) = S(a + (b + k))$
-
-Therefore: $(a + b) + S(k) = S((a + b) + k) = S(a + (b + k)) = a + (b + S(k))$ ✓
-
-**Conclusion:** By mathematical induction, $(a + b) + c = a + (b + c)$ for all $a, b, c \in \mathbb{N}$. ∎
+> We prove this by induction on $c$, keeping $a$ and $b$ fixed but arbitrary.
+>
+> **Base case ($c = 0$):**
+>
+> We need to show $(a + b) + 0 = a + (b + 0)$.
+>
+> Left side: $(a + b) + 0 = a + b$ [by definition]
+>
+> Right side: $a + (b + 0) = a + b$ [by definition]
+>
+> Therefore $(a + b) + 0 = a + b = a + (b + 0)$ ✓
+>
+> **Inductive step:**
+>
+> IH: Assume $(a + b) + k = a + (b + k)$ for some $k \in \mathbb{N}$.
+>
+> Goal: Prove $(a + b) + S(k) = a + (b + S(k))$.
+>
+> Transform the left side:
+> $$(a + b) + S(k) = S((a + b) + k) \quad \text{[definition]}$$
+>
+> Transform the right side:
+> $$
+> \begin{aligned}
+> a + (b + S(k)) &= a + S(b + k) && \text{[definition]} \\
+> &= S(a + (b + k)) && \text{[definition again]}
+> \end{aligned}
+> $$
+>
+> Connect using IH:
+>
+> We have from IH: $(a + b) + k = a + (b + k)$
+>
+> Applying $S$ to both sides: $S((a + b) + k) = S(a + (b + k))$
+>
+> Therefore: $(a + b) + S(k) = S((a + b) + k) = S(a + (b + k)) = a + (b + S(k))$ ✓
+>
+> **Conclusion:** By mathematical induction, $(a + b) + c = a + (b + c)$ for all $a, b, c \in \mathbb{N}$. ∎
 
 ### Key Insights
 
@@ -248,16 +272,24 @@ With addition fully characterized, we define multiplication recursively using ad
 **Base case:**
 $$n \times 0 = 0$$
 
-**Meaning:** Anything times zero is zero.
+**Meaning:**
 
-**Intuition:** "n groups of 0 things = 0 things total"
+Anything times zero is zero.
+
+**Intuition:**
+
+"n groups of 0 things = 0 things total"
 
 **Recursive case:**
 $$n \times S(m) = (n \times m) + n$$
 
-**Meaning:** To multiply $n$ by one-more-than-$m$, take the result of multiplying by $m$ and add $n$.
+**Meaning:**
 
-**Intuition:** "n groups of (m+1) things = (n groups of m things) + (n more things)"
+To multiply $n$ by one-more-than-$m$, take the result of multiplying by $m$ and add $n$.
+
+**Intuition:**
+
+"n groups of (m+1) things = (n groups of m things) + (n more things)"
 {% end %}
 
 ### Example: Computing $3 \times 2$
@@ -291,170 +323,198 @@ From the definition alone:
 ## Theorem 5: Left Identity for Multiplication
 
 {% callout_tip() %}
-**Statement:** For all $n \in \mathbb{N}$, we have $0 \times n = 0$.
+**Statement:**
 
-**In words:** Zero times anything is zero.
+For all $n \in \mathbb{N}$, we have $0 \times n = 0$.
+
+**In words:**
+
+Zero times anything is zero.
 {% end %}
 
 ### Proof
 
-We prove this by induction on $n$.
-
-**Base case:** $0 \times 0 = 0$ [by definition] ✓
-
-**Inductive step:**
-
-IH: Assume $0 \times k = 0$ for some $k \in \mathbb{N}$.
-
-Goal: Prove $0 \times S(k) = 0$.
-
-$$
-\begin{aligned}
-0 \times S(k) &= (0 \times k) + 0 && \text{[definition]} \\
-&= 0 + 0 && \text{[by IH]} \\
-&= 0 && \text{[definition of addition]}
-\end{aligned}
-$$
-
-**Conclusion:** By induction, $0 \times n = 0$ for all $n \in \mathbb{N}$. ∎
+> We prove this by induction on $n$.
+>
+> **Base case:** $0 \times 0 = 0$ [by definition] ✓
+>
+> **Inductive step:**
+>
+> IH: Assume $0 \times k = 0$ for some $k \in \mathbb{N}$.
+>
+> Goal: Prove $0 \times S(k) = 0$.
+>
+> $$
+> \begin{aligned}
+> 0 \times S(k) &= (0 \times k) + 0 && \text{[definition]} \\
+> &= 0 + 0 && \text{[by IH]} \\
+> &= 0 && \text{[definition of addition]}
+> \end{aligned}
+> $$
+>
+> **Conclusion:** By induction, $0 \times n = 0$ for all $n \in \mathbb{N}$. ∎
 
 ## Theorem 6: Left Successor for Multiplication
 
 {% callout_tip() %}
-**Statement:** For all $m, n \in \mathbb{N}$, we have $S(m) \times n = (m \times n) + n$.
+**Statement:**
 
-**In words:** Multiplying the successor of $m$ by $n$ equals $(m \times n) + n$.
+For all $m, n \in \mathbb{N}$, we have $S(m) \times n = (m \times n) + n$.
 
-**Dependency:** This proof requires associativity and commutativity of addition.
+**In words:**
+
+Multiplying the successor of $m$ by $n$ equals $(m \times n) + n$.
+
+**Dependency:**
+
+This proof requires associativity and commutativity of addition.
 {% end %}
 
 ### Proof (Sketch)
 
-We prove by induction on $n$.
-
-Base case: Both sides equal $0$.
-
-Inductive step uses the fact that:
-$$S(m) \times S(k) = (S(m) \times k) + S(m) = ((m \times k) + k) + S(m)$$
-
-And we need to show this equals:
-$$(m \times S(k)) + S(k) = ((m \times k) + m) + S(k)$$
-
-This requires rearranging the sum using commutativity and associativity of addition. ∎
+> We prove by induction on $n$.
+>
+> Base case: Both sides equal $0$.
+>
+> Inductive step uses the fact that:
+> $$S(m) \times S(k) = (S(m) \times k) + S(m) = ((m \times k) + k) + S(m)$$
+>
+> And we need to show this equals:
+> $$(m \times S(k)) + S(k) = ((m \times k) + m) + S(k)$$
+>
+> This requires rearranging the sum using commutativity and associativity of addition. ∎
 
 ## Theorem 7: Commutativity of Multiplication
 
 {% callout_tip() %}
-**Statement:** For all $m, n \in \mathbb{N}$, we have $m \times n = n \times m$.
+**Statement:**
 
-**In words:** Order doesn't matter in multiplication.
+For all $m, n \in \mathbb{N}$, we have $m \times n = n \times m$.
 
-**Dependency:** Requires Theorems 5 and 6.
+**In words:**
+
+Order doesn't matter in multiplication.
+
+**Dependency:**
+
+Requires Theorems 5 and 6.
 {% end %}
 
 ### Proof
 
-We prove by induction on $n$.
-
-**Base case ($n = 0$):**
-
-$$
-\begin{aligned}
-m \times 0 &= 0 && \text{[definition]} \\
-0 \times m &= 0 && \text{[Theorem 5]}
-\end{aligned}
-$$
-
-Therefore $m \times 0 = 0 \times m$ ✓
-
-**Inductive step:**
-
-IH: Assume $m \times k = k \times m$ for some $k \in \mathbb{N}$.
-
-Goal: Prove $m \times S(k) = S(k) \times m$.
-
-$$
-\begin{aligned}
-m \times S(k) &= (m \times k) + m && \text{[definition]} \\
-&= (k \times m) + m && \text{[by IH]} \\
-&= S(k) \times m && \text{[Theorem 6]}
-\end{aligned}
-$$
-
-**Conclusion:** By induction, $m \times n = n \times m$ for all $m, n \in \mathbb{N}$. ∎
+> We prove by induction on $n$.
+>
+> **Base case ($n = 0$):**
+>
+> $$
+> \begin{aligned}
+> m \times 0 &= 0 && \text{[definition]} \\
+> 0 \times m &= 0 && \text{[Theorem 5]}
+> \end{aligned}
+> $$
+>
+> Therefore $m \times 0 = 0 \times m$ ✓
+>
+> **Inductive step:**
+>
+> IH: Assume $m \times k = k \times m$ for some $k \in \mathbb{N}$.
+>
+> Goal: Prove $m \times S(k) = S(k) \times m$.
+>
+> $$
+> \begin{aligned}
+> m \times S(k) &= (m \times k) + m && \text{[definition]} \\
+> &= (k \times m) + m && \text{[by IH]} \\
+> &= S(k) \times m && \text{[Theorem 6]}
+> \end{aligned}
+> $$
+>
+> **Conclusion:** By induction, $m \times n = n \times m$ for all $m, n \in \mathbb{N}$. ∎
 
 ## Theorem 8: Distributivity
 
 {% callout_tip() %}
-**Statement:** For all $a, b, c \in \mathbb{N}$, we have $a \times (b + c) = (a \times b) + (a \times c)$.
+**Statement:**
 
-**In words:** Multiplication distributes over addition.
+For all $a, b, c \in \mathbb{N}$, we have $a \times (b + c) = (a \times b) + (a \times c)$.
 
-**Dependency:** Requires associativity of addition (Theorem 4).
+**In words:**
+
+Multiplication distributes over addition.
+
+**Dependency:**
+
+Requires associativity of addition (Theorem 4).
 {% end %}
 
 ### Proof
 
-We prove by induction on $c$.
-
-**Base case ($c = 0$):**
-
-$$
-\begin{aligned}
-a \times (b + 0) &= a \times b && \text{[addition definition]} \\
-(a \times b) + (a \times 0) &= (a \times b) + 0 = a \times b && \text{[multiplication definition]}
-\end{aligned}
-$$
-
-Both sides equal $a \times b$ ✓
-
-**Inductive step:**
-
-IH: Assume $a \times (b + k) = (a \times b) + (a \times k)$.
-
-Goal: Prove $a \times (b + S(k)) = (a \times b) + (a \times S(k))$.
-
-Left side:
-$$
-\begin{aligned}
-a \times (b + S(k)) &= a \times S(b + k) && \text{[addition definition]} \\
-&= (a \times (b + k)) + a && \text{[multiplication definition]}
-\end{aligned}
-$$
-
-Right side:
-$$
-\begin{aligned}
-(a \times b) + (a \times S(k)) &= (a \times b) + ((a \times k) + a) && \text{[multiplication definition]}
-\end{aligned}
-$$
-
-Using IH: $(a \times (b + k)) + a = ((a \times b) + (a \times k)) + a$
-
-By associativity of addition: $((a \times b) + (a \times k)) + a = (a \times b) + ((a \times k) + a)$ ✓
-
-**Conclusion:** By induction, distributivity holds for all $a, b, c \in \mathbb{N}$. ∎
+> We prove by induction on $c$.
+>
+> **Base case ($c = 0$):**
+>
+> $$
+> \begin{aligned}
+> a \times (b + 0) &= a \times b && \text{[addition definition]} \\
+> (a \times b) + (a \times 0) &= (a \times b) + 0 = a \times b && \text{[multiplication definition]}
+> \end{aligned}
+> $$
+>
+> Both sides equal $a \times b$ ✓
+>
+> **Inductive step:**
+>
+> IH: Assume $a \times (b + k) = (a \times b) + (a \times k)$.
+>
+> Goal: Prove $a \times (b + S(k)) = (a \times b) + (a \times S(k))$.
+>
+> Left side:
+> $$
+> \begin{aligned}
+> a \times (b + S(k)) &= a \times S(b + k) && \text{[addition definition]} \\
+> &= (a \times (b + k)) + a && \text{[multiplication definition]}
+> \end{aligned}
+> $$
+>
+> Right side:
+> $$
+> \begin{aligned}
+> (a \times b) + (a \times S(k)) &= (a \times b) + ((a \times k) + a) && \text{[multiplication definition]}
+> \end{aligned}
+> $$
+>
+> Using IH: $(a \times (b + k)) + a = ((a \times b) + (a \times k)) + a$
+>
+> By associativity of addition: $((a \times b) + (a \times k)) + a = (a \times b) + ((a \times k) + a)$ ✓
+>
+> **Conclusion:** By induction, distributivity holds for all $a, b, c \in \mathbb{N}$. ∎
 
 ## Theorem 9: Associativity of Multiplication
 
 {% callout_tip() %}
-**Statement:** For all $a, b, c \in \mathbb{N}$, we have $(a \times b) \times c = a \times (b \times c)$.
+**Statement:**
 
-**In words:** Grouping doesn't matter in multiplication.
+For all $a, b, c \in \mathbb{N}$, we have $(a \times b) \times c = a \times (b \times c)$.
 
-**Dependency:** Requires distributivity (Theorem 8).
+**In words:**
+
+Grouping doesn't matter in multiplication.
+
+**Dependency:**
+
+Requires distributivity (Theorem 8).
 {% end %}
 
 ### Proof (Sketch)
 
-We prove by induction on $c$.
-
-Base case: Both sides equal $0$.
-
-Inductive step uses distributivity to expand:
-$$a \times (b \times S(k)) = a \times ((b \times k) + b) = (a \times (b \times k)) + (a \times b)$$
-
-Combined with the IH, this gives the desired result. ∎
+> We prove by induction on $c$.
+>
+> Base case: Both sides equal $0$.
+>
+> Inductive step uses distributivity to expand:
+> $$a \times (b \times S(k)) = a \times ((b \times k) + b) = (a \times (b \times k)) + (a \times b)$$
+>
+> Combined with the IH, this gives the desired result. ∎
 
 ## Summary: Multiplication is Fully Characterized
 
@@ -474,7 +534,9 @@ Examples that illuminate subtle aspects of the theory.
 
 ## Why Order Matters in Recursive Definition
 
-**Question:** Why did we define addition as recursive on the RIGHT argument instead of the LEFT?
+**Question:**
+
+Why did we define addition as recursive on the RIGHT argument instead of the LEFT?
 
 Consider trying to define it recursively on the LEFT:
 
@@ -485,7 +547,9 @@ S(m) + n &= S(m + n)
 \end{aligned}
 $$
 
-**Problem:** How would you compute $3 + 2$ using these rules?
+**Problem:**
+
+How would you compute $3 + 2$ using these rules?
 
 $$S(S(S(0))) + S(S(0)) = ?$$
 
@@ -508,7 +572,9 @@ The successor is on the RIGHT, so we can successfully recurse.
 
 ## Why We Needed to Prove $0 + n = n$
 
-**It seems obvious:** "Zero plus anything is that thing!"
+**It seems obvious:**
+
+"Zero plus anything is that thing!"
 
 **But look carefully at what we have:**
 
@@ -567,9 +633,13 @@ This is a DIFFERENT mathematical structure (called a cyclic group), not the natu
 
 **In $\mathbb{N}$, we can add any two numbers. But can we always subtract?**
 
-**Question:** What is $3 - 5$ in $\mathbb{N}$?
+**Question:**
 
-**Problem:** There is no natural number $n$ that satisfies $5 + n = 3$.
+What is $3 - 5$ in $\mathbb{N}$?
+
+**Problem:**
+
+There is no natural number $n$ that satisfies $5 + n = 3$.
 
 Why not?
 - $5 + 0 = 5 > 3$
@@ -577,7 +647,9 @@ Why not?
 - $5 + 2 = 7 > 3$
 - All sums $5 + n$ satisfy $5 + n \geq 5 > 3$
 
-**Conclusion:** Subtraction is NOT always defined in $\mathbb{N}$! The set is not closed under subtraction.
+**Conclusion:**
+
+Subtraction is NOT always defined in $\mathbb{N}$! The set is not closed under subtraction.
 
 This fundamental limitation is why we need to construct the **integers $\mathbb{Z}$** (coming in Domain 1.2).
 
@@ -598,13 +670,17 @@ This fundamental limitation is why we need to construct the **integers $\mathbb{
 | Discrete | ✓ | ✓ | ✓ | ✗ |
 | Complete | ✗ | ✗ | ✗ | ✓ |
 
-**Key insight:** $\mathbb{N}$ is the MOST RESTRICTED but has the MOST STRUCTURE (well-ordering, induction, minimality).
+**Key insight:**
+
+$\mathbb{N}$ is the MOST RESTRICTED but has the MOST STRUCTURE (well-ordering, induction, minimality).
 
 ## Why Induction Only Works in $\mathbb{N}$
 
 **Try proving "for all integers $n$, $P(n)$" by standard induction:**
 
-**Problem:** Where do you start the induction?
+**Problem:**
+
+Where do you start the induction?
 - Start at 0? What about $-1, -2, -3, \ldots$?
 - Start at the minimum? There IS NO minimum in $\mathbb{Z}$!
 
@@ -615,186 +691,6 @@ This fundamental limitation is why we need to construct the **integers $\mathbb{
 $\mathbb{Z}$ has no minimum element, so standard induction fails.
 
 Note: We CAN use modified induction techniques (separate induction on positive and negative integers, or strong induction), but these are different from the natural induction available in $\mathbb{N}$.
-
-# Common Errors
-
-Understanding where students commonly make mistakes and how to debug them.
-
-## Error 1: Confusing IH with Axiom 5
-
-**Incorrect reasoning:** "I used Axiom 5 to conclude that $S(a) = S(b)$"
-
-**Why this is wrong:** 
-
-- Axiom 5 is the PRINCIPLE that justifies induction as a proof method
-- It's invoked at the CONCLUSION of an inductive proof
-- It is NOT used in the middle of proof steps
-
-**Correct reasoning:** "I applied the function $S$ to both sides of the equality $a = b$ (basic property of equality)"
-
-**Debugging question:** "Am I using this in the middle of a proof step, or to justify the entire proof method at the conclusion?"
-- Middle of proof → Not Axiom 5
-- At conclusion → Axiom 5 justifies the induction method
-
-## Error 2: Using Wrong Axiom for Closure
-
-**Incorrect:** "By Axiom 4, we know $S(n) \in \mathbb{N}$"
-
-**Why this is wrong:** Axiom 4 states that $S(n) \neq 0$, NOT that $S(n) \in \mathbb{N}$.
-
-**Correct:** "By Axiom 2 (closure), we know $S(n) \in \mathbb{N}$"
-
-**Debugging tip:** Memorize exactly what each axiom says. Don't guess based on vague memory.
-
-## Error 3: Treating Definitions as Theorems
-
-**Incorrect:** "I need to prove that $n + 0 = n$"
-
-**Why this is wrong:** This IS the base case of the definition. It's given, not proven.
-
-**Correct:** "By the definition of addition, $n + 0 = n$"
-
-**Debugging tip:** Check—is this statement literally part of the definition? Then it's GIVEN.
-
-## Error 4: Circular Reasoning
-
-**Incorrect proof attempt:**
-```
-Goal: Prove m + n = n + m
-Proof: Assume m + n = n + m
-Therefore m + n = n + m ✓
-```
-
-**Why this is wrong:** You ASSUMED what you're trying to prove! This is circular.
-
-**Correct approach:** Start from axioms and definitions, build up step-by-step to the conclusion.
-
-**Debugging tip:** Never assume the goal. The IH should be about a SIMPLER case (e.g., $k$ instead of $S(k)$), not the same statement.
-
-## Error 5: Not Matching Definition Patterns
-
-**Problem:** "I have $S(m) + n$ and don't know which rule to use"
-
-**Debugging process:**
-
-1. **Identify the pattern:** $S(m) + n$ has the form "$S(\text{something}) + \text{something}$"
-2. **Check the definition:** Does our definition handle this pattern?
-   - Definition gives: $n + 0$ and $n + S(m)$
-   - No direct match for $S(m) + n$!
-3. **Check proven theorems:** 
-   - Theorem 2 states: $S(m) + n = S(m + n)$ ✓
-4. **Apply it!**
-
-**Pro tip:** Create a reference table of "what rule handles what pattern" to avoid this confusion.
-
-## Error 6: Forgetting to Justify Steps
-
-**Incorrect proof excerpt:**
-```
-Need to show: (a + b) + c = (b + a) + c
-These are obviously equal.
-```
-
-**Why this is wrong:** "Obviously equal" is not a mathematical justification.
-
-**Correct:**
-```
-(a + b) + c = (b + a) + c    [by commutativity of addition: a + b = b + a]
-```
-
-**Debugging tip:** Every equals sign in a proof needs a justification in brackets: [definition], [Theorem X], [IH], [Axiom Y], etc.
-
-## Error 7: Applying Theorems Before They're Proven
-
-**Incorrect:** Using commutativity of multiplication in the proof of Theorem 5
-
-**Why this is wrong:** Theorem 5 is proven BEFORE we establish commutativity. Can't use results you haven't proven yet!
-
-**Correct:** Only use axioms, definitions, and previously proven theorems.
-
-**Debugging tip:** Check the dependency order. Draw a diagram if needed.
-
-# Connections
-
-How natural numbers connect to other mathematical structures.
-
-## Building the Integers: $\mathbb{N} \to \mathbb{Z}$
-
-**Problem with $\mathbb{N}$:** Cannot always subtract. For example, $3 - 5$ doesn't exist.
-
-**Solution:** Build $\mathbb{Z}$ from ordered pairs of natural numbers.
-
-### Construction
-
-**Core idea:** Represent the integer $(a, b)$ as meaning "$a - b$"
-
-**Examples:**
-- $(3, 5)$ represents $3 - 5 = -2$
-- $(7, 4)$ represents $7 - 4 = 3$
-- $(5, 5)$ represents $5 - 5 = 0$
-
-**Equivalence relation:** $(a, b) \sim (c, d)$ if and only if $a + d = b + c$
-
-**Why this works:** The statement $a - b = c - d$ is equivalent to $a + d = b + c$, but the right side uses only addition from $\mathbb{N}$!
-
-**Example equivalence classes:**
-- $(3, 5) \sim (1, 3) \sim (0, 2) \sim (2, 4)$ all represent $-2$
-- $(7, 4) \sim (5, 2) \sim (3, 0) \sim (6, 3)$ all represent $3$
-
-**Key insight:** $\mathbb{Z}$ is CONSTRUCTED FROM $\mathbb{N}$ using only the structure we already have!
-
-## Building the Rationals: $\mathbb{Z} \to \mathbb{Q}$
-
-**Problem with $\mathbb{Z}$:** Cannot always divide. For example, $3 \div 4$ doesn't exist.
-
-**Solution:** Build $\mathbb{Q}$ from ordered pairs of integers.
-
-### Construction
-
-**Core idea:** Represent $(a, b)$ as meaning "$a/b$" (with $b \neq 0$)
-
-**Examples:**
-- $(3, 4)$ represents $3/4$
-- $(6, 8)$ represents $6/8 = 3/4$
-- $(-2, 5)$ represents $-2/5$
-
-**Equivalence relation:** $(a, b) \sim (c, d)$ if and only if $a \times d = b \times c$
-
-**Why this works:** The statement $a/b = c/d$ is equivalent to $ad = bc$ (cross-multiplication), using only multiplication from $\mathbb{Z}$!
-
-**Example equivalence classes:**
-- $(1, 2) \sim (2, 4) \sim (3, 6) \sim (-1, -2)$ all represent $1/2$
-- $(3, 4) \sim (6, 8) \sim (9, 12) \sim (-3, -4)$ all represent $3/4$
-
-**Key insight:** $\mathbb{Q}$ is BUILT FROM $\mathbb{Z}$, which is BUILT FROM $\mathbb{N}$!
-
-## Building the Reals: $\mathbb{Q} \to \mathbb{R}$
-
-**Problem with $\mathbb{Q}$:** Has "holes"—numbers like $\sqrt{2}$ cannot be expressed as fractions.
-
-**Solution:** Build $\mathbb{R}$ via either Dedekind cuts or Cauchy sequences.
-
-### Dedekind Cut Approach
-
-**Idea:** A real number is a partition of $\mathbb{Q}$ into two sets $(L, R)$ where:
-- Everything in $L$ is less than everything in $R$
-- $L$ has no maximum element
-- $R$ has no minimum element (or has minimum that represents the number)
-
-**Example:** $\sqrt{2}$ is represented by:
-$$L = \{q \in \mathbb{Q} : q^2 < 2 \text{ or } q < 0\}$$
-$$R = \{q \in \mathbb{Q} : q^2 \geq 2 \text{ and } q \geq 0\}$$
-
-### Cauchy Sequence Approach
-
-**Idea:** A real number is an equivalence class of Cauchy sequences of rationals.
-
-**Example:** $\sqrt{2}$ is represented by the sequence:
-$$[1, 1.4, 1.41, 1.414, 1.4142, 1.41421, \ldots]$$
-
-where each term is a rational approximation getting closer to $\sqrt{2}$.
-
-**Key insight:** $\mathbb{R}$ is BUILT FROM $\mathbb{Q}$, which is BUILT FROM $\mathbb{Z}$, which is BUILT FROM $\mathbb{N}$!
 
 ## The Complete Hierarchy
 
@@ -810,30 +706,9 @@ where each term is a rational approximation getting closer to $\sqrt{2}$.
 ℂ (complex numbers - adds √-1)
 ```
 
-**Remarkable fact:** ALL of mathematics is built on the foundation of the 5 Peano Axioms!
+**Remarkable fact:**
 
-## Prerequisites for Understanding $\mathbb{N}$
-
-**You needed:**
-- Basic logic (quantifiers $\forall$, $\exists$, connectives)
-- Set theory (membership $\in$, subsets, operations)
-- Functions (domain, codomain, injectivity)
-- Proof techniques (direct, contradiction, induction)
-
-## What $\mathbb{N}$ Enables You to Study
-
-**Having mastered $\mathbb{N}$, you can now understand:**
-
-- **Integers $\mathbb{Z}$** (Domain 1.2 - coming next)
-- **Divisibility theory** (primes, GCD, Euclidean algorithm)
-- **Number theory** (modular arithmetic, Fermat's theorems, quadratic reciprocity)
-- **Rational numbers $\mathbb{Q}$** (Domain 1.3)
-- **Real numbers $\mathbb{R}$** (Domain 1.3)
-- **Combinatorics** (counting principles, permutations, combinations)
-- **Discrete mathematics** (graphs, algorithms, complexity theory)
-- **Recursion theory** (computability, Turing machines)
-
-**$\mathbb{N}$ is the foundational structure for all of discrete mathematics and number theory.**
+ALL of mathematics is built on the foundation of the 5 Peano Axioms!
 
 # Further Exploration
 
@@ -841,9 +716,13 @@ Open-ended investigations and creative mathematical thinking.
 
 ## What If We Modified Axiom 4?
 
-**Original Axiom 4:** $S(n) \neq 0$ for all $n \in \mathbb{N}$
+**Original Axiom 4:**
 
-**Modified version:** $S(4) = 0$, but $S(n) \neq 0$ for $n < 4$
+$S(n) \neq 0$ for all $n \in \mathbb{N}$
+
+**Modified version:**
+
+$S(4) = 0$, but $S(n) \neq 0$ for $n < 4$
 
 **What structure results?**
 
@@ -855,1203 +734,3 @@ Answer: A cyclic group of order 5, denoted $\mathbb{Z}/5\mathbb{Z}$ or $\mathbb{
 - **Addition mod 5:** $3 + 3 = 6 \equiv 1 \pmod{5}$
 - **No well-ordering:** The usual order breaks down in cycles
 - **Induction fails:** Can't reach all elements from 0 without repeating
-
-**Applications:**
-- Clock arithmetic (12-hour clock is $\mathbb{Z}/12\mathbb{Z}$)
-- Cryptography (RSA encryption uses modular arithmetic)
-- Error-correcting codes
-- Abstract algebra (finite groups, rings, fields)
-
-**Investigation questions:**
-1. What happens if we make $S(n) = 0$ for some different $n$?
-2. Can we define consistent addition and multiplication on such structures?
-3. Which algebraic properties survive? Which break?
-
-## Alternative Recursion for Addition
-
-**Our definition:**
-$$
-\begin{aligned}
-n + 0 &= n \\
-n + S(m) &= S(n + m)
-\end{aligned}
-$$
-
-**Alternative definition (recursive on left):**
-$$
-\begin{aligned}
-0 + m &= m \\
-S(n) + m &= S(n + m)
-\end{aligned}
-$$
-
-**Exploration questions:**
-
-1. Can you prove these define the SAME operation?
-2. Which theorems become easier to prove? Which become harder?
-3. How does the commutativity proof change?
-4. Is there a "symmetric" definition that treats both arguments equally?
-
-**Answer preview:** They do define the same operation, but:
-- Our choice: Must prove $0 + n = n$ as theorem, get $n + 0 = n$ from definition
-- Alternative: Must prove $n + 0 = n$ as theorem, get $0 + n = n$ from definition
-
-The total work is the same, just distributed differently!
-
-## Fibonacci Numbers from Peano Axioms
-
-**Challenge:** Define the Fibonacci sequence using only the Peano axioms.
-
-**Solution:** Define $F: \mathbb{N} \to \mathbb{N}$ by more complex recursion:
-
-$$
-\begin{aligned}
-F(0) &= 0 \\
-F(1) &= 1 \\
-F(S(S(n))) &= F(S(n)) + F(n)
-\end{aligned}
-$$
-
-This is **two-step recursion**—the value depends on TWO previous values, not just one.
-
-**Investigation problems:**
-
-1. Prove that $F(n) < 2^n$ for all $n \geq 1$
-2. Prove that $F(n)$ grows exponentially
-3. Can you find a closed-form formula? (Binet's formula)
-4. Prove that $\gcd(F(m), F(n)) = F(\gcd(m, n))$
-
-**Hint:** Use **strong induction**—assume $P(0), P(1), \ldots, P(k)$ all true, then prove $P(k+1)$.
-
-## Fast Exponentiation Algorithm
-
-**Define exponentiation recursively:**
-$$
-\begin{aligned}
-a^0 &= 1 \\
-a^{S(n)} &= a^n \times a
-\end{aligned}
-$$
-
-**Naive computation of $2^{1000}$:** Requires 999 multiplications
-
-**Binary exponentiation (fast method):**
-- $2^{1000} = (2^{500})^2$
-- $2^{500} = (2^{250})^2$
-- $2^{250} = (2^{125})^2$
-- Continue halving...
-- Only about 10 squaring operations!
-
-**Challenge problems:**
-
-1. Formalize this algorithm using Peano arithmetic
-2. Prove its correctness
-3. Prove the complexity is $O(\log n)$ multiplications
-4. Implement it in Lean
-
-## Gödel Numbering
-
-**Mind-blowing idea:** Encode all of logic and mathematics itself using natural numbers!
-
-**Gödel's technique:**
-- Assign each logical symbol a unique number
-- Encode formulas as products of prime powers
-- Encode proofs as sequences of numbers
-
-**Example encoding scheme:**
-- Symbol "0" → 1
-- Symbol "S" → 2
-- Symbol "+" → 3
-- Symbol "(" → 5
-- Symbol ")" → 7
-
-**Encoding formula "$S(0) + 0$":**
-
-Could encode as: $2^{p_1} \times 3^{p_2} \times 5^{p_3} \times \cdots$ where each prime corresponds to a position and exponent encodes the symbol.
-
-**Consequence:** Can write statements IN arithmetic ABOUT arithmetic!
-
-**This leads to:**
-- Gödel's First Incompleteness Theorem
-- Undecidability results
-- Foundations of computability theory
-
-**Investigation:** How would you encode the statement "this statement is unprovable"?
-
-## Applications to Computer Science
-
-**Natural numbers appear everywhere in CS:**
-
-### Data Structures
-- Array indices: $i \in \mathbb{N}$
-- List lengths: $|L| \in \mathbb{N}$
-- Tree depths: $d \in \mathbb{N}$
-- Graph node degrees: $\deg(v) \in \mathbb{N}$
-
-### Complexity Theory
-- Time complexity: $T(n)$ where $n \in \mathbb{N}$ is input size
-- Space complexity: $S(n)$
-- **Induction proves algorithm correctness!**
-
-### Type Theory
-- Dependent types parameterized by $\mathbb{N}$
-- Example: `Vector<T, n>` = vector of type T with length $n \in \mathbb{N}$
-- Length is part of the type!
-
-### Recursion
-Every recursive function has:
-- **Base case** (like $n + 0 = n$)
-- **Recursive case** (like $n + S(m) = S(n + m)$)
-
-**EXACTLY the pattern from Peano arithmetic!**
-
-**Investigation:** How does structural induction on data types relate to mathematical induction on $\mathbb{N}$?
-
-# Practice Problems
-
-Test and deepen your understanding with these exercises.
-
-## Basic Proofs
-
-### Problem 1
-
-Prove that for all $n \in \mathbb{N}$, we have $n + S(0) = S(n)$.
-
-(This shows that adding 1 to any number gives its successor.)
-
-**Hint:** Use the definition of addition directly—no induction needed!
-
-### Problem 2
-
-Prove that for all $n \in \mathbb{N}$, we have $S(0) + n = S(n)$.
-
-(This is the left-side version of Problem 1.)
-
-**Hint:** Use induction on $n$, and apply Theorem 2 in the inductive step.
-
-### Problem 3
-
-Prove that for all $n \in \mathbb{N}$, we have $n \times S(0) = n$.
-
-(This shows that 1 is the multiplicative identity on the right.)
-
-**Hint:** Use induction on $n$.
-
-## Intermediate Proofs
-
-### Problem 4
-
-Prove that for all $n \in \mathbb{N}$, we have $S(0) \times n = n$.
-
-(This shows that 1 is the multiplicative identity on the left.)
-
-**Hint:** Induction on $n$. You'll need commutativity of addition.
-
-### Problem 5
-
-Prove that for all $m, n \in \mathbb{N}$, we have $(m + n) + S(0) = S(m + n)$.
-
-**Hint:** Use associativity and Problem 1.
-
-### Problem 6
-
-Prove the "right distributivity": For all $a, b, c \in \mathbb{N}$,
-$$(b + c) \times a = (b \times a) + (c \times a)$$
-
-**Hint:** Use commutativity of multiplication and Theorem 8 (left distributivity).
-
-## Advanced Proofs
-
-### Problem 7
-
-Prove the **unique left inverse property**: For all $n, m \in \mathbb{N}$, if $n + m = n$, then $m = 0$.
-
-(In other words, 0 is the ONLY number you can add to $n$ to get $n$ back.)
-
-**Hint:** Use induction on $m$. In the inductive step, you'll need Axiom 3 (injectivity of successor).
-
-### Problem 8
-
-Prove the **cancellation law for addition**: For all $a, b, c \in \mathbb{N}$, if $a + b = a + c$, then $b = c$.
-
-**Hint:** Induction on $a$. Use Axiom 3 and Problem 7.
-
-### Problem 9
-
-Prove that for all $n, m \in \mathbb{N}$, if $S(n) = n + m$, then $m = S(0)$.
-
-(This characterizes when a successor equals a sum.)
-
-**Hint:** Induction on $m$.
-
-## Challenge Problems
-
-### Problem 10
-
-Define a "less than" relation: We write $n < m$ if there exists $k \in \mathbb{N}$ with $k \neq 0$ such that $n + k = m$.
-
-Prove that $<$ is **transitive**: If $a < b$ and $b < c$, then $a < c$.
-
-**Hint:** Use the associativity of addition.
-
-### Problem 11
-
-Prove the **well-ordering principle**: Every non-empty subset $S \subseteq \mathbb{N}$ has a least element.
-
-**Hint:** Use strong induction. Assume, for contradiction, that $S$ has no least element.
-
-### Problem 12
-
-Define the Fibonacci sequence by:
-$$
-\begin{aligned}
-F(0) &= 0 \\
-F(1) &= 1 \\
-F(n+2) &= F(n+1) + F(n)
-\end{aligned}
-$$
-
-Prove that $F(n) < 2^n$ for all $n \geq 1$.
-
-**Hint:** Use strong induction.
-
-## Solutions
-
-### Solution to Problem 1
-
-**Theorem:** For all $n \in \mathbb{N}$, we have $n + S(0) = S(n)$.
-
-**Proof:**
-
-$$
-\begin{aligned}
-n + S(0) &= S(n + 0) && \text{[definition: } n + S(m) = S(n+m)\text{]} \\
-&= S(n) && \text{[definition: } n + 0 = n\text{]}
-\end{aligned}
-$$
-
-Therefore $n + S(0) = S(n)$. ∎
-
-### Solution to Problem 2
-
-**Theorem:** For all $n \in \mathbb{N}$, we have $S(0) + n = S(n)$.
-
-**Proof by induction on $n$:**
-
-**Base case:** $S(0) + 0 = S(0) = S(0)$ [by definition of addition] ✓
-
-**Inductive step:**
-
-IH: Assume $S(0) + k = S(k)$ for some $k \in \mathbb{N}$.
-
-Goal: Prove $S(0) + S(k) = S(S(k))$.
-
-$$
-\begin{aligned}
-S(0) + S(k) &= S(S(0) + k) && \text{[Theorem 2: } S(m) + n = S(m+n)\text{]} \\
-&= S(S(k)) && \text{[by IH]}
-\end{aligned}
-$$
-
-Therefore $S(0) + S(k) = S(S(k))$ ✓
-
-**Conclusion:** By mathematical induction, $S(0) + n = S(n)$ for all $n \in \mathbb{N}$. ∎
-
-### Solution to Problem 3
-
-**Theorem:** For all $n \in \mathbb{N}$, we have $n \times S(0) = n$.
-
-**Proof by induction on $n$:**
-
-**Base case:** $0 \times S(0) = 0$ [by definition of multiplication] ✓
-
-**Inductive step:**
-
-IH: Assume $k \times S(0) = k$ for some $k \in \mathbb{N}$.
-
-Goal: Prove $S(k) \times S(0) = S(k)$.
-
-$$
-\begin{aligned}
-S(k) \times S(0) &= (k \times S(0)) + S(0) && \text{[Theorem 6: } S(m) \times n = (m \times n) + n\text{]} \\
-&= k + S(0) && \text{[by IH]} \\
-&= S(k + 0) && \text{[definition of addition]} \\
-&= S(k) && \text{[definition: } k + 0 = k\text{]}
-\end{aligned}
-$$
-
-Therefore $S(k) \times S(0) = S(k)$ ✓
-
-**Conclusion:** By induction, $n \times S(0) = n$ for all $n \in \mathbb{N}$. ∎
-
-### Solution to Problem 7
-
-**Theorem:** For all $n, m \in \mathbb{N}$, if $n + m = n$, then $m = 0$.
-
-**Proof by induction on $m$:**
-
-**Base case ($m = 0$):** Trivially, $m = 0$ ✓
-
-**Inductive step:**
-
-IH: Assume that for some $k \in \mathbb{N}$, if $n + k = n$ then $k = 0$.
-
-Goal: Show that if $n + S(k) = n$, then $S(k) = 0$ (which will give us a contradiction).
-
-Suppose $n + S(k) = n$.
-
-Then:
-$$
-\begin{aligned}
-n + S(k) &= n \\
-S(n + k) &= n && \text{[definition of addition]}
-\end{aligned}
-$$
-
-But this says $S(n + k) = n$, which means $n$ is a successor. But by Axiom 4, no element equals both $S(\text{something})$ and equals $n$ for all $n$ unless we derive a contradiction.
-
-Actually, let me reconsider. If $n = 0$, then $0 + S(k) = S(k) \neq 0$ by Axiom 4, contradiction.
-
-If $n = S(p)$ for some $p$, then:
-$$S(p) + S(k) = S(p)$$
-$$S(S(p) + k) = S(p)$$ [by definition]
-
-By Axiom 3 (injectivity), $S(p) + k = p$.
-
-But then $S(p) + k = p < S(p)$, which contradicts the property that adding positive numbers increases the value.
-
-Therefore, our assumption that $n + S(k) = n$ must be false for any $k$, which means only $m = 0$ satisfies $n + m = n$. ∎
-
----
-
-**Note:** Full solutions to all 12 problems are available upon request. The remaining solutions follow similar proof techniques using induction, the proven theorems, and the Peano Axioms.
-
-# Formal Verification in Lean 4
-
-All theorems in this document can be formalized and machine-verified using the Lean 4 proof assistant.
-
-## Why Lean?
-
-Lean provides:
-
-- **Absolute correctness:** Every proof is checked by the type system—no human errors slip through
-- **Executable definitions:** Can actually compute with our definitions
-- **Interactive development:** Get immediate feedback on what remains to prove
-- **Readable syntax:** Closely mirrors mathematical notation
-
-## The Peano Axioms as Inductive Type
-
-```lean
--- Natural numbers via inductive type
-inductive Nat where
-  | zero : Nat
-  | succ : Nat → Nat
-
-open Nat
-```
-
-**What this encoding provides:**
-
-| Peano Axiom | Lean Feature |
-|-------------|--------------|
-| Axiom 1: $0 \in \mathbb{N}$ | `zero` constructor exists |
-| Axiom 2: $S(n) \in \mathbb{N}$ | `succ : Nat → Nat` type signature |
-| Axiom 3: Injectivity | Constructors automatically injective |
-| Axiom 4: $S(n) \neq 0$ | Different constructors are distinct |
-| Axiom 5: Induction | Built into `induction` tactic |
-
-**All 5 Peano Axioms encoded in 3 lines!**
-
-## Defining Addition
-
-```lean
--- Recursive definition matching our mathematical one
-def add : Nat → Nat → Nat
-  | n, zero => n                    -- Base: n + 0 = n
-  | n, succ m => succ (add n m)    -- Recursive: n + S(m) = S(n + m)
-
--- Enable infix notation
-instance : Add Nat where
-  add := add
-```
-
-**Pattern matching implements our definition:**
-- First clause: when second argument is `zero`, return `n`
-- Second clause: when second argument is `succ m`, return `succ (add n m)`
-
-## Theorem 1: Left Identity
-
-```lean
-theorem zero_add : ∀ n : Nat, zero + n = n := by
-  intro n
-  induction n with
-  | zero =>
-    -- Base: zero + zero = zero
-    rfl
-  | succ k ih =>
-    -- Inductive step
-    -- IH: zero + k = k
-    -- Goal: zero + succ k = succ k
-    rw [add]  -- Apply definition: zero + succ k = succ (zero + k)
-    rw [ih]   -- Use IH: succ (zero + k) = succ k
-    rfl       -- Both sides equal
-```
-
-**Proof tactics explained:**
-- `intro n` — Introduce the universal quantifier variable
-- `induction n with` — Start induction, generating two cases
-- `rfl` — "Reflexivity" proves sides that compute to the same value
-- `rw [add]` — "Rewrite" using the definition of `add`
-- `rw [ih]` — Rewrite using the inductive hypothesis
-
-## Theorem 2: Left Successor
-
-```lean
-theorem succ_add : ∀ m n : Nat, succ m + n = succ (m + n) := by
-  intros m n
-  induction n with
-  | zero =>
-    -- Base: succ m + zero = succ (m + zero)
-    rfl  -- Both sides equal succ m by definition
-  | succ k ih =>
-    -- IH: succ m + k = succ (m + k)
-    -- Goal: succ m + succ k = succ (m + succ k)
-    rw [add]           -- succ m + succ k = succ (succ m + k)
-    rw [ih]            -- = succ (succ (m + k))
-    rw [add]           -- m + succ k = succ (m + k)
-    rfl
-```
-
-**Multiple rewrites:** Each `rw` step corresponds exactly to one step in our hand-written proof.
-
-## Theorem 3: Commutativity
-
-```lean
-theorem add_comm : ∀ m n : Nat, m + n = n + m := by
-  intros m n
-  induction n with
-  | zero =>
-    -- Base: m + zero = zero + m
-    rw [add]        -- m + zero = m (by definition)
-    rw [zero_add]   -- zero + m = m (by Theorem 1)
-  | succ k ih =>
-    -- IH: m + k = k + m
-    -- Goal: m + succ k = succ k + m
-    rw [add]        -- m + succ k = succ (m + k)
-    rw [ih]         -- = succ (k + m)
-    rw [succ_add]   -- succ k + m = succ (k + m) (by Theorem 2)
-```
-
-**Building on previous theorems:** Uses both `zero_add` (Theorem 1) and `succ_add` (Theorem 2)!
-
-## Theorem 4: Associativity
-
-```lean
-theorem add_assoc : ∀ a b c : Nat, (a + b) + c = a + (b + c) := by
-  intros a b c
-  induction c with
-  | zero =>
-    rfl  -- Both sides definitionally equal
-  | succ k ih =>
-    -- IH: (a + b) + k = a + (b + k)
-    rw [add, add]  -- Apply definition to both sides
-    rw [ih]        -- Use inductive hypothesis
-    rw [add, add]  -- Apply definition again
-```
-
-**Shorthand:** `rw [add, add]` applies the rewrite rule twice in sequence.
-
-## Defining Multiplication
-
-```lean
--- Recursive definition using addition
-def mul : Nat → Nat → Nat
-  | n, zero => zero                -- n × 0 = 0
-  | n, succ m => mul n m + n      -- n × S(m) = (n × m) + n
-
-instance : Mul Nat where
-  mul := mul
-```
-
-**Notice:** Multiplication is defined in terms of `add`, showing the dependency.
-
-## Multiplication Theorems
-
-```lean
--- Theorem 5: Left identity
-theorem zero_mul : ∀ n : Nat, zero * n = zero := by
-  intro n
-  induction n with
-  | zero => rfl
-  | succ k ih =>
-    rw [mul]  -- zero * succ k = (zero * k) + zero
-    rw [ih]   -- = zero + zero
-    rw [add]  -- = zero
-
--- Theorem 7: Commutativity
-theorem mul_comm : ∀ m n : Nat, m * n = n * m := by
-  intros m n
-  induction n with
-  | zero =>
-    rw [mul]
-    rw [zero_mul]
-  | succ k ih =>
-    rw [mul]
-    rw [ih]
-    -- Additional steps using addition properties...
-    sorry  -- Full proof requires Theorem 6
-```
-
-## Example Computations
-
-```lean
--- Define some numbers for testing
-def one := succ zero
-def two := succ one
-def three := succ two
-
--- Verify addition works
-example : two + three = succ (succ (succ (succ (succ zero)))) := by rfl
-
--- Verify multiplication works
-example : two * three = succ (succ (succ (succ (succ (succ zero))))) := by rfl
-
--- Verify commutativity
-example : two + three = three + two := by rw [add_comm]
-example : two * three = three * two := by rw [mul_comm]
-```
-
-**Type checking = Proof verification:** If these examples compile successfully, the equalities are machine-verified correct!
-
-## Key Insights
-
-### 1. Proofs Are Programs
-
-- Mathematical proofs become executable code
-- Type system ensures logical correctness
-- No difference between "code" and "proof"
-
-### 2. Same Logic, Different Notation
-
-- **Hand proof:** "By definition, $n + 0 = n$"
-- **Lean:** `rw [add]`
-- **Exactly the same reasoning!**
-
-### 3. Machine Verification
-
-- Eliminates all human error
-- Provides absolute certainty
-- Makes mathematics more reliable
-
-### 4. Interactive Development
-
-- Errors caught at compile time
-- Can see what remains to prove
-- Experiment with different proof strategies
-
-## Complete Lean File Available
-
-The complete formalization `peano_arithmetic.lean` includes:
-
-- All 5 Peano Axioms (via inductive type)
-- Addition definition + all 4 theorems with full proofs
-- Multiplication definition + theorem statements
-- Example computations
-- Extensive inline documentation
-
-**To use:** Install Lean 4 from https://lean-lang.org/ and compile the file to verify all proofs.
-
-# Quick Reference
-
-Condensed reference for working mathematicians.
-
-## The 5 Peano Axioms
-
-| # | Name | Statement | Use Case |
-|---|------|-----------|----------|
-| **1** | Existence | $0 \in \mathbb{N}$ | Starting point exists |
-| **2** | Closure | $\forall n, S(n) \in \mathbb{N}$ | Successor stays in $\mathbb{N}$ |
-| **3** | Injectivity | $S(n) = S(m) \implies n = m$ | Different inputs → different outputs |
-| **4** | Zero | $\forall n, S(n) \neq 0$ | No cycles, 0 not a successor |
-| **5** | Induction | If $0 \in P$ and $[n \in P \implies S(n) \in P]$ then $P = \mathbb{N}$ | Minimality + proof method |
-
-### When to Use Each Axiom
-
-- Need $S(k) \in \mathbb{N}$? → **Axiom 2 (Closure)**
-- Need $S(k) \neq 0$? → **Axiom 4 (Zero)**
-- Need $S(n) = S(m) \implies n = m$? → **Axiom 3 (Injectivity)**
-- Proving for all $n \in \mathbb{N}$? → **Axiom 5 (Induction)**
-
-## Definitions
-
-### Addition (Recursive on Right Argument)
-
-$$
-\begin{aligned}
-n + 0 &= n && \text{(base case)} \\
-n + S(m) &= S(n + m) && \text{(recursive case)}
-\end{aligned}
-$$
-
-### Multiplication (Recursive on Right Argument)
-
-$$
-\begin{aligned}
-n \times 0 &= 0 && \text{(base case)} \\
-n \times S(m) &= (n \times m) + n && \text{(recursive case)}
-\end{aligned}
-$$
-
-## All Proven Theorems
-
-### Structural Properties
-
-1. Zero is unique (only one non-successor)
-2. Every non-zero is a successor
-3. $S$ is bijection onto $\mathbb{N} \setminus \{0\}$
-4. $\mathbb{N}$ is infinite
-5. $S$ has no fixed points ($S(n) \neq n$)
-
-### Addition (4 Theorems)
-
-| # | Name | Statement | Status |
-|---|------|-----------|--------|
-| - | Right identity | $n + 0 = n$ | Definition |
-| - | Right successor | $n + S(m) = S(n+m)$ | Definition |
-| **T1** | Left identity | $0 + n = n$ | Theorem (proven) |
-| **T2** | Left successor | $S(m) + n = S(m+n)$ | Theorem (proven) |
-| **T3** | Commutativity | $m + n = n + m$ | Theorem (proven) |
-| **T4** | Associativity | $(a+b)+c = a+(b+c)$ | Theorem (proven) |
-
-### Multiplication (5 Theorems)
-
-| # | Name | Statement | Status |
-|---|------|-----------|--------|
-| - | Right identity | $n \times 0 = 0$ | Definition |
-| - | Right successor | $n \times S(m) = (n \times m) + n$ | Definition |
-| **T5** | Left identity | $0 \times n = 0$ | Theorem (proven) |
-| **T6** | Left successor | $S(m) \times n = (m \times n) + n$ | Theorem (proven) |
-| **T7** | Commutativity | $m \times n = n \times m$ | Theorem (proven) |
-| **T8** | Distributivity | $a \times (b+c) = (a \times b) + (a \times c)$ | Theorem (proven) |
-| **T9** | Associativity | $(a \times b) \times c = a \times (b \times c)$ | Theorem (proven) |
-
-**Total: 14 theorems proven from 5 axioms!**
-
-## Induction Proof Template
-
-```
-To prove P(n) for all n ∈ ℕ:
-
-1. BASE CASE (n = 0):
-   Prove P(0) directly using definitions and axioms
-
-2. INDUCTIVE STEP:
-   a) IH: Assume P(k) for some k ∈ ℕ
-   b) Goal: Prove P(S(k))
-   c) Proof: [Use IH + definitions + axioms + previous theorems]
-
-3. CONCLUSION:
-   By Axiom 5 (Induction Principle):
-   - P(0) is true (base case)
-   - For all k, P(k) ⟹ P(S(k)) (inductive step)
-   Therefore P(n) for all n ∈ ℕ. ∎
-```
-
-**Critical distinction:**
-- **IH** = Assumption used WITHIN the proof
-- **Axiom 5** = Justification used AT THE END
-
-## Common Proof Steps Reference
-
-### Working with Addition
-
-| Given | Desired | Apply |
-|-------|---------|-------|
-| $n + 0$ | Simplify | Definition: $n + 0 = n$ |
-| $n + S(m)$ | Simplify | Definition: $n + S(m) = S(n+m)$ |
-| $0 + n$ | Simplify | Theorem 1: $0 + n = n$ |
-| $S(m) + n$ | Simplify | Theorem 2: $S(m) + n = S(m+n)$ |
-| $m + n$ | Reorder | Theorem 3: $m + n = n + m$ |
-| $(a+b)+c$ | Regroup | Theorem 4: $(a+b)+c = a+(b+c)$ |
-
-### Working with Multiplication
-
-| Given | Desired | Apply |
-|-------|---------|-------|
-| $n \times 0$ | Simplify | Definition: $n \times 0 = 0$ |
-| $n \times S(m)$ | Expand | Definition: $n \times S(m) = (n \times m) + n$ |
-| $0 \times n$ | Simplify | Theorem 5: $0 \times n = 0$ |
-| $S(m) \times n$ | Expand | Theorem 6: $S(m) \times n = (m \times n) + n$ |
-| $m \times n$ | Reorder | Theorem 7: $m \times n = n \times m$ |
-| $a \times (b+c)$ | Distribute | Theorem 8: $a \times (b+c) = (a \times b) + (a \times c)$ |
-| $(a \times b) \times c$ | Regroup | Theorem 9: $(a \times b) \times c = a \times (b \times c)$ |
-
-### Working with Equality
-
-| Have | Need | Justification |
-|------|------|---------------|
-| $a = b$ | $S(a) = S(b)$ | Apply function $S$ (basic logic) |
-| $S(a) = S(b)$ | $a = b$ | Axiom 3 (injectivity) |
-| $a = b$, $b = c$ | $a = c$ | Transitivity of equality |
-
-## Common Mistakes to Avoid
-
-| Error | Why Wrong | Correct Approach |
-|-------|-----------|------------------|
-| "Axiom 4 gives closure" | Axiom 4 is about zero | Use Axiom 2 for closure |
-| "Commutativity from Axiom 3" | Axiom 3 is injectivity | Commutativity is Theorem 3 |
-| "$0 + n = n$ is definition" | Definition gives $n + 0 = n$ | Prove $0 + n = n$ as Theorem 1 |
-| "Theorem 2 for $S(a) = S(b)$" | Theorem 2 is about addition | Use basic function application |
-| "IH same as Axiom 5" | IH is assumption in proof | Axiom 5 justifies the method |
-| "Obviously equal" | Not a proof | Give explicit justification |
-
-## Decision Tree for Proofs
-
-```
-Need to prove for all n?
-  ↓
-Use induction (Axiom 5)
-  ↓
-Base case: n = 0
-  ↓
-Use definitions directly
-  ↓
-Inductive step:
-  ├─ IH: Assume for k
-  ├─ Goal: Prove for S(k)
-  ├─ Use: Definitions + IH + Previous theorems
-  └─ Conclude by Axiom 5
-```
-
-## Axiom vs Definition vs Theorem
-
-| Type | What | Example | Provable? |
-|------|------|---------|-----------|
-| **Axiom** | Given without proof | $S(n) \neq 0$ | ✗ No |
-| **Definition** | Our choice for new concept | $n + 0 = n$ | ✗ No (it's chosen) |
-| **Theorem** | Follows from axioms + defs | $m + n = n + m$ | ✓ Yes (must prove) |
-
-## Notation Guide
-
-| Symbol | Meaning | LaTeX |
-|--------|---------|-------|
-| $\mathbb{N}$ | Natural numbers | `\mathbb{N}` |
-| $S(n)$ | Successor of $n$ | `S(n)` |
-| $0$ | Zero | `0` |
-| $+$ | Addition | `+` |
-| $\times$ | Multiplication | `\times` |
-| $\forall$ | "For all" | `\forall` |
-| $\exists$ | "There exists" | `\exists` |
-| $\implies$ | "Implies" | `\implies` |
-| $\in$ | "Is element of" | `\in` |
-| IH | Inductive Hypothesis | `IH` |
-| ∎ | End of proof (QED) | `\qed` or `\square` |
-
-## What We Accomplished
-
-**From:** 5 simple Peano Axioms
-
-**Proved:** 14 theorems characterizing arithmetic
-
-**Hierarchy:**
-```
-Axioms 1-5
-    ↓
-Definitions (addition, multiplication)
-    ↓
-Theorems 1-4 (addition properties)
-    ↓
-Theorems 5-9 (multiplication properties)
-    ↓
-Complete arithmetic on ℕ
-```
-
-**All rigorously proven using only mathematical induction!**
-
----
-
-*This completes the comprehensive treatment of natural numbers from Peano's axioms through full arithmetic structure. Mathematics studied for its own sake, with complete theoretical coverage and no shortcuts.*
-
-# Formal Verification in Lean
-
-Below is the complete executable code that implements the Peano axioms and proves the theorems we derived above. You do not need to install Lean to view this code, but if you wish to run it, you can install [Lean 4 and VS Code](https://lean-lang.org/).
-
-```lean
-```lean
--- Peano Arithmetic in Lean 4
--- Complete formalization of natural numbers from axioms
-
-/-!
-# Peano Axioms and Arithmetic
-
-This file formalizes:
-1. The 5 Peano Axioms
-2. Definition of addition
-3. Key theorems about addition
-4. Definition of multiplication
-5. Key theorems about multiplication
-
-All proofs are by induction, matching our hand-written proofs.
--/
-
--- ============================================================================
--- PART 1: THE PEANO AXIOMS
--- ============================================================================
-
-/-!
-## The Natural Numbers Type
-
-In Lean, we define the natural numbers as an inductive type.
-This automatically gives us:
-- A type Nat
-- A constructor zero : Nat (our 0)
-- A constructor succ : Nat → Nat (our S function)
--/
-
-inductive Nat where
-  | zero : Nat
-  | succ : Nat → Nat
-
--- Open the namespace so we can write "zero" instead of "Nat.zero"
-open Nat
-
-/-!
-## The 5 Peano Axioms (Verified Automatically)
-
-Axiom 1 (Existence): zero exists ✓
-  - Guaranteed by the constructor
-
-Axiom 2 (Closure): succ n is a Nat for any Nat n ✓
-  - Guaranteed by the type system: succ : Nat → Nat
-
-Axiom 3 (Injectivity): succ n = succ m → n = m ✓
-  - We prove this below
-
-Axiom 4 (Zero not successor): succ n ≠ zero ✓
-  - Guaranteed by inductive type (different constructors)
-
-Axiom 5 (Induction): Built into Lean's recursor ✓
-  - We use it via the "induction" tactic
--/
-
--- AXIOM 3: Injectivity of successor
-theorem succ_injective : ∀ n m : Nat, succ n = succ m → n = m := by
-  intros n m h
-  -- In Lean, constructors are injective automatically
-  injection h
-
-/-!
-EXPLANATION:
-- "theorem" declares a theorem
-- "∀" means "for all" (universal quantifier)
-- "→" means "implies"
-- "by" starts the proof
-- "intros" introduces the variables and hypothesis
-- "injection" uses the fact that constructors are injective
--/
-
--- ============================================================================
--- PART 2: ADDITION
--- ============================================================================
-
-/-!
-## Definition of Addition
-
-We define addition recursively on the right argument:
-  n + zero = n                    (base case)
-  n + (succ m) = succ (n + m)     (recursive case)
--/
-
-def add : Nat → Nat → Nat
-  | n, zero => n
-  | n, succ m => succ (add n m)
-
--- Notation: We can write n + m instead of add n m
-instance : Add Nat where
-  add := add
-
-/-!
-EXPLANATION:
-- "def" defines a function
-- Pattern matching on the second argument (m)
-- First case: m = zero, return n
-- Second case: m = succ m', return succ (n + m')
-- "instance" lets us use + notation
--/
-
--- ============================================================================
--- PART 3: THEOREMS ABOUT ADDITION
--- ============================================================================
-
-/-!
-## Theorem 1: Left Identity (0 + n = n)
-
-This is NOT built into the definition (which only gives n + 0 = n).
-We must prove it by induction.
--/
-
-theorem zero_add : ∀ n : Nat, zero + n = n := by
-  intro n
-  induction n with
-  | zero =>
-    -- Base case: zero + zero = zero
-    rfl  -- "reflexivity" - both sides are definitionally equal
-  | succ k ih =>
-    -- Inductive step
-    -- IH: zero + k = k
-    -- Goal: zero + k.succ = k.succ
-    rw [add]  -- Apply definition: zero + succ k = succ (zero + k)
-    rw [ih]   -- Use IH: succ (zero + k) = succ k
-    rfl       -- Both sides equal
-
-/-!
-EXPLANATION:
-- "induction n with" starts induction on n
-- Two cases: zero and succ k
-- "rfl" means "reflexivity" - proves things that are definitionally equal
-- "rw" means "rewrite" - replaces left side with right side of equation
-- "ih" is the inductive hypothesis
--/
-
-/-!
-## Theorem 2: Left Successor (S(m) + n = S(m + n))
-
-Again, the definition only gives n + S(m) = S(n + m).
-We prove the left version by induction.
--/
-
-theorem succ_add : ∀ m n : Nat, succ m + n = succ (m + n) := by
-  intros m n
-  induction n with
-  | zero =>
-    -- Base case: succ m + zero = succ (m + zero)
-    rfl  -- By definition, both equal succ m
-  | succ k ih =>
-    -- IH: succ m + k = succ (m + k)
-    -- Goal: succ m + succ k = succ (m + succ k)
-    rw [add]           -- succ m + succ k = succ (succ m + k)
-    rw [ih]            -- succ (succ m + k) = succ (succ (m + k))
-    rw [add]           -- m + succ k = succ (m + k)
-    rfl
-
-/-!
-EXPLANATION:
-- Same structure as Theorem 1
-- Multiple "rw" steps correspond to our manual proof steps
-- Each "rw" applies a definition or previously proven theorem
--/
-
-/-!
-## Theorem 3: Commutativity (m + n = n + m)
-
-This is the big one! Uses both Theorem 1 and Theorem 2.
--/
-
-theorem add_comm : ∀ m n : Nat, m + n = n + m := by
-  intros m n
-  induction n with
-  | zero =>
-    -- Base case: m + zero = zero + m
-    rw [add]        -- m + zero = m (by definition)
-    rw [zero_add]   -- zero + m = m (by Theorem 1)
-  | succ k ih =>
-    -- IH: m + k = k + m
-    -- Goal: m + succ k = succ k + m
-    rw [add]        -- m + succ k = succ (m + k)
-    rw [ih]         -- succ (m + k) = succ (k + m)
-    rw [succ_add]   -- succ k + m = succ (k + m)
-
-/-!
-EXPLANATION:
-- Uses our two previous theorems!
-- "rw [zero_add]" applies Theorem 1
-- "rw [succ_add]" applies Theorem 2
-- Shows how theorems build on each other
--/
-
-/-!
-## Theorem 4: Associativity ((a + b) + c = a + (b + c))
-
-Surprisingly, this doesn't need commutativity!
--/
-
-theorem add_assoc : ∀ a b c : Nat, (a + b) + c = a + (b + c) := by
-  intros a b c
-  induction c with
-  | zero =>
-    -- Base case: (a + b) + zero = a + (b + zero)
-    rfl  -- Both sides definitionally equal to a + b
-  | succ k ih =>
-    -- IH: (a + b) + k = a + (b + k)
-    -- Goal: (a + b) + succ k = a + (b + succ k)
-    rw [add, add]   -- Left: (a + b) + succ k = succ ((a + b) + k)
-    rw [ih]         -- succ ((a + b) + k) = succ (a + (b + k))
-    rw [add]        -- Right: a + (b + succ k) = a + succ (b + k)
-    rw [add]        -- a + succ (b + k) = succ (a + (b + k))
-
-/-!
-EXPLANATION:
-- Multiple "rw [add]" applications unfold the definition
-- "rw [add, add]" is shorthand for two applications
-- Notice we didn't use commutativity at all!
--/
-
--- ============================================================================
--- PART 4: MULTIPLICATION
--- ============================================================================
-
-/-!
-## Definition of Multiplication
-
-Recursive on the right argument:
-  n * zero = zero                      (base case)
-  n * (succ m) = (n * m) + n          (recursive case)
--/
-
-def mul : Nat → Nat → Nat
-  | n, zero => zero
-  | n, succ m => mul n m + n
-
-instance : Mul Nat where
-  mul := mul
-
-/-!
-EXPLANATION:
-- Base case: anything times zero is zero
-- Recursive: n * succ m = (n * m) + n
-- Notice we use our previously defined addition!
--/
-
--- ============================================================================
--- PART 5: THEOREMS ABOUT MULTIPLICATION
--- ============================================================================
-
-/-!
-## Theorem 5: Left Identity (0 * n = 0)
--/
-
-theorem zero_mul : ∀ n : Nat, zero * n = zero := by
-  intro n
-  induction n with
-  | zero =>
-    rfl  -- zero * zero = zero by definition
-  | succ k ih =>
-    -- IH: zero * k = zero
-    -- Goal: zero * succ k = zero
-    rw [mul]        -- zero * succ k = (zero * k) + zero
-    rw [ih]         -- (zero * k) + zero = zero + zero
-    rw [add]        -- zero + zero = zero
-
-/-!
-## Theorem 6: Left Successor (S(m) * n = (m * n) + n)
--/
-
-theorem succ_mul : ∀ m n : Nat, succ m * n = m * n + n := by
-  intros m n
-  induction n with
-  | zero =>
-    rfl  -- Both sides equal zero
-  | succ k ih =>
-    -- IH: succ m * k = m * k + k
-    -- Goal: succ m * succ k = m * succ k + succ k
-    rw [mul]              -- succ m * succ k = (succ m * k) + succ m
-    rw [ih]               -- (succ m * k) + succ m = (m * k + k) + succ m
-    rw [mul]              -- m * succ k = (m * k) + m
-    rw [add]              -- m * succ k + succ k = succ (m * succ k) + k
-    -- Now we need to rearrange using associativity and commutativity
-    rw [add_assoc]        -- (m * k + k) + succ m = m * k + (k + succ m)
-    rw [add_assoc]        -- Goal: m * k + (k + succ m) = m * k + (m + succ k)
-    -- Need to show: k + succ m = m + succ k
-    have h : k + succ m = succ (k + m) := by rw [add]
-    rw [h]
-    have h2 : m + succ k = succ (m + k) := by rw [add]
-    rw [h2]
-    have h3 : k + m = m + k := by rw [add_comm]
-    rw [h3]
-
-/-!
-EXPLANATION:
-- More complex proof requiring multiple rewrites
-- Uses associativity and commutativity of addition
-- "have" introduces intermediate lemmas
-- Shows how multiplication proofs depend on addition theorems
--/
-
-/-!
-## Theorem 7: Commutativity (m * n = n * m)
-
-Uses both Theorem 5 and Theorem 6!
--/
-
-theorem mul_comm : ∀ m n : Nat, m * n = n * m := by
-  intros m n
-  induction n with
-  | zero =>
-    rw [mul]        -- m * zero = zero
-    rw [zero_mul]   -- zero * m = zero
-  | succ k ih =>
-    rw [mul]        -- m * succ k = (m * k) + m
-    rw [ih]         -- (m * k) + m = (k * m) + m
-    rw [succ_mul]   -- succ k * m = (k * m) + m
-
--- ============================================================================
--- VERIFICATION
--- ============================================================================
-
-/-!
-## Example Computations
-
-Let's verify our definitions work correctly:
--/
-
--- Define some numbers for testing
-def one := succ zero
-def two := succ one
-def three := succ two
-
--- Test addition
-example : two + three = succ (succ (succ (succ (succ zero)))) := by rfl
-
--- Test multiplication
-example : two * three = succ (succ (succ (succ (succ (succ zero))))) := by rfl
-
--- Test commutativity
-example : two + three = three + two := by rw [add_comm]
-example : two * three = three * two := by rw [mul_comm]
-
-/-!
-EXPLANATION:
-- "example" creates an anonymous theorem (just for verification)
-- "rfl" proves things that compute to the same value
-- These verify our definitions match standard arithmetic!
--/
-
--- ============================================================================
--- SUMMARY
--- ============================================================================
-
-/-!
-## What We've Formalized
-
-AXIOMS:
-✓ All 5 Peano Axioms (built into the inductive type)
-
-DEFINITIONS:
-✓ Addition (recursive on right argument)
-✓ Multiplication (recursive on right argument)
-
-THEOREMS ABOUT ADDITION:
-✓ Theorem 1: zero + n = n (left identity)
-✓ Theorem 2: succ m + n = succ (m + n) (left successor)
-✓ Theorem 3: m + n = n + m (commutativity)
-✓ Theorem 4: (a + b) + c = a + (b + c) (associativity)
-
-THEOREMS ABOUT MULTIPLICATION:
-✓ Theorem 5: zero * n = zero (left identity)
-✓ Theorem 6: succ m * n = (m * n) + n (left successor)
-✓ Theorem 7: m * n = n * m (commutativity)
-
-All proofs are machine-verified by Lean's type checker!
--/
-```
-```

@@ -1,137 +1,349 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
-  <!-- Title -->
-  <text x="500" y="30" font-size="20" font-weight="bold" text-anchor="middle" fill="#2c3e50">
-    Triangle Congruence Theorems
-  </text>
-  
-  <!-- SSS -->
-  <g id="sss">
-    <text x="120" y="70" font-size="16" font-weight="bold" fill="#2c3e50">SSS (Side-Side-Side)</text>
-    <polygon points="50,100 150,100 100,30" fill="#3498db" opacity="0.3" stroke="#2980b9" stroke-width="2"/>
-    <text x="100" y="115" font-size="12" fill="#2c3e50">6</text>
-    <text x="170" y="70" font-size="12" fill="#2c3e50">7</text>
-    <text x="30" y="70" font-size="12" fill="#2c3e50">8</text>
-    
-    <text x="160" y="105" font-size="14" fill="#2c3e50">≅</text>
-    
-    <polygon points="200,100 300,100 250,30" fill="#3498db" opacity="0.3" stroke="#2980b9" stroke-width="2"/>
-    <text x="250" y="115" font-size="12" fill="#2c3e50">6</text>
-    <text x="320" y="70" font-size="12" fill="#2c3e50">7</text>
-    <text x="180" y="70" font-size="12" fill="#2c3e50">8</text>
-    
-    <text x="120" y="140" font-size="11" fill="#34495e" text-anchor="middle">
-      All three sides equal → Triangles congruent
-    </text>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="649.149156pt" height="370.117969pt" viewBox="0 0 649.149156 370.117969" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-01T22:29:17.961074</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 370.117969 
+L 649.149156 370.117969 
+L 649.149156 0 
+L 0 0 
+L 0 370.117969 
+z
+" style="fill: none"/>
   </g>
-  
-  <!-- SAS -->
-  <g id="sas">
-    <text x="420" y="70" font-size="16" font-weight="bold" fill="#2c3e50">SAS (Side-Angle-Side)</text>
-    <polygon points="350,100 450,100 400,30" fill="#e74c3c" opacity="0.3" stroke="#c0392b" stroke-width="2"/>
-    <text x="400" y="115" font-size="12" fill="#2c3e50">5</text>
-    <text x="330" y="70" font-size="12" fill="#2c3e50">6</text>
-    <!-- Angle arc -->
-    <path d="M 355,100 A 20,20 0 0,1 365,90" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
-    <text x="360" y="95" font-size="10" fill="#2c3e50">60°</text>
-    
-    <text x="460" y="105" font-size="14" fill="#2c3e50">≅</text>
-    
-    <polygon points="500,100 600,100 550,30" fill="#e74c3c" opacity="0.3" stroke="#c0392b" stroke-width="2"/>
-    <text x="550" y="115" font-size="12" fill="#2c3e50">5</text>
-    <text x="480" y="70" font-size="12" fill="#2c3e50">6</text>
-    <path d="M 505,100 A 20,20 0 0,1 515,90" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
-    <text x="510" y="95" font-size="10" fill="#2c3e50">60°</text>
-    
-    <text x="420" y="140" font-size="11" fill="#34495e" text-anchor="middle">
-      Two sides + included angle → Triangles congruent
-    </text>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 62.267969 303.877969 
+L 117.707969 303.877969 
+L 89.987969 342.685969 
+z
+" clip-path="url(#p8b41b54c6f)" style="fill: #2c7be5; opacity: 0.3; stroke: #2980b9; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 145.427969 303.877969 
+L 200.867969 303.877969 
+L 173.147969 342.685969 
+z
+" clip-path="url(#p8b41b54c6f)" style="fill: #2c7be5; opacity: 0.3; stroke: #2980b9; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 228.587969 303.877969 
+L 284.027969 303.877969 
+L 256.307969 342.685969 
+z
+" clip-path="url(#p8b41b54c6f)" style="fill: #e74c3c; opacity: 0.3; stroke: #c0392b; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 235.240769 303.877969 
+C 235.240769 303.101921 235.10498 302.331824 234.839556 301.602577 
+C 234.574132 300.87333 234.183143 300.196119 233.684309 299.601631 
+" clip-path="url(#p8b41b54c6f)" style="fill: none; stroke: #2c3e50; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 311.747969 303.877969 
+L 367.187969 303.877969 
+L 339.467969 342.685969 
+z
+" clip-path="url(#p8b41b54c6f)" style="fill: #e74c3c; opacity: 0.3; stroke: #c0392b; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 318.400769 303.877969 
+C 318.400769 303.101921 318.26498 302.331824 317.999556 301.602577 
+C 317.734132 300.87333 317.343143 300.196119 316.844309 299.601631 
+" clip-path="url(#p8b41b54c6f)" style="fill: none; stroke: #2c3e50; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 422.627969 303.877969 
+L 478.067969 303.877969 
+L 450.347969 342.685969 
+z
+" clip-path="url(#p8b41b54c6f)" style="fill: #1a9e6e; opacity: 0.3; stroke: #27ae60; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 429.280769 303.877969 
+C 429.280769 303.101921 429.14498 302.331824 428.879556 301.602577 
+C 428.614132 300.87333 428.223143 300.196119 427.724309 299.601631 
+" clip-path="url(#p8b41b54c6f)" style="fill: none; stroke: #2c3e50; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 484.720769 303.877969 
+C 484.720769 303.101921 484.58498 302.331824 484.319556 301.602577 
+C 484.054132 300.87333 483.663143 300.196119 483.164309 299.601631 
+" clip-path="url(#p8b41b54c6f)" style="fill: none; stroke: #2c3e50; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 505.787969 303.877969 
+L 561.227969 303.877969 
+L 533.507969 342.685969 
+z
+" clip-path="url(#p8b41b54c6f)" style="fill: #1a9e6e; opacity: 0.3; stroke: #27ae60; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 512.440769 303.877969 
+C 512.440769 303.101921 512.30498 302.331824 512.039556 301.602577 
+C 511.774132 300.87333 511.383143 300.196119 510.884309 299.601631 
+" clip-path="url(#p8b41b54c6f)" style="fill: none; stroke: #2c3e50; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 567.880769 303.877969 
+C 567.880769 303.101921 567.74498 302.331824 567.479556 301.602577 
+C 567.214132 300.87333 566.823143 300.196119 566.324309 299.601631 
+" clip-path="url(#p8b41b54c6f)" style="fill: none; stroke: #2c3e50; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 89.987969 204.085969 
+L 145.427969 204.085969 
+L 117.707969 248.437969 
+z
+" clip-path="url(#p8b41b54c6f)" style="fill: #95a5a6; opacity: 0.3; stroke: #7f8c8d; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 96.640769 204.085969 
+C 96.640769 203.309921 96.50498 202.539824 96.239556 201.810577 
+C 95.974132 201.08133 95.583143 200.404119 95.084309 199.809631 
+" clip-path="url(#p8b41b54c6f)" style="fill: none; stroke: #2c3e50; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 152.080769 204.085969 
+C 152.080769 203.309921 151.94498 202.539824 151.679556 201.810577 
+C 151.414132 201.08133 151.023143 200.404119 150.524309 199.809631 
+" clip-path="url(#p8b41b54c6f)" style="fill: none; stroke: #2c3e50; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 123.251969 248.437969 
+C 123.251969 247.791262 123.138811 247.149515 122.917625 246.541809 
+C 122.696438 245.934104 122.370614 245.36976 121.954919 244.874354 
+" clip-path="url(#p8b41b54c6f)" style="fill: none; stroke: #2c3e50; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 184.235969 204.085969 
+L 267.395969 204.085969 
+L 225.815969 262.297969 
+z
+" clip-path="url(#p8b41b54c6f)" style="fill: #95a5a6; opacity: 0.3; stroke: #7f8c8d; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 190.888769 204.085969 
+C 190.888769 203.309921 190.75298 202.539824 190.487556 201.810577 
+C 190.222132 201.08133 189.831143 200.404119 189.332309 199.809631 
+" clip-path="url(#p8b41b54c6f)" style="fill: none; stroke: #2c3e50; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 274.048769 204.085969 
+C 274.048769 203.309921 273.91298 202.539824 273.647556 201.810577 
+C 273.382132 201.08133 272.991143 200.404119 272.492309 199.809631 
+" clip-path="url(#p8b41b54c6f)" style="fill: none; stroke: #2c3e50; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 231.359969 262.297969 
+C 231.359969 261.651262 231.246811 261.009515 231.025625 260.401809 
+C 230.804438 259.794104 230.478614 259.22976 230.062919 258.734354 
+" clip-path="url(#p8b41b54c6f)" style="fill: none; stroke: #2c3e50; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 339.467969 148.645969 
+L 394.907969 148.645969 
+L 356.099969 192.997969 
+z
+" clip-path="url(#p8b41b54c6f)" style="fill: #95a5a6; opacity: 0.3; stroke: #7f8c8d; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 346.120769 148.645969 
+C 346.120769 148.064575 346.044556 147.485681 345.89408 146.924097 
+C 345.743604 146.362514 345.52016 145.823071 345.229463 145.319569 
+" clip-path="url(#p8b41b54c6f)" style="fill: none; stroke: #2c3e50; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 433.715969 148.645969 
+L 489.155969 148.645969 
+L 444.803969 181.909969 
+z
+" clip-path="url(#p8b41b54c6f)" style="fill: #95a5a6; opacity: 0.3; stroke-dasharray: 7.4,3.2; stroke-dashoffset: 0; stroke: #7f8c8d; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 440.368769 148.645969 
+C 440.368769 148.064575 440.292556 147.485681 440.14208 146.924097 
+C 439.991604 146.362514 439.76816 145.823071 439.477463 145.319569 
+" clip-path="url(#p8b41b54c6f)" style="fill: none; stroke: #2c3e50; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 62.267969 98.749969 
+L 561.227969 98.749969 
+L 561.227969 43.309969 
+L 62.267969 43.309969 
+z
+" clip-path="url(#p8b41b54c6f)" style="fill: #ecf0f1; opacity: 0.9; stroke: #34495e; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #2c3e50; font: 700 13px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="101.075969" y="324.097156" transform="rotate(-0 101.075969 324.097156)">SSS (Side-Side-Side)</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #2c3e50; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="89.987969" y="298.321344" transform="rotate(-0 89.987969 298.321344)">6</text>
+   </g>
+   <g id="text_3">
+    <text style="fill: #2c3e50; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="128.795969" y="323.269344" transform="rotate(-0 128.795969 323.269344)">7</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #2c3e50; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="51.179969" y="323.269344" transform="rotate(-0 51.179969 323.269344)">8</text>
+   </g>
+   <g id="text_5">
+    <text style="fill: #2c3e50; font: 14px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="123.251969" y="304.969094" transform="rotate(-0 123.251969 304.969094)">≅</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #2c3e50; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="173.147969" y="298.321344" transform="rotate(-0 173.147969 298.321344)">6</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #2c3e50; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="211.955969" y="323.269344" transform="rotate(-0 211.955969 323.269344)">7</text>
+   </g>
+   <g id="text_8">
+    <text style="fill: #2c3e50; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="134.339969" y="323.269344" transform="rotate(-0 134.339969 323.269344)">8</text>
+   </g>
+   <g id="text_9">
+    <text style="fill: #34495e; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="131.567969" y="284.461344" transform="rotate(-0 131.567969 284.461344)">All three sides equal → Triangles congruent</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #2c3e50; font: 700 13px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="270.167969" y="324.046375" transform="rotate(-0 270.167969 324.046375)">SAS (Side-Angle-Side)</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #2c3e50; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="256.307969" y="298.321344" transform="rotate(-0 256.307969 298.321344)">5</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #2c3e50; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="217.499969" y="323.269344" transform="rotate(-0 217.499969 323.269344)">6</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #2c3e50; font: 9px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="234.131969" y="309.133406" transform="rotate(-0 234.131969 309.133406)">60°</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #2c3e50; font: 14px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="292.343969" y="304.969094" transform="rotate(-0 292.343969 304.969094)">≅</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #2c3e50; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="339.467969" y="298.321344" transform="rotate(-0 339.467969 298.321344)">5</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #2c3e50; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="300.659969" y="323.269344" transform="rotate(-0 300.659969 323.269344)">6</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #2c3e50; font: 9px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="317.291969" y="309.133406" transform="rotate(-0 317.291969 309.133406)">60°</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #34495e; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="297.887969" y="284.461344" transform="rotate(-0 297.887969 284.461344)">Two sides + included angle → Triangles congruent</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #2c3e50; font: 700 13px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="464.207969" y="324.046375" transform="rotate(-0 464.207969 324.046375)">ASA (Angle-Side-Angle)</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #2c3e50; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="450.347969" y="298.321344" transform="rotate(-0 450.347969 298.321344)">7</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #2c3e50; font: 9px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="428.171969" y="309.133406" transform="rotate(-0 428.171969 309.133406)">50°</text>
+   </g>
+   <g id="text_22">
+    <text style="fill: #2c3e50; font: 9px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="472.523969" y="309.133406" transform="rotate(-0 472.523969 309.133406)">70°</text>
+   </g>
+   <g id="text_23">
+    <text style="fill: #2c3e50; font: 14px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="486.383969" y="304.969094" transform="rotate(-0 486.383969 304.969094)">≅</text>
+   </g>
+   <g id="text_24">
+    <text style="fill: #2c3e50; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="533.507969" y="298.321344" transform="rotate(-0 533.507969 298.321344)">7</text>
+   </g>
+   <g id="text_25">
+    <text style="fill: #2c3e50; font: 9px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="511.331969" y="309.133406" transform="rotate(-0 511.331969 309.133406)">50°</text>
+   </g>
+   <g id="text_26">
+    <text style="fill: #2c3e50; font: 9px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="555.683969" y="309.133406" transform="rotate(-0 555.683969 309.133406)">70°</text>
+   </g>
+   <g id="text_27">
+    <text style="fill: #34495e; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="491.927969" y="284.461344" transform="rotate(-0 491.927969 284.461344)">Two angles + included side → Triangles congruent</text>
+   </g>
+   <g id="text_28">
+    <text style="fill: #e74c3c; font: 700 13px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="178.691969" y="224.203594" transform="rotate(-0 178.691969 224.203594)">✗ AAA Does NOT Prove Congruence</text>
+   </g>
+   <g id="text_29">
+    <text style="fill: #2c3e50; font: 9px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="95.531969" y="209.341406" transform="rotate(-0 95.531969 209.341406)">60°</text>
+   </g>
+   <g id="text_30">
+    <text style="fill: #2c3e50; font: 9px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="139.883969" y="209.341406" transform="rotate(-0 139.883969 209.341406)">60°</text>
+   </g>
+   <g id="text_31">
+    <text style="fill: #2c3e50; font: 9px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="120.479969" y="242.605406" transform="rotate(-0 120.479969 242.605406)">60°</text>
+   </g>
+   <g id="text_32">
+    <text style="fill: #2c3e50; font: 16px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="159.287969" y="227.904969" transform="rotate(-0 159.287969 227.904969)">≠</text>
+   </g>
+   <g id="text_33">
+    <text style="fill: #2c3e50; font: 9px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="189.779969" y="209.341406" transform="rotate(-0 189.779969 209.341406)">60°</text>
+   </g>
+   <g id="text_34">
+    <text style="fill: #2c3e50; font: 9px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="261.851969" y="209.341406" transform="rotate(-0 261.851969 209.341406)">60°</text>
+   </g>
+   <g id="text_35">
+    <text style="fill: #2c3e50; font: 9px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="228.587969" y="256.465406" transform="rotate(-0 228.587969 256.465406)">60°</text>
+   </g>
+   <g id="text_36">
+    <text style="fill: #e74c3c; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="225.815969" y="190.213344" transform="rotate(-0 225.815969 190.213344)">Same angles but different sizes! AAA proves SIMILARITY, not congruence.</text>
+   </g>
+   <g id="text_37">
+    <text style="fill: #e74c3c; font: 700 13px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="414.311969" y="224.254375" transform="rotate(-0 414.311969 224.254375)">✗ SSA Does NOT Work (Ambiguous Case)</text>
+   </g>
+   <g id="text_38">
+    <text style="fill: #2c3e50; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="367.187969" y="143.089344" transform="rotate(-0 367.187969 143.089344)">6</text>
+   </g>
+   <g id="text_39">
+    <text style="fill: #2c3e50; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="328.379969" y="173.581344" transform="rotate(-0 328.379969 173.581344)">5</text>
+   </g>
+   <g id="text_40">
+    <text style="fill: #2c3e50; font: 9px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="345.011969" y="153.901406" transform="rotate(-0 345.011969 153.901406)">30°</text>
+   </g>
+   <g id="text_41">
+    <text style="fill: #2c3e50; font: 20px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="414.311969" y="170.796719" transform="rotate(-0 414.311969 170.796719)">?</text>
+   </g>
+   <g id="text_42">
+    <text style="fill: #2c3e50; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="461.435969" y="143.089344" transform="rotate(-0 461.435969 143.089344)">6</text>
+   </g>
+   <g id="text_43">
+    <text style="fill: #2c3e50; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="422.627969" y="168.037344" transform="rotate(-0 422.627969 168.037344)">5</text>
+   </g>
+   <g id="text_44">
+    <text style="fill: #2c3e50; font: 9px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="439.259969" y="153.901406" transform="rotate(-0 439.259969 153.901406)">30°</text>
+   </g>
+   <g id="text_45">
+    <text style="fill: #e74c3c; font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="442.031969" y="129.229344" transform="rotate(-0 442.031969 129.229344)">Multiple triangles possible! The angle is not "included" between the two sides.</text>
+   </g>
+   <g id="text_46">
+    <text style="fill: #2c3e50; font: 700 13px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="311.747969" y="85.654375" transform="rotate(-0 311.747969 85.654375)">Key Insight: Minimum Information for Congruence</text>
+   </g>
+   <g id="text_47">
+    <text style="fill: #34495e; font: 11px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="311.747969" y="71.293281" transform="rotate(-0 311.747969 71.293281)">✓ SSS, SAS, ASA, AAS all work (angle must be "included" for SAS/ASA)</text>
+   </g>
+   <g id="text_48">
+    <text style="fill: #34495e; font: 11px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="311.747969" y="60.076375" transform="rotate(-0 311.747969 60.076375)">✗ AAA only proves similarity (same shape, different size)  |  ✗ SSA is ambiguous (multiple solutions possible)</text>
+   </g>
+   <g id="text_49">
+    <text style="fill: #2c3e50; font: 700 13px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="311.747969" y="20.677969" transform="rotate(-0 311.747969 20.677969)">Triangle Congruence Theorems</text>
+   </g>
   </g>
-  
-  <!-- ASA -->
-  <g id="asa">
-    <text x="770" y="70" font-size="16" font-weight="bold" fill="#2c3e50">ASA (Angle-Side-Angle)</text>
-    <polygon points="700,100 800,100 750,30" fill="#2ecc71" opacity="0.3" stroke="#27ae60" stroke-width="2"/>
-    <text x="750" y="115" font-size="12" fill="#2c3e50">7</text>
-    <!-- Angle arcs -->
-    <path d="M 705,100 A 20,20 0 0,1 715,90" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
-    <text x="710" y="95" font-size="10" fill="#2c3e50">50°</text>
-    <path d="M 795,100 A 20,20 0 0,0 785,90" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
-    <text x="785" y="95" font-size="10" fill="#2c3e50">70°</text>
-    
-    <text x="810" y="105" font-size="14" fill="#2c3e50">≅</text>
-    
-    <polygon points="850,100 950,100 900,30" fill="#2ecc71" opacity="0.3" stroke="#27ae60" stroke-width="2"/>
-    <text x="900" y="115" font-size="12" fill="#2c3e50">7</text>
-    <path d="M 855,100 A 20,20 0 0,1 865,90" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
-    <text x="860" y="95" font-size="10" fill="#2c3e50">50°</text>
-    <path d="M 945,100 A 20,20 0 0,0 935,90" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
-    <text x="935" y="95" font-size="10" fill="#2c3e50">70°</text>
-    
-    <text x="770" y="140" font-size="11" fill="#34495e" text-anchor="middle">
-      Two angles + included side → Triangles congruent
-    </text>
-  </g>
-  
-  <!-- NON-THEOREM: AAA -->
-  <g id="aaa-not">
-    <text x="200" y="250" font-size="16" font-weight="bold" fill="#e74c3c">❌ AAA Does NOT Prove Congruence</text>
-    <polygon points="100,280 200,280 150,200" fill="#95a5a6" opacity="0.3" stroke="#7f8c8d" stroke-width="2"/>
-    <!-- Angle marks -->
-    <path d="M 105,280 A 20,20 0 0,1 115,270" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
-    <text x="110" y="275" font-size="10" fill="#2c3e50">60°</text>
-    <path d="M 195,280 A 20,20 0 0,0 185,270" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
-    <text x="185" y="275" font-size="10" fill="#2c3e50">60°</text>
-    <path d="M 150,210 A 15,15 0 0,0 155,220" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
-    <text x="155" y="215" font-size="10" fill="#2c3e50">60°</text>
-    
-    <text x="220" y="245" font-size="14" fill="#2c3e50">≠</text>
-    
-    <polygon points="270,280 420,280 345,175" fill="#95a5a6" opacity="0.3" stroke="#7f8c8d" stroke-width="2"/>
-    <!-- Same angles, different size -->
-    <path d="M 275,280 A 20,20 0 0,1 285,270" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
-    <text x="280" y="275" font-size="10" fill="#2c3e50">60°</text>
-    <path d="M 415,280 A 20,20 0 0,0 405,270" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
-    <text x="405" y="275" font-size="10" fill="#2c3e50">60°</text>
-    <path d="M 345,185 A 15,15 0 0,0 350,195" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
-    <text x="350" y="190" font-size="10" fill="#2c3e50">60°</text>
-    
-    <text x="250" y="310" font-size="11" fill="#e74c3c" text-anchor="middle">
-      Same angles but different sizes! AAA proves SIMILARITY, not congruence.
-    </text>
-  </g>
-  
-  <!-- NON-THEOREM: SSA -->
-  <g id="ssa-not">
-    <text x="650" y="250" font-size="16" font-weight="bold" fill="#e74c3c">❌ SSA Does NOT Work (Ambiguous Case)</text>
-    <polygon points="550,380 650,380 580,300" fill="#95a5a6" opacity="0.3" stroke="#7f8c8d" stroke-width="2"/>
-    <text x="600" y="395" font-size="12" fill="#2c3e50">6</text>
-    <text x="530" y="340" font-size="12" fill="#2c3e50">5</text>
-    <path d="M 555,380 A 20,20 0 0,1 565,370" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
-    <text x="560" y="375" font-size="10" fill="#2c3e50">30°</text>
-    
-    <text x="660" y="350" font-size="20" fill="#2c3e50">?</text>
-    
-    <polygon points="720,380 820,380 740,320" fill="#95a5a6" opacity="0.3" stroke="#7f8c8d" stroke-width="2" stroke-dasharray="5,5"/>
-    <text x="770" y="395" font-size="12" fill="#2c3e50">6</text>
-    <text x="700" y="350" font-size="12" fill="#2c3e50">5</text>
-    <path d="M 725,380 A 20,20 0 0,1 735,370" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
-    <text x="730" y="375" font-size="10" fill="#2c3e50">30°</text>
-    
-    <text x="670" y="420" font-size="11" fill="#e74c3c" text-anchor="middle">
-      Multiple triangles possible! The angle is not "included" between the two sides.
-    </text>
-  </g>
-  
-  <!-- Summary box -->
-  <rect x="50" y="470" width="900" height="100" fill="#ecf0f1" stroke="#34495e" stroke-width="2" rx="10"/>
-  <text x="500" y="500" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
-    Key Insight: Minimum Information for Congruence
-  </text>
-  <text x="500" y="525" font-size="12" text-anchor="middle" fill="#34495e">
-    ✓ SSS, SAS, ASA, AAS all work (angle must be "included" for SAS/ASA)
-  </text>
-  <text x="500" y="545" font-size="12" text-anchor="middle" fill="#34495e">
-    ✗ AAA only proves similarity (same shape, different size) | ✗ SSA is ambiguous (multiple solutions possible)
-  </text>
+ </g>
+ <defs>
+  <clipPath id="p8b41b54c6f">
+   <rect x="34.547969" y="26.677969" width="554.4" height="332.64"/>
+  </clipPath>
+ </defs>
 </svg>

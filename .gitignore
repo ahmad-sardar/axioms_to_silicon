@@ -2,3 +2,7 @@ docs/
 .DS_Store
 *.swp
 *~
+.venv/
+__pycache__/
+*.pyc
+scripts/

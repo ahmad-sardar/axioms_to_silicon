@@ -1,47 +1,141 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
-  <!-- Title -->
-  <text x="400" y="25" font-size="18" font-weight="bold" text-anchor="middle" fill="#ffffff">
-    Visual Proof of Pythagorean Theorem: a² + b² = c²
-  </text>
-  
-  <!-- Right triangle (main) -->
-  <g id="main-triangle">
-    <polygon points="100,300 250,300 250,180" fill="#3498db" opacity="0.3" stroke="#2c3e50" stroke-width="2"/>
-    <text x="175" y="260" font-size="14" font-weight="bold" fill="#ffffff">a = 3</text>
-    <text x="260" y="240" font-size="14" font-weight="bold" fill="#ffffff">b = 4</text>
-    <text x="160" y="240" font-size="14" font-weight="bold" fill="#ffffff">c = 5</text>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="468pt" height="255.866364pt" viewBox="0 0 468 255.866364" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-01T22:29:17.903821</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 255.866364 
+L 468 255.866364 
+L 468 0 
+L 0 0 
+L 0 255.866364 
+z
+" style="fill: none"/>
   </g>
-  
-  <!-- Square on side a -->
-  <g id="square-a">
-    <rect x="100" y="300" width="150" height="150" fill="#e74c3c" opacity="0.4" stroke="#c0392b" stroke-width="2"/>
-    <text x="175" y="380" font-size="16" font-weight="bold" fill="#ffffff">a²</text>
-    <text x="165" y="400" font-size="12" fill="#ffffff">= 9</text>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 37.854545 123.320909 
+L 139.309091 123.320909 
+L 139.309091 21.866364 
+L 37.854545 21.866364 
+z
+" clip-path="url(#pb704a1d3d8)" style="fill: #e74c3c; opacity: 0.4; stroke: #c0392b; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 139.309091 204.484545 
+L 220.472727 204.484545 
+L 220.472727 123.320909 
+L 139.309091 123.320909 
+z
+" clip-path="url(#pb704a1d3d8)" style="fill: #1a9e6e; opacity: 0.4; stroke: #27ae60; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 294.872727 177.43 
+L 430.145455 177.43 
+L 430.145455 42.157273 
+L 294.872727 42.157273 
+z
+" clip-path="url(#pb704a1d3d8)" style="fill: #9b59b6; opacity: 0.4; stroke: #8e44ad; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 37.854545 123.320909 
+L 139.309091 123.320909 
+L 139.309091 204.484545 
+z
+" clip-path="url(#pb704a1d3d8)" style="fill: #2c7be5; opacity: 0.3; stroke: #2c3e50; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 240.763636 119.939091 
+L 267.818182 119.939091 
+" clip-path="url(#pb704a1d3d8)" style="fill: none; stroke: #ffffff; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 240.763636 106.411818 
+L 267.818182 106.411818 
+" clip-path="url(#pb704a1d3d8)" style="fill: none; stroke: #ffffff; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <!-- $a^2$ -->
+    <g style="fill: #ffffff" transform="translate(80.601818 76.456761)">
+     <text>
+      <tspan style="font: oblique 14px 'DejaVu Sans'" x="0" y="-0.3671875">a</tspan>
+      <tspan style="font: 9.8px 'DejaVu Sans'" x="9.230612" y="-5.7265625">2</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_2">
+    <text style="fill: #ffffff; font: 11px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="88.581818" y="62.101676" transform="rotate(-0 88.581818 62.101676)">= 9</text>
+   </g>
+   <g id="text_3">
+    <!-- $b^2$ -->
+    <g style="fill: #ffffff" transform="translate(171.560909 167.765852)">
+     <text>
+      <tspan style="font: oblique 14px 'DejaVu Sans'" x="0" y="-0.3671875">b</tspan>
+      <tspan style="font: 9.8px 'DejaVu Sans'" x="9.929792" y="-5.7265625">2</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_4">
+    <text style="fill: #ffffff; font: 11px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="179.890909" y="154.763494" transform="rotate(-0 179.890909 154.763494)">= 16</text>
+   </g>
+   <g id="text_5">
+    <!-- $c^2$ -->
+    <g style="fill: #ffffff" transform="translate(355.019091 113.656761)">
+     <text>
+      <tspan style="font: oblique 14px 'DejaVu Sans'" x="0" y="-0.3671875">c</tspan>
+      <tspan style="font: 9.8px 'DejaVu Sans'" x="8.348776" y="-5.7265625">2</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_6">
+    <text style="fill: #ffffff; font: 11px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="362.509091" y="99.301676" transform="rotate(-0 362.509091 99.301676)">= 25</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #ffffff; font: 700 11px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="88.581818" y="135.061009" transform="rotate(-0 88.581818 135.061009)">a = 3</text>
+   </g>
+   <g id="text_8">
+    <text style="fill: #ffffff; font: 700 11px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="144.72" y="166.93804" transform="rotate(-0 144.72 166.93804)">b = 4</text>
+   </g>
+   <g id="text_9">
+    <text style="fill: #ffffff; font: 700 11px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(67.842442 159.872932) rotate(-321)">c = 5</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #2c3e50; font: 11px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(171.399034 66.088334)">Area of square on hypotenuse</text>
+    <text style="fill: #2c3e50; font: 11px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(190.058643 78.405928)">= Sum of areas on legs</text>
+   </g>
+   <g id="text_11">
+    <!-- Visual Proof of the Pythagorean Theorem: $a^2 + b^2 = c^2$ -->
+    <g style="fill: #2c3e50" transform="translate(39.13 22.63)">
+     <text>
+      <tspan style="font: 700 13px 'DejaVu Sans'" x="0 10.061035 14.51709 22.254883 31.509766 40.282227 44.738281 49.26416 58.791992 65.203125 74.134277 83.06543 88.721191 93.24707 102.178223 107.833984 112.359863 118.574219 127.829102 136.645996 141.171875 150.699707 159.173828 165.388184 174.643066 183.415527 192.721191 201.652344 208.063477 216.880371 225.652832 234.907715 239.433594 248.30127 257.556152 266.373047 275.304199 281.715332 290.532227 304.078125 309.276855" y="-0.2640625000000014">Visual Proof of the Pythagorean Theorem: </tspan>
+      <tspan style="font: oblique 13px 'DejaVu Sans'" x="313.802734 344.476878 375.799792" y="-0.2640625000000014">abc</tspan>
+      <tspan style="font: 9.1px 'DejaVu Sans'" x="322.373704 353.696618 383.551914" y="-5.240625000000001">222</tspan>
+      <tspan style="font: 13px 'DejaVu Sans'" x="331.051585 362.374499" y="-0.2640625000000014">+=</tspan>
+     </text>
+    </g>
+   </g>
   </g>
-  
-  <!-- Square on side b -->
-  <g id="square-b">
-    <rect x="250" y="60" width="120" height="120" fill="#2ecc71" opacity="0.4" stroke="#27ae60" stroke-width="2"/>
-    <text x="305" y="120" font-size="16" font-weight="bold" fill="#ffffff">b²</text>
-    <text x="300" y="138" font-size="12" fill="#ffffff">= 16</text>
-  </g>
-  
-  <!-- Square on hypotenuse c -->
-  <g id="square-c">
-    <rect x="480" y="220" width="200" height="200" fill="#9b59b6" opacity="0.4" stroke="#8e44ad" stroke-width="2"/>
-    <text x="575" y="325" font-size="16" font-weight="bold" fill="#ffffff">c²</text>
-    <text x="570" y="345" font-size="12" fill="#ffffff">= 25</text>
-  </g>
-  
-  <!-- Equals sign -->
-  <g id="equals">
-    <line x1="400" y1="305" x2="440" y2="305" stroke="#ffffff" stroke-width="3"/>
-    <line x1="400" y1="325" x2="440" y2="325" stroke="#ffffff" stroke-width="3"/>
-  </g>
-  
-  <!-- Annotation -->
-  <text x="400" y="380" font-size="14" text-anchor="middle" fill="#ffffff">
-    Area of square on hypotenuse = Sum of areas on legs
-  </text>
+ </g>
+ <defs>
+  <clipPath id="pb704a1d3d8">
+   <rect x="10.8" y="28.63" width="446.4" height="216.436364"/>
+  </clipPath>
+ </defs>
 </svg>

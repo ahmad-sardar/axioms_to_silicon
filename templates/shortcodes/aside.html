@@ -1,0 +1,4 @@
+<aside class="aside-note">
+  {% if title %}<p class="aside-title">{{ title }}</p>{% endif %}
+  {{ body | markdown | safe }}
+</aside>
