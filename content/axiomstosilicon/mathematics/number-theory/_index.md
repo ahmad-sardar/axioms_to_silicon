@@ -7,4 +7,4 @@ title = "Number Theory"
 - [Unique Factorization](unique-factorization/)
 - [Modular Arithmetic](modular-arithmetic/)
 - [Construction of Rational Number](construction-of-rational-number/)
-- [The Construction of the Integers from the Natural Numbers](integers/)
+- [The Construction of the Integers from the Natural Numbers](the-construction-of-the-integers-from-the-natural-numbers/)
