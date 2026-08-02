@@ -12,5 +12,7 @@ transparent = true
   <a href="mathematics/analysis/logarithm/">The Logarithm and Exponential Function</a>
   <a href="mathematics/analysis/real-number-system/">Real Number System</a>
   <a href="mathematics/number-theory/the-construction-of-the-integers-from-the-natural-numbers/">The Construction of the Integers from the Natural Numbers</a>
-
+  <a href="mathematics/number-theory/modular-arithmetic/">Modular Arithmetic</a>
+  <a href="mathematics/number-theory/unique-factorization/">Unique Factorization</a>
+  <a href="mathematics/number-theory/construction-of-rational-numbers/">Construction of Rational Numbers</a>
 </div>
